@@ -1,0 +1,29 @@
+# Chapter 1 Exercises
+
+This chapter, which is mostly conceptual, has mostly conceptual exercises.  Exercises 1.1 with the helicopters seems like great fun, i might look at some day!
+
+## 1.4 Problems of statistics: Give examples of applied statistics problems of interest to you in which there are challenges in:
+
+(a) Generalizing from sample to population.
+
+With the election season going on, the problem that first comes to mind is survey responses.  THe sample is the respondants, and the population is of course the population.  I worry about how one can correct for people who refuse to answer surveys. What are they like, does this bias the results in general? 
+
+
+(b) Generalizing from treatment to control group.
+
+Here I think about gun laws... the treatment effect of more restrictive gun laws is difficult to extract due to other various differences between states or countries with different laws, so the control groups are not only different due to the treatment.
+
+
+(c) Generalizing from observed measurements to the underlying constructs of interest.
+
+WHen looking at the effect of marketing programs on increased sales, we use observations of sales numbers to try to understnad the effect of the marketing program.
+
+## Problem 1.9  A problem with linear models
+
+a) The issue is that the best solution is an infinitely long and wide helicopter!
+
+b) One solution would be to measure the weight, or add an interaction of length*width as a surrogate. I suspect this would result in a negative coefficient, but don't have the data to check.
+
+ 
+
+
