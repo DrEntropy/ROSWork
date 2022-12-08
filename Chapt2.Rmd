@@ -1,0 +1,61 @@
+## Exercise 2.9
+
+Graphing parallel time series: The mortality data in Section 2.4 are accessible from this site at the U.S. Centers for Disease Control and Prevention: wonder.cdc.gov. Download mortality data from this source but choose just one particular cause of death, and then make graphs similar to those in Section 2.4, breaking down trends in death rate by age, sex, and region of the country.
+
+I am going to chose to look at influenza data by age, gender, region and year for the last 10 years.
+
+
+
+```{r}
+library(tidyverse)
+data <- read_tsv("InfluenzaWithRegion.txt", na = c("Suppressed", "Not Applicable")) |>
+        filter(!is.na(Year)) |>
+        select(-Notes,-`Year Code`, -`Gender Code`,
+               -`Ten-Year Age Groups Code`, -`Crude Rate`,-`Census Region Code`) |>
+        rename(Age  = `Ten-Year Age Groups`, region = `Census Region`) |> filter(Age != 'Not Stated')
+
+tail(data)
+```
+
+There are a lot of ways to display this.  I think it is most useful to less finely group teh ages. Also I am goint to treat suppressed NA's as zeros, there is not much data in that area anyway.
+
+```{r}
+data[is.na(data$Deaths),"Deaths"] = 0
+unique(data$Age)
+```
+```{r}
+
+bottom_age <- \(age){
+  if(str_sub(age,1,1)=='<')
+    return(0)
+  return(as.numeric(str_split(age,"-|\\+",simplify = TRUE)[1]))
+}
+
+regroup <- \(age_string){
+  bottom <- bottom_age(age_string)
+  if(bottom < 15) 
+    return("Child")
+  if(bottom < 35)
+    return("Young Adult")
+  if(bottom < 65)
+    return("Adult")
+  return("Senior")
+}
+
+data_grouped <-
+data |> rowwise() |> mutate(age_group= regroup(Age)) |> ungroup() |>
+  group_by(age_group, Gender, Year, region) |>
+  summarize(deaths = sum(Deaths), pop = sum(Population), .groups = "drop") |>
+  mutate(rate = deaths/pop) 
+head(data_grouped)
+```
+
+```{r}
+ggplot(data = data_grouped, aes(x=Year, y= rate)) +
+  geom_line(mapping = aes(color = age_group, linetype=Gender)) + 
+  facet_wrap(vars(region))
+```
+
+
+
+

@@ -1,0 +1,1018 @@
+"Notes"	"Census Region"	"Census Region Code"	"Ten-Year Age Groups"	"Ten-Year Age Groups Code"	"Year"	"Year Code"	"Gender"	"Gender Code"	Deaths	Population	Crude Rate
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2011"	"2011"	"Female"	"F"	Suppressed	314207	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2011"	"2011"	"Male"	"M"	Suppressed	328952	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2012"	"2012"	"Female"	"F"	Suppressed	308475	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2012"	"2012"	"Male"	"M"	Suppressed	323135	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2013"	"2013"	"Female"	"F"	Suppressed	312646	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2013"	"2013"	"Male"	"M"	Suppressed	327763	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2014"	"2014"	"Female"	"F"	Suppressed	312023	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2014"	"2014"	"Male"	"M"	Suppressed	326068	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2015"	"2015"	"Female"	"F"	Suppressed	310761	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2015"	"2015"	"Male"	"M"	Suppressed	325571	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2016"	"2016"	"Female"	"F"	Suppressed	305759	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2016"	"2016"	"Male"	"M"	Suppressed	320881	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2017"	"2017"	"Female"	"F"	Suppressed	304386	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2017"	"2017"	"Male"	"M"	Suppressed	319058	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2018"	"2018"	"Female"	"F"	Suppressed	297991	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2018"	"2018"	"Male"	"M"	Suppressed	312417	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2019"	"2019"	"Female"	"F"	Suppressed	294771	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2019"	"2019"	"Male"	"M"	Suppressed	308930	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2020 "	"2020"	"Female"	"F"	Suppressed	291595	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"< 1 year"	"1"	"2020 "	"2020"	"Male"	"M"	Suppressed	305056	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2011"	"2011"	"Female"	"F"	Suppressed	1254687	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2011"	"2011"	"Male"	"M"	Suppressed	1310814	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2012"	"2012"	"Female"	"F"	Suppressed	1251615	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2012"	"2012"	"Male"	"M"	Suppressed	1308771	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2013"	"2013"	"Female"	"F"	Suppressed	1249292	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2013"	"2013"	"Male"	"M"	Suppressed	1306333	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2014"	"2014"	"Female"	"F"	Suppressed	1254180	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2014"	"2014"	"Male"	"M"	Suppressed	1310052	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2015"	"2015"	"Female"	"F"	Suppressed	1252678	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2015"	"2015"	"Male"	"M"	Suppressed	1309429	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2016"	"2016"	"Female"	"F"	Suppressed	1236251	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2016"	"2016"	"Male"	"M"	Suppressed	1291577	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2017"	"2017"	"Female"	"F"	Suppressed	1235790	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2017"	"2017"	"Male"	"M"	Suppressed	1293407	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2018"	"2018"	"Female"	"F"	Suppressed	1224428	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2018"	"2018"	"Male"	"M"	Suppressed	1282922	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2019"	"2019"	"Female"	"F"	Suppressed	1213760	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2019"	"2019"	"Male"	"M"	Suppressed	1271948	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2020 "	"2020"	"Female"	"F"	Suppressed	1199288	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"1-4 years"	"1-4"	"2020 "	"2020"	"Male"	"M"	Suppressed	1255336	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2011"	"2011"	"Female"	"F"	Suppressed	3310705	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2011"	"2011"	"Male"	"M"	Suppressed	3461452	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2012"	"2012"	"Female"	"F"	Suppressed	3294916	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2012"	"2012"	"Male"	"M"	Suppressed	3446167	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2013"	"2013"	"Female"	"F"	Suppressed	3273297	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2013"	"2013"	"Male"	"M"	10	3423665	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2014"	"2014"	"Female"	"F"	Suppressed	3249211	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2014"	"2014"	"Male"	"M"	Suppressed	3396369	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2015"	"2015"	"Female"	"F"	Suppressed	3222045	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2015"	"2015"	"Male"	"M"	Suppressed	3365058	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2016"	"2016"	"Female"	"F"	Suppressed	3205510	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2016"	"2016"	"Male"	"M"	Suppressed	3348780	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2017"	"2017"	"Female"	"F"	Suppressed	3187158	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2017"	"2017"	"Male"	"M"	Suppressed	3328472	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2018"	"2018"	"Female"	"F"	Suppressed	3153952	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2018"	"2018"	"Male"	"M"	Suppressed	3294326	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2019"	"2019"	"Female"	"F"	Suppressed	3128696	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2019"	"2019"	"Male"	"M"	Suppressed	3270115	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2020 "	"2020"	"Female"	"F"	Suppressed	3111806	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"5-14 years"	"5-14"	"2020 "	"2020"	"Male"	"M"	Suppressed	3253485	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2011"	"2011"	"Female"	"F"	Suppressed	3765012	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2011"	"2011"	"Male"	"M"	Suppressed	3911652	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2012"	"2012"	"Female"	"F"	Suppressed	3763286	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2012"	"2012"	"Male"	"M"	Suppressed	3906199	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2013"	"2013"	"Female"	"F"	Suppressed	3739687	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2013"	"2013"	"Male"	"M"	Suppressed	3873196	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2014"	"2014"	"Female"	"F"	Suppressed	3735762	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2014"	"2014"	"Male"	"M"	Suppressed	3858041	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2015"	"2015"	"Female"	"F"	Suppressed	3709484	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2015"	"2015"	"Male"	"M"	Suppressed	3822993	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2016"	"2016"	"Female"	"F"	Suppressed	3671743	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2016"	"2016"	"Male"	"M"	Suppressed	3788807	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2017"	"2017"	"Female"	"F"	Suppressed	3638965	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2017"	"2017"	"Male"	"M"	Suppressed	3746170	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2018"	"2018"	"Female"	"F"	Suppressed	3564988	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2018"	"2018"	"Male"	"M"	Suppressed	3658077	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2019"	"2019"	"Female"	"F"	Suppressed	3512974	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2019"	"2019"	"Male"	"M"	Suppressed	3600276	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2020 "	"2020"	"Female"	"F"	Suppressed	3466175	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"15-24 years"	"15-24"	"2020 "	"2020"	"Male"	"M"	Suppressed	3548569	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2011"	"2011"	"Female"	"F"	Suppressed	3601821	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2011"	"2011"	"Male"	"M"	Suppressed	3571610	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2012"	"2012"	"Female"	"F"	Suppressed	3654985	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2012"	"2012"	"Male"	"M"	Suppressed	3638462	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2013"	"2013"	"Female"	"F"	Suppressed	3706938	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2013"	"2013"	"Male"	"M"	Suppressed	3710638	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2014"	"2014"	"Female"	"F"	Suppressed	3754674	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2014"	"2014"	"Male"	"M"	Suppressed	3770291	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2015"	"2015"	"Female"	"F"	Suppressed	3787526	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2015"	"2015"	"Male"	"M"	Suppressed	3819767	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2016"	"2016"	"Female"	"F"	Suppressed	3800746	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2016"	"2016"	"Male"	"M"	Suppressed	3857566	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2017"	"2017"	"Female"	"F"	Suppressed	3843275	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2017"	"2017"	"Male"	"M"	Suppressed	3911393	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2018"	"2018"	"Female"	"F"	Suppressed	3821266	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2018"	"2018"	"Male"	"M"	Suppressed	3902512	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2019"	"2019"	"Female"	"F"	Suppressed	3820958	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2019"	"2019"	"Male"	"M"	12	3908835	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2020 "	"2020"	"Female"	"F"	10	3807804	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"25-34 years"	"25-34"	"2020 "	"2020"	"Male"	"M"	13	3900549	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2011"	"2011"	"Female"	"F"	Suppressed	3675513	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2011"	"2011"	"Male"	"M"	Suppressed	3553299	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2012"	"2012"	"Female"	"F"	Suppressed	3622836	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2012"	"2012"	"Male"	"M"	Suppressed	3509724	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2013"	"2013"	"Female"	"F"	Suppressed	3570783	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2013"	"2013"	"Male"	"M"	Suppressed	3469969	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2014"	"2014"	"Female"	"F"	16	3542518	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2014"	"2014"	"Male"	"M"	17	3439790	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2015"	"2015"	"Female"	"F"	Suppressed	3512798	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2015"	"2015"	"Male"	"M"	Suppressed	3414112	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2016"	"2016"	"Female"	"F"	Suppressed	3461744	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2016"	"2016"	"Male"	"M"	23	3371597	0.7
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2017"	"2017"	"Female"	"F"	Suppressed	3468225	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2017"	"2017"	"Male"	"M"	Suppressed	3386488	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2018"	"2018"	"Female"	"F"	11	3453393	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2018"	"2018"	"Male"	"M"	11	3382148	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2019"	"2019"	"Female"	"F"	16	3463552	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2019"	"2019"	"Male"	"M"	29	3400532	0.9
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2020 "	"2020"	"Female"	"F"	10	3483659	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"35-44 years"	"35-44"	"2020 "	"2020"	"Male"	"M"	14	3429227	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2011"	"2011"	"Female"	"F"	12	4316393	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2011"	"2011"	"Male"	"M"	13	4118376	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2012"	"2012"	"Female"	"F"	Suppressed	4270197	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2012"	"2012"	"Male"	"M"	Suppressed	4074460	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2013"	"2013"	"Female"	"F"	Suppressed	4211811	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2013"	"2013"	"Male"	"M"	Suppressed	4018090	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2014"	"2014"	"Female"	"F"	32	4155773	0.8
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2014"	"2014"	"Male"	"M"	29	3965634	0.7
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2015"	"2015"	"Female"	"F"	12	4099174	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2015"	"2015"	"Male"	"M"	13	3913887	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2016"	"2016"	"Female"	"F"	26	4018247	0.6
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2016"	"2016"	"Male"	"M"	19	3829349	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2017"	"2017"	"Female"	"F"	13	3944282	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2017"	"2017"	"Male"	"M"	16	3757897	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2018"	"2018"	"Female"	"F"	37	3814710	1.0
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2018"	"2018"	"Male"	"M"	36	3636060	1.0
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2019"	"2019"	"Female"	"F"	35	3694050	0.9
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2019"	"2019"	"Male"	"M"	30	3524378	0.9
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2020 "	"2020"	"Female"	"F"	19	3593268	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"45-54 years"	"45-54"	"2020 "	"2020"	"Male"	"M"	44	3432285	1.3
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2011"	"2011"	"Female"	"F"	12	3683065	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2011"	"2011"	"Male"	"M"	18	3403214	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2012"	"2012"	"Female"	"F"	Suppressed	3724015	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2012"	"2012"	"Male"	"M"	Suppressed	3444402	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2013"	"2013"	"Female"	"F"	13	3789996	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2013"	"2013"	"Male"	"M"	25	3513148	0.7
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2014"	"2014"	"Female"	"F"	51	3857118	1.3
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2014"	"2014"	"Male"	"M"	62	3579635	1.7
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2015"	"2015"	"Female"	"F"	32	3923478	0.8
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2015"	"2015"	"Male"	"M"	21	3646026	0.6
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2016"	"2016"	"Female"	"F"	41	3964240	1.0
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2016"	"2016"	"Male"	"M"	68	3685121	1.8
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2017"	"2017"	"Female"	"F"	35	4009611	0.9
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2017"	"2017"	"Male"	"M"	34	3727307	0.9
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2018"	"2018"	"Female"	"F"	65	4012935	1.6
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2018"	"2018"	"Male"	"M"	76	3731937	2.0
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2019"	"2019"	"Female"	"F"	72	4017594	1.8
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2019"	"2019"	"Male"	"M"	78	3735601	2.1
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2020 "	"2020"	"Female"	"F"	63	4001060	1.6
+	"Census Region 1: Northeast"	"CENS-R1"	"55-64 years"	"55-64"	"2020 "	"2020"	"Male"	"M"	92	3721049	2.5
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2011"	"2011"	"Female"	"F"	13	2229610	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2011"	"2011"	"Male"	"M"	Suppressed	1881621	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2012"	"2012"	"Female"	"F"	10	2366943	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2012"	"2012"	"Male"	"M"	Suppressed	2011542	Suppressed
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2013"	"2013"	"Female"	"F"	36	2470911	1.5
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2013"	"2013"	"Male"	"M"	33	2113057	1.6
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2014"	"2014"	"Female"	"F"	39	2566600	1.5
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2014"	"2014"	"Male"	"M"	40	2198979	1.8
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2015"	"2015"	"Female"	"F"	63	2660995	2.4
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2015"	"2015"	"Male"	"M"	58	2287000	2.5
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2016"	"2016"	"Female"	"F"	41	2749041	1.5
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2016"	"2016"	"Male"	"M"	49	2366731	2.1
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2017"	"2017"	"Female"	"F"	54	2850396	1.9
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2017"	"2017"	"Male"	"M"	63	2462621	2.6
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2018"	"2018"	"Female"	"F"	106	2900579	3.7
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2018"	"2018"	"Male"	"M"	143	2512576	5.7
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2019"	"2019"	"Female"	"F"	93	2985291	3.1
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2019"	"2019"	"Male"	"M"	86	2590827	3.3
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2020 "	"2020"	"Female"	"F"	80	3077686	2.6
+	"Census Region 1: Northeast"	"CENS-R1"	"65-74 years"	"65-74"	"2020 "	"2020"	"Male"	"M"	99	2675548	3.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2011"	"2011"	"Female"	"F"	22	1525575	1.4
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2011"	"2011"	"Male"	"M"	16	1063861	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2012"	"2012"	"Female"	"F"	12	1512261	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2012"	"2012"	"Male"	"M"	11	1063910	Unreliable
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2013"	"2013"	"Female"	"F"	75	1501941	5.0
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2013"	"2013"	"Male"	"M"	63	1067932	5.9
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2014"	"2014"	"Female"	"F"	55	1499107	3.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2014"	"2014"	"Male"	"M"	59	1076146	5.5
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2015"	"2015"	"Female"	"F"	141	1499351	9.4
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2015"	"2015"	"Male"	"M"	134	1085011	12.4
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2016"	"2016"	"Female"	"F"	52	1510534	3.4
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2016"	"2016"	"Male"	"M"	41	1100709	3.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2017"	"2017"	"Female"	"F"	103	1558813	6.6
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2017"	"2017"	"Male"	"M"	95	1142964	8.3
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2018"	"2018"	"Female"	"F"	221	1612356	13.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2018"	"2018"	"Male"	"M"	199	1190748	16.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2019"	"2019"	"Female"	"F"	109	1658018	6.6
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2019"	"2019"	"Male"	"M"	109	1229637	8.9
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2020 "	"2020"	"Female"	"F"	130	1691363	7.7
+	"Census Region 1: Northeast"	"CENS-R1"	"75-84 years"	"75-84"	"2020 "	"2020"	"Male"	"M"	123	1260070	9.8
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2011"	"2011"	"Female"	"F"	94	846082	11.1
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2011"	"2011"	"Male"	"M"	47	394077	11.9
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2012"	"2012"	"Female"	"F"	58	858625	6.8
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2012"	"2012"	"Male"	"M"	40	406165	9.8
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2013"	"2013"	"Female"	"F"	243	871758	27.9
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2013"	"2013"	"Male"	"M"	144	420222	34.3
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2014"	"2014"	"Female"	"F"	133	876012	15.2
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2014"	"2014"	"Male"	"M"	66	428350	15.4
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2015"	"2015"	"Female"	"F"	505	880345	57.4
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2015"	"2015"	"Male"	"M"	255	436402	58.4
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2016"	"2016"	"Female"	"F"	93	883134	10.5
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2016"	"2016"	"Male"	"M"	40	441443	9.1
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2017"	"2017"	"Female"	"F"	372	899374	41.4
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2017"	"2017"	"Male"	"M"	182	454529	40.0
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2018"	"2018"	"Female"	"F"	594	894051	66.4
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2018"	"2018"	"Male"	"M"	344	456707	75.3
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2019"	"2019"	"Female"	"F"	242	889464	27.2
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2019"	"2019"	"Male"	"M"	148	462596	32.0
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2020 "	"2020"	"Female"	"F"	206	882646	23.3
+	"Census Region 1: Northeast"	"CENS-R1"	"85+ years"	"85+"	"2020 "	"2020"	"Male"	"M"	128	462345	27.7
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2011"	"2011"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2011"	"2011"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2012"	"2012"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2012"	"2012"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2013"	"2013"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2013"	"2013"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2014"	"2014"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2014"	"2014"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2015"	"2015"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2015"	"2015"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2016"	"2016"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2016"	"2016"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2017"	"2017"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2017"	"2017"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2018"	"2018"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2018"	"2018"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2019"	"2019"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2019"	"2019"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2020 "	"2020"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"Not Stated"	"NS"	"2020 "	"2020"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2011"	"2011"	"Female"	"F"	Suppressed	410619	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2011"	"2011"	"Male"	"M"	Suppressed	429491	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2012"	"2012"	"Female"	"F"	Suppressed	401691	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2012"	"2012"	"Male"	"M"	Suppressed	421076	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2013"	"2013"	"Female"	"F"	Suppressed	402721	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2013"	"2013"	"Male"	"M"	Suppressed	422544	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2014"	"2014"	"Female"	"F"	Suppressed	403814	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2014"	"2014"	"Male"	"M"	Suppressed	423171	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2015"	"2015"	"Female"	"F"	Suppressed	406066	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2015"	"2015"	"Male"	"M"	Suppressed	426193	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2016"	"2016"	"Female"	"F"	Suppressed	403819	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2016"	"2016"	"Male"	"M"	Suppressed	423389	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2017"	"2017"	"Female"	"F"	Suppressed	400245	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2017"	"2017"	"Male"	"M"	Suppressed	419284	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2018"	"2018"	"Female"	"F"	Suppressed	391445	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2018"	"2018"	"Male"	"M"	Suppressed	409882	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2019"	"2019"	"Female"	"F"	Suppressed	385396	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2019"	"2019"	"Male"	"M"	Suppressed	403780	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2020 "	"2020"	"Female"	"F"	Suppressed	381835	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"< 1 year"	"1"	"2020 "	"2020"	"Male"	"M"	Suppressed	399115	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2011"	"2011"	"Female"	"F"	Suppressed	1686173	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2011"	"2011"	"Male"	"M"	Suppressed	1756822	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2012"	"2012"	"Female"	"F"	Suppressed	1665751	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2012"	"2012"	"Male"	"M"	Suppressed	1739224	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2013"	"2013"	"Female"	"F"	Suppressed	1641631	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2013"	"2013"	"Male"	"M"	Suppressed	1719278	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2014"	"2014"	"Female"	"F"	Suppressed	1633445	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2014"	"2014"	"Male"	"M"	Suppressed	1712690	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2015"	"2015"	"Female"	"F"	Suppressed	1630744	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2015"	"2015"	"Male"	"M"	Suppressed	1708916	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2016"	"2016"	"Female"	"F"	Suppressed	1633673	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2016"	"2016"	"Male"	"M"	Suppressed	1712467	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2017"	"2017"	"Female"	"F"	Suppressed	1637695	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2017"	"2017"	"Male"	"M"	Suppressed	1715659	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2018"	"2018"	"Female"	"F"	Suppressed	1632197	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2018"	"2018"	"Male"	"M"	10	1712325	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2019"	"2019"	"Female"	"F"	Suppressed	1616986	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2019"	"2019"	"Male"	"M"	11	1693695	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2020 "	"2020"	"Female"	"F"	Suppressed	1594836	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"1-4 years"	"1-4"	"2020 "	"2020"	"Male"	"M"	Suppressed	1668442	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2011"	"2011"	"Female"	"F"	Suppressed	4351666	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2011"	"2011"	"Male"	"M"	Suppressed	4550117	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2012"	"2012"	"Female"	"F"	Suppressed	4346386	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2012"	"2012"	"Male"	"M"	Suppressed	4543608	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2013"	"2013"	"Female"	"F"	Suppressed	4338985	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2013"	"2013"	"Male"	"M"	Suppressed	4534191	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2014"	"2014"	"Female"	"F"	Suppressed	4314715	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2014"	"2014"	"Male"	"M"	Suppressed	4506697	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2015"	"2015"	"Female"	"F"	Suppressed	4283808	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2015"	"2015"	"Male"	"M"	Suppressed	4472383	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2016"	"2016"	"Female"	"F"	Suppressed	4249397	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2016"	"2016"	"Male"	"M"	Suppressed	4440972	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2017"	"2017"	"Female"	"F"	10	4235605	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2017"	"2017"	"Male"	"M"	10	4428338	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2018"	"2018"	"Female"	"F"	Suppressed	4224394	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2018"	"2018"	"Male"	"M"	Suppressed	4416743	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2019"	"2019"	"Female"	"F"	Suppressed	4203227	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2019"	"2019"	"Male"	"M"	Suppressed	4396849	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2020 "	"2020"	"Female"	"F"	Suppressed	4189717	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"5-14 years"	"5-14"	"2020 "	"2020"	"Male"	"M"	Suppressed	4382952	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2011"	"2011"	"Female"	"F"	Suppressed	4594247	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2011"	"2011"	"Male"	"M"	Suppressed	4795595	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2012"	"2012"	"Female"	"F"	Suppressed	4587889	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2012"	"2012"	"Male"	"M"	Suppressed	4793445	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2013"	"2013"	"Female"	"F"	Suppressed	4596880	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2013"	"2013"	"Male"	"M"	Suppressed	4801063	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2014"	"2014"	"Female"	"F"	Suppressed	4595443	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2014"	"2014"	"Male"	"M"	Suppressed	4794724	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2015"	"2015"	"Female"	"F"	Suppressed	4572934	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2015"	"2015"	"Male"	"M"	Suppressed	4778044	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2016"	"2016"	"Female"	"F"	Suppressed	4526979	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2016"	"2016"	"Male"	"M"	Suppressed	4748242	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2017"	"2017"	"Female"	"F"	Suppressed	4492018	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2017"	"2017"	"Male"	"M"	Suppressed	4706724	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2018"	"2018"	"Female"	"F"	Suppressed	4456286	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2018"	"2018"	"Male"	"M"	Suppressed	4660362	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2019"	"2019"	"Female"	"F"	Suppressed	4421182	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2019"	"2019"	"Male"	"M"	Suppressed	4618525	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2020 "	"2020"	"Female"	"F"	Suppressed	4393580	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"15-24 years"	"15-24"	"2020 "	"2020"	"Male"	"M"	Suppressed	4584588	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2011"	"2011"	"Female"	"F"	Suppressed	4315790	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2011"	"2011"	"Male"	"M"	Suppressed	4375276	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2012"	"2012"	"Female"	"F"	Suppressed	4337074	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2012"	"2012"	"Male"	"M"	Suppressed	4399989	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2013"	"2013"	"Female"	"F"	Suppressed	4354638	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2013"	"2013"	"Male"	"M"	Suppressed	4429243	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2014"	"2014"	"Female"	"F"	15	4377537	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2014"	"2014"	"Male"	"M"	12	4454640	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2015"	"2015"	"Female"	"F"	Suppressed	4391936	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2015"	"2015"	"Male"	"M"	Suppressed	4480292	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2016"	"2016"	"Female"	"F"	15	4412476	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2016"	"2016"	"Male"	"M"	Suppressed	4526590	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2017"	"2017"	"Female"	"F"	Suppressed	4437862	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2017"	"2017"	"Male"	"M"	Suppressed	4572080	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2018"	"2018"	"Female"	"F"	Suppressed	4462891	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2018"	"2018"	"Male"	"M"	16	4615283	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2019"	"2019"	"Female"	"F"	12	4472733	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2019"	"2019"	"Male"	"M"	13	4637812	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2020 "	"2020"	"Female"	"F"	20	4467819	0.4
+	"Census Region 2: Midwest"	"CENS-R2"	"25-34 years"	"25-34"	"2020 "	"2020"	"Male"	"M"	21	4639331	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2011"	"2011"	"Female"	"F"	15	4215672	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2011"	"2011"	"Male"	"M"	Suppressed	4215080	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2012"	"2012"	"Female"	"F"	Suppressed	4177743	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2012"	"2012"	"Male"	"M"	Suppressed	4181881	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2013"	"2013"	"Female"	"F"	13	4160031	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2013"	"2013"	"Male"	"M"	10	4168489	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2014"	"2014"	"Female"	"F"	31	4147133	0.7
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2014"	"2014"	"Male"	"M"	39	4156941	0.9
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2015"	"2015"	"Female"	"F"	11	4134582	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2015"	"2015"	"Male"	"M"	Suppressed	4150249	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2016"	"2016"	"Female"	"F"	11	4103821	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2016"	"2016"	"Male"	"M"	24	4119878	0.6
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2017"	"2017"	"Female"	"F"	18	4123964	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2017"	"2017"	"Male"	"M"	12	4141875	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2018"	"2018"	"Female"	"F"	28	4161571	0.7
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2018"	"2018"	"Male"	"M"	24	4184136	0.6
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2019"	"2019"	"Female"	"F"	22	4193010	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2019"	"2019"	"Male"	"M"	14	4217278	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2020 "	"2020"	"Female"	"F"	24	4228324	0.6
+	"Census Region 2: Midwest"	"CENS-R2"	"35-44 years"	"35-44"	"2020 "	"2020"	"Male"	"M"	20	4255074	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2011"	"2011"	"Female"	"F"	15	4958644	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2011"	"2011"	"Male"	"M"	15	4853885	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2012"	"2012"	"Female"	"F"	11	4866737	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2012"	"2012"	"Male"	"M"	Suppressed	4767974	Suppressed
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2013"	"2013"	"Female"	"F"	23	4761513	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2013"	"2013"	"Male"	"M"	27	4674409	0.6
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2014"	"2014"	"Female"	"F"	54	4672514	1.2
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2014"	"2014"	"Male"	"M"	66	4595886	1.4
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2015"	"2015"	"Female"	"F"	19	4589391	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2015"	"2015"	"Male"	"M"	22	4524013	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2016"	"2016"	"Female"	"F"	43	4498622	1.0
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2016"	"2016"	"Male"	"M"	44	4434726	1.0
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2017"	"2017"	"Female"	"F"	16	4406822	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2017"	"2017"	"Male"	"M"	25	4349680	0.6
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2018"	"2018"	"Female"	"F"	68	4296584	1.6
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2018"	"2018"	"Male"	"M"	60	4243088	1.4
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2019"	"2019"	"Female"	"F"	37	4189018	0.9
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2019"	"2019"	"Male"	"M"	61	4137916	1.5
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2020 "	"2020"	"Female"	"F"	48	4107106	1.2
+	"Census Region 2: Midwest"	"CENS-R2"	"45-54 years"	"45-54"	"2020 "	"2020"	"Male"	"M"	60	4061693	1.5
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2011"	"2011"	"Female"	"F"	22	4328192	0.5
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2011"	"2011"	"Male"	"M"	27	4128046	0.7
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2012"	"2012"	"Female"	"F"	14	4387457	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2012"	"2012"	"Male"	"M"	10	4184726	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2013"	"2013"	"Female"	"F"	45	4479435	1.0
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2013"	"2013"	"Male"	"M"	43	4271526	1.0
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2014"	"2014"	"Female"	"F"	75	4553415	1.6
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2014"	"2014"	"Male"	"M"	105	4341902	2.4
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2015"	"2015"	"Female"	"F"	49	4624747	1.1
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2015"	"2015"	"Male"	"M"	39	4410680	0.9
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2016"	"2016"	"Female"	"F"	57	4669626	1.2
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2016"	"2016"	"Male"	"M"	80	4450118	1.8
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2017"	"2017"	"Female"	"F"	73	4703784	1.6
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2017"	"2017"	"Male"	"M"	74	4479472	1.7
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2018"	"2018"	"Female"	"F"	152	4716074	3.2
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2018"	"2018"	"Male"	"M"	156	4487408	3.5
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2019"	"2019"	"Female"	"F"	108	4706445	2.3
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2019"	"2019"	"Male"	"M"	106	4482179	2.4
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2020 "	"2020"	"Female"	"F"	110	4665011	2.4
+	"Census Region 2: Midwest"	"CENS-R2"	"55-64 years"	"55-64"	"2020 "	"2020"	"Male"	"M"	117	4442026	2.6
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2011"	"2011"	"Female"	"F"	26	2582041	1.0
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2011"	"2011"	"Male"	"M"	18	2267732	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2012"	"2012"	"Female"	"F"	17	2733210	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2012"	"2012"	"Male"	"M"	13	2414983	Unreliable
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2013"	"2013"	"Female"	"F"	53	2851717	1.9
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2013"	"2013"	"Male"	"M"	56	2533520	2.2
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2014"	"2014"	"Female"	"F"	76	2968707	2.6
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2014"	"2014"	"Male"	"M"	64	2642877	2.4
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2015"	"2015"	"Female"	"F"	89	3083526	2.9
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2015"	"2015"	"Male"	"M"	70	2754329	2.5
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2016"	"2016"	"Female"	"F"	54	3196592	1.7
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2016"	"2016"	"Male"	"M"	58	2859763	2.0
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2017"	"2017"	"Female"	"F"	110	3320772	3.3
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2017"	"2017"	"Male"	"M"	111	2976343	3.7
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2018"	"2018"	"Female"	"F"	228	3411237	6.7
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2018"	"2018"	"Male"	"M"	202	3061583	6.6
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2019"	"2019"	"Female"	"F"	112	3528048	3.2
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2019"	"2019"	"Male"	"M"	115	3165988	3.6
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2020 "	"2020"	"Female"	"F"	134	3656875	3.7
+	"Census Region 2: Midwest"	"CENS-R2"	"65-74 years"	"65-74"	"2020 "	"2020"	"Male"	"M"	145	3279287	4.4
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2011"	"2011"	"Female"	"F"	30	1728057	1.7
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2011"	"2011"	"Male"	"M"	24	1248832	1.9
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2012"	"2012"	"Female"	"F"	35	1719627	2.0
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2012"	"2012"	"Male"	"M"	37	1253559	3.0
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2013"	"2013"	"Female"	"F"	111	1718433	6.5
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2013"	"2013"	"Male"	"M"	105	1267656	8.3
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2014"	"2014"	"Female"	"F"	118	1725842	6.8
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2014"	"2014"	"Male"	"M"	113	1285816	8.8
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2015"	"2015"	"Female"	"F"	167	1731184	9.6
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2015"	"2015"	"Male"	"M"	150	1301242	11.5
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2016"	"2016"	"Female"	"F"	59	1748764	3.4
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2016"	"2016"	"Male"	"M"	39	1323193	2.9
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2017"	"2017"	"Female"	"F"	208	1791882	11.6
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2017"	"2017"	"Male"	"M"	197	1366979	14.4
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2018"	"2018"	"Female"	"F"	344	1858380	18.5
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2018"	"2018"	"Male"	"M"	294	1429372	20.6
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2019"	"2019"	"Female"	"F"	129	1906942	6.8
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2019"	"2019"	"Male"	"M"	141	1472891	9.6
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2020 "	"2020"	"Female"	"F"	174	1938863	9.0
+	"Census Region 2: Midwest"	"CENS-R2"	"75-84 years"	"75-84"	"2020 "	"2020"	"Male"	"M"	144	1505830	9.6
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2011"	"2011"	"Female"	"F"	94	927916	10.1
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2011"	"2011"	"Male"	"M"	42	438942	9.6
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2012"	"2012"	"Female"	"F"	125	939550	13.3
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2012"	"2012"	"Male"	"M"	67	452717	14.8
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2013"	"2013"	"Female"	"F"	363	951242	38.2
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2013"	"2013"	"Male"	"M"	213	468745	45.4
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2014"	"2014"	"Female"	"F"	280	957613	29.2
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2014"	"2014"	"Male"	"M"	152	479586	31.7
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2015"	"2015"	"Female"	"F"	552	963282	57.3
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2015"	"2015"	"Male"	"M"	277	488862	56.7
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2016"	"2016"	"Female"	"F"	83	963981	8.6
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2016"	"2016"	"Male"	"M"	49	494341	9.9
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2017"	"2017"	"Female"	"F"	565	969378	58.3
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2017"	"2017"	"Male"	"M"	303	502890	60.3
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2018"	"2018"	"Female"	"F"	850	969508	87.7
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2018"	"2018"	"Male"	"M"	504	507995	99.2
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2019"	"2019"	"Female"	"F"	240	964317	24.9
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2019"	"2019"	"Male"	"M"	133	514787	25.8
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2020 "	"2020"	"Female"	"F"	227	957484	23.7
+	"Census Region 2: Midwest"	"CENS-R2"	"85+ years"	"85+"	"2020 "	"2020"	"Male"	"M"	125	516956	24.2
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2011"	"2011"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2011"	"2011"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2012"	"2012"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2012"	"2012"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2013"	"2013"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2013"	"2013"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2014"	"2014"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2014"	"2014"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2015"	"2015"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2015"	"2015"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2016"	"2016"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2016"	"2016"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2017"	"2017"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2017"	"2017"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2018"	"2018"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2018"	"2018"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2019"	"2019"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2019"	"2019"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2020 "	"2020"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"Not Stated"	"NS"	"2020 "	"2020"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2011"	"2011"	"Female"	"F"	Suppressed	748106	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2011"	"2011"	"Male"	"M"	Suppressed	783201	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2012"	"2012"	"Female"	"F"	Suppressed	736808	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2012"	"2012"	"Male"	"M"	Suppressed	770929	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2013"	"2013"	"Female"	"F"	Suppressed	735830	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2013"	"2013"	"Male"	"M"	Suppressed	770468	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2014"	"2014"	"Female"	"F"	Suppressed	738185	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2014"	"2014"	"Male"	"M"	Suppressed	770645	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2015"	"2015"	"Female"	"F"	Suppressed	748890	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2015"	"2015"	"Male"	"M"	Suppressed	783450	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2016"	"2016"	"Female"	"F"	Suppressed	752340	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2016"	"2016"	"Male"	"M"	Suppressed	786050	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2017"	"2017"	"Female"	"F"	Suppressed	749018	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2017"	"2017"	"Male"	"M"	Suppressed	783777	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2018"	"2018"	"Female"	"F"	Suppressed	730438	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2018"	"2018"	"Male"	"M"	Suppressed	764348	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2019"	"2019"	"Female"	"F"	Suppressed	721017	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2019"	"2019"	"Male"	"M"	Suppressed	754276	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2020 "	"2020"	"Female"	"F"	Suppressed	717854	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"< 1 year"	"1"	"2020 "	"2020"	"Male"	"M"	Suppressed	748811	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2011"	"2011"	"Female"	"F"	Suppressed	3021434	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2011"	"2011"	"Male"	"M"	Suppressed	3148185	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2012"	"2012"	"Female"	"F"	Suppressed	3004590	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2012"	"2012"	"Male"	"M"	Suppressed	3128755	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2013"	"2013"	"Female"	"F"	Suppressed	2987266	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2013"	"2013"	"Male"	"M"	Suppressed	3113191	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2014"	"2014"	"Female"	"F"	Suppressed	2991670	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2014"	"2014"	"Male"	"M"	10	3118315	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2015"	"2015"	"Female"	"F"	Suppressed	2999794	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2015"	"2015"	"Male"	"M"	Suppressed	3129065	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2016"	"2016"	"Female"	"F"	Suppressed	3023249	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2016"	"2016"	"Male"	"M"	Suppressed	3153313	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2017"	"2017"	"Female"	"F"	Suppressed	3038561	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2017"	"2017"	"Male"	"M"	11	3172084	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2018"	"2018"	"Female"	"F"	10	3044116	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2018"	"2018"	"Male"	"M"	Suppressed	3177910	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2019"	"2019"	"Female"	"F"	Suppressed	3024911	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2019"	"2019"	"Male"	"M"	10	3154271	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2020 "	"2020"	"Female"	"F"	Suppressed	2997930	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"1-4 years"	"1-4"	"2020 "	"2020"	"Male"	"M"	14	3124017	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2011"	"2011"	"Female"	"F"	Suppressed	7574943	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2011"	"2011"	"Male"	"M"	Suppressed	7908068	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2012"	"2012"	"Female"	"F"	10	7635850	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2012"	"2012"	"Male"	"M"	Suppressed	7968410	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2013"	"2013"	"Female"	"F"	10	7683992	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2013"	"2013"	"Male"	"M"	12	8011340	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2014"	"2014"	"Female"	"F"	15	7722785	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2014"	"2014"	"Male"	"M"	15	8034958	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2015"	"2015"	"Female"	"F"	Suppressed	7743842	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2015"	"2015"	"Male"	"M"	Suppressed	8051222	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2016"	"2016"	"Female"	"F"	Suppressed	7761431	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2016"	"2016"	"Male"	"M"	Suppressed	8063057	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2017"	"2017"	"Female"	"F"	18	7794290	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2017"	"2017"	"Male"	"M"	Suppressed	8106072	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2018"	"2018"	"Female"	"F"	22	7824199	0.3
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2018"	"2018"	"Male"	"M"	Suppressed	8142029	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2019"	"2019"	"Female"	"F"	18	7835981	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2019"	"2019"	"Male"	"M"	12	8162564	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2020 "	"2020"	"Female"	"F"	15	7876260	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"5-14 years"	"5-14"	"2020 "	"2020"	"Male"	"M"	11	8200539	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2011"	"2011"	"Female"	"F"	Suppressed	7928427	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2011"	"2011"	"Male"	"M"	Suppressed	8284209	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2012"	"2012"	"Female"	"F"	Suppressed	7975286	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2012"	"2012"	"Male"	"M"	Suppressed	8354700	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2013"	"2013"	"Female"	"F"	Suppressed	7990627	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2013"	"2013"	"Male"	"M"	Suppressed	8397182	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2014"	"2014"	"Female"	"F"	Suppressed	8023500	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2014"	"2014"	"Male"	"M"	15	8426402	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2015"	"2015"	"Female"	"F"	Suppressed	8026000	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2015"	"2015"	"Male"	"M"	Suppressed	8439772	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2016"	"2016"	"Female"	"F"	Suppressed	7991119	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2016"	"2016"	"Male"	"M"	Suppressed	8383522	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2017"	"2017"	"Female"	"F"	11	7976040	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2017"	"2017"	"Male"	"M"	Suppressed	8379568	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2018"	"2018"	"Female"	"F"	Suppressed	7988824	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2018"	"2018"	"Male"	"M"	14	8365060	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2019"	"2019"	"Female"	"F"	Suppressed	7983030	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2019"	"2019"	"Male"	"M"	Suppressed	8337625	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2020 "	"2020"	"Female"	"F"	19	8023288	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"15-24 years"	"15-24"	"2020 "	"2020"	"Male"	"M"	13	8362251	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2011"	"2011"	"Female"	"F"	21	7785399	0.3
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2011"	"2011"	"Male"	"M"	17	7795102	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2012"	"2012"	"Female"	"F"	Suppressed	7882925	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2012"	"2012"	"Male"	"M"	Suppressed	7922042	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2013"	"2013"	"Female"	"F"	24	7975765	0.3
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2013"	"2013"	"Male"	"M"	23	8024657	0.3
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2014"	"2014"	"Female"	"F"	38	8129807	0.5
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2014"	"2014"	"Male"	"M"	40	8160153	0.5
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2015"	"2015"	"Female"	"F"	10	8269458	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2015"	"2015"	"Male"	"M"	Suppressed	8297961	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2016"	"2016"	"Female"	"F"	17	8384530	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2016"	"2016"	"Male"	"M"	12	8424388	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2017"	"2017"	"Female"	"F"	Suppressed	8497659	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2017"	"2017"	"Male"	"M"	12	8578912	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2018"	"2018"	"Female"	"F"	21	8574183	0.2
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2018"	"2018"	"Male"	"M"	35	8685122	0.4
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2019"	"2019"	"Female"	"F"	27	8621447	0.3
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2019"	"2019"	"Male"	"M"	28	8750877	0.3
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2020 "	"2020"	"Female"	"F"	34	8670778	0.4
+	"Census Region 3: South"	"CENS-R3"	"25-34 years"	"25-34"	"2020 "	"2020"	"Male"	"M"	33	8816014	0.4
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2011"	"2011"	"Female"	"F"	18	7714407	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2011"	"2011"	"Male"	"M"	16	7554441	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2012"	"2012"	"Female"	"F"	Suppressed	7724969	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2012"	"2012"	"Male"	"M"	Suppressed	7564198	Suppressed
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2013"	"2013"	"Female"	"F"	38	7746174	0.5
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2013"	"2013"	"Male"	"M"	47	7575908	0.6
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2014"	"2014"	"Female"	"F"	82	7791951	1.1
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2014"	"2014"	"Male"	"M"	72	7601831	0.9
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2015"	"2015"	"Female"	"F"	12	7836696	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2015"	"2015"	"Male"	"M"	15	7640436	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2016"	"2016"	"Female"	"F"	23	7837159	0.3
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2016"	"2016"	"Male"	"M"	34	7647807	0.4
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2017"	"2017"	"Female"	"F"	20	7918616	0.3
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2017"	"2017"	"Male"	"M"	30	7729247	0.4
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2018"	"2018"	"Female"	"F"	64	8011163	0.8
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2018"	"2018"	"Male"	"M"	64	7823811	0.8
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2019"	"2019"	"Female"	"F"	47	8090830	0.6
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2019"	"2019"	"Male"	"M"	61	7903267	0.8
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2020 "	"2020"	"Female"	"F"	68	8199823	0.8
+	"Census Region 3: South"	"CENS-R3"	"35-44 years"	"35-44"	"2020 "	"2020"	"Male"	"M"	53	8013795	0.7
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2011"	"2011"	"Female"	"F"	25	8385352	0.3
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2011"	"2011"	"Male"	"M"	38	8052476	0.5
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2012"	"2012"	"Female"	"F"	16	8328113	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2012"	"2012"	"Male"	"M"	14	8003490	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2013"	"2013"	"Female"	"F"	53	8273478	0.6
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2013"	"2013"	"Male"	"M"	74	7951268	0.9
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2014"	"2014"	"Female"	"F"	123	8249523	1.5
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2014"	"2014"	"Male"	"M"	126	7930156	1.6
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2015"	"2015"	"Female"	"F"	25	8246924	0.3
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2015"	"2015"	"Male"	"M"	29	7923440	0.4
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2016"	"2016"	"Female"	"F"	54	8235356	0.7
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2016"	"2016"	"Male"	"M"	54	7922550	0.7
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2017"	"2017"	"Female"	"F"	58	8214327	0.7
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2017"	"2017"	"Male"	"M"	67	7901649	0.8
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2018"	"2018"	"Female"	"F"	139	8137496	1.7
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2018"	"2018"	"Male"	"M"	150	7822420	1.9
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2019"	"2019"	"Female"	"F"	84	8039461	1.0
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2019"	"2019"	"Male"	"M"	83	7723580	1.1
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2020 "	"2020"	"Female"	"F"	108	7990775	1.4
+	"Census Region 3: South"	"CENS-R3"	"45-54 years"	"45-54"	"2020 "	"2020"	"Male"	"M"	115	7670890	1.5
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2011"	"2011"	"Female"	"F"	38	7303621	0.5
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2011"	"2011"	"Male"	"M"	32	6681766	0.5
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2012"	"2012"	"Female"	"F"	21	7404564	0.3
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2012"	"2012"	"Male"	"M"	13	6761062	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2013"	"2013"	"Female"	"F"	74	7537361	1.0
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2013"	"2013"	"Male"	"M"	86	6881910	1.2
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2014"	"2014"	"Female"	"F"	165	7693808	2.1
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2014"	"2014"	"Male"	"M"	217	7020291	3.1
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2015"	"2015"	"Female"	"F"	72	7867062	0.9
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2015"	"2015"	"Male"	"M"	66	7183212	0.9
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2016"	"2016"	"Female"	"F"	74	8012217	0.9
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2016"	"2016"	"Male"	"M"	91	7320282	1.2
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2017"	"2017"	"Female"	"F"	109	8146049	1.3
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2017"	"2017"	"Male"	"M"	111	7444425	1.5
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2018"	"2018"	"Female"	"F"	275	8244202	3.3
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2018"	"2018"	"Male"	"M"	290	7544338	3.8
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2019"	"2019"	"Female"	"F"	171	8319354	2.1
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2019"	"2019"	"Male"	"M"	189	7629235	2.5
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2020 "	"2020"	"Female"	"F"	197	8363721	2.4
+	"Census Region 3: South"	"CENS-R3"	"55-64 years"	"55-64"	"2020 "	"2020"	"Male"	"M"	228	7680463	3.0
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2011"	"2011"	"Female"	"F"	33	4604359	0.7
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2011"	"2011"	"Male"	"M"	24	4005412	0.6
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2012"	"2012"	"Female"	"F"	17	4909121	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2012"	"2012"	"Male"	"M"	19	4283123	Unreliable
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2013"	"2013"	"Female"	"F"	72	5153847	1.4
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2013"	"2013"	"Male"	"M"	80	4503512	1.8
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2014"	"2014"	"Female"	"F"	102	5405132	1.9
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2014"	"2014"	"Male"	"M"	146	4714557	3.1
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2015"	"2015"	"Female"	"F"	100	5642671	1.8
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2015"	"2015"	"Male"	"M"	107	4914602	2.2
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2016"	"2016"	"Female"	"F"	70	5875510	1.2
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2016"	"2016"	"Male"	"M"	65	5102335	1.3
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2017"	"2017"	"Female"	"F"	185	6087634	3.0
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2017"	"2017"	"Male"	"M"	177	5264944	3.4
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2018"	"2018"	"Female"	"F"	313	6265118	5.0
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2018"	"2018"	"Male"	"M"	330	5397362	6.1
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2019"	"2019"	"Female"	"F"	209	6471977	3.2
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2019"	"2019"	"Male"	"M"	214	5558889	3.8
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2020 "	"2020"	"Female"	"F"	243	6706174	3.6
+	"Census Region 3: South"	"CENS-R3"	"65-74 years"	"65-74"	"2020 "	"2020"	"Male"	"M"	252	5740854	4.4
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2011"	"2011"	"Female"	"F"	45	2799253	1.6
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2011"	"2011"	"Male"	"M"	28	2052821	1.4
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2012"	"2012"	"Female"	"F"	39	2824385	1.4
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2012"	"2012"	"Male"	"M"	37	2095561	1.8
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2013"	"2013"	"Female"	"F"	88	2868402	3.1
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2013"	"2013"	"Male"	"M"	85	2154388	3.9
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2014"	"2014"	"Female"	"F"	126	2927332	4.3
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2014"	"2014"	"Male"	"M"	136	2219638	6.1
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2015"	"2015"	"Female"	"F"	219	2991851	7.3
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2015"	"2015"	"Male"	"M"	189	2285208	8.3
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2016"	"2016"	"Female"	"F"	72	3074033	2.3
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2016"	"2016"	"Male"	"M"	56	2359203	2.4
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2017"	"2017"	"Female"	"F"	247	3174561	7.8
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2017"	"2017"	"Male"	"M"	214	2456509	8.7
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2018"	"2018"	"Female"	"F"	427	3326628	12.8
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2018"	"2018"	"Male"	"M"	438	2593572	16.9
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2019"	"2019"	"Female"	"F"	205	3460609	5.9
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2019"	"2019"	"Male"	"M"	205	2705341	7.6
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2020 "	"2020"	"Female"	"F"	221	3578424	6.2
+	"Census Region 3: South"	"CENS-R3"	"75-84 years"	"75-84"	"2020 "	"2020"	"Male"	"M"	207	2803463	7.4
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2011"	"2011"	"Female"	"F"	73	1284846	5.7
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2011"	"2011"	"Male"	"M"	39	630908	6.2
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2012"	"2012"	"Female"	"F"	107	1318495	8.1
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2012"	"2012"	"Male"	"M"	36	659845	5.5
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2013"	"2013"	"Female"	"F"	224	1353993	16.5
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2013"	"2013"	"Male"	"M"	139	692894	20.1
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2014"	"2014"	"Female"	"F"	219	1379465	15.9
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2014"	"2014"	"Male"	"M"	128	721830	17.7
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2015"	"2015"	"Female"	"F"	436	1409757	30.9
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2015"	"2015"	"Male"	"M"	264	751534	35.1
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2016"	"2016"	"Female"	"F"	87	1433981	6.1
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2016"	"2016"	"Male"	"M"	60	776142	7.7
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2017"	"2017"	"Female"	"F"	443	1445341	30.7
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2017"	"2017"	"Male"	"M"	284	799341	35.5
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2018"	"2018"	"Female"	"F"	742	1466719	50.6
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2018"	"2018"	"Male"	"M"	490	824890	59.4
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2019"	"2019"	"Female"	"F"	304	1481449	20.5
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2019"	"2019"	"Male"	"M"	167	850457	19.6
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2020 "	"2020"	"Female"	"F"	213	1501557	14.2
+	"Census Region 3: South"	"CENS-R3"	"85+ years"	"85+"	"2020 "	"2020"	"Male"	"M"	144	875073	16.5
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2011"	"2011"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2011"	"2011"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2012"	"2012"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2012"	"2012"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2013"	"2013"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2013"	"2013"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2014"	"2014"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2014"	"2014"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2015"	"2015"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2015"	"2015"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2016"	"2016"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2016"	"2016"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2017"	"2017"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2017"	"2017"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2018"	"2018"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2018"	"2018"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2019"	"2019"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2019"	"2019"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2020 "	"2020"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"Not Stated"	"NS"	"2020 "	"2020"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2011"	"2011"	"Female"	"F"	Suppressed	479895	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2011"	"2011"	"Male"	"M"	Suppressed	502066	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2012"	"2012"	"Female"	"F"	Suppressed	479365	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2012"	"2012"	"Male"	"M"	Suppressed	501598	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2013"	"2013"	"Female"	"F"	Suppressed	473859	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2013"	"2013"	"Male"	"M"	Suppressed	495952	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2014"	"2014"	"Female"	"F"	Suppressed	476471	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2014"	"2014"	"Male"	"M"	Suppressed	497973	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2015"	"2015"	"Female"	"F"	Suppressed	477187	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2015"	"2015"	"Male"	"M"	Suppressed	499920	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2016"	"2016"	"Female"	"F"	Suppressed	477749	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2016"	"2016"	"Male"	"M"	Suppressed	500158	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2017"	"2017"	"Female"	"F"	Suppressed	470496	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2017"	"2017"	"Male"	"M"	Suppressed	493031	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2018"	"2018"	"Female"	"F"	Suppressed	459829	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2018"	"2018"	"Male"	"M"	Suppressed	481858	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2019"	"2019"	"Female"	"F"	Suppressed	446751	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2019"	"2019"	"Male"	"M"	Suppressed	468131	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2020 "	"2020"	"Female"	"F"	Suppressed	435585	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"< 1 year"	"1"	"2020 "	"2020"	"Male"	"M"	Suppressed	455159	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2011"	"2011"	"Female"	"F"	Suppressed	1947437	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2011"	"2011"	"Male"	"M"	Suppressed	2039969	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2012"	"2012"	"Female"	"F"	Suppressed	1934914	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2012"	"2012"	"Male"	"M"	Suppressed	2022647	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2013"	"2013"	"Female"	"F"	Suppressed	1912425	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2013"	"2013"	"Male"	"M"	Suppressed	1996889	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2014"	"2014"	"Female"	"F"	Suppressed	1911367	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2014"	"2014"	"Male"	"M"	Suppressed	1996814	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2015"	"2015"	"Female"	"F"	Suppressed	1903560	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2015"	"2015"	"Male"	"M"	Suppressed	1995057	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2016"	"2016"	"Female"	"F"	Suppressed	1907344	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2016"	"2016"	"Male"	"M"	Suppressed	1999018	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2017"	"2017"	"Female"	"F"	Suppressed	1906701	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2017"	"2017"	"Male"	"M"	Suppressed	1999668	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2018"	"2018"	"Female"	"F"	Suppressed	1897629	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2018"	"2018"	"Male"	"M"	Suppressed	1990540	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2019"	"2019"	"Female"	"F"	Suppressed	1863884	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2019"	"2019"	"Male"	"M"	Suppressed	1954176	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2020 "	"2020"	"Female"	"F"	Suppressed	1821212	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"1-4 years"	"1-4"	"2020 "	"2020"	"Male"	"M"	Suppressed	1905221	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2011"	"2011"	"Female"	"F"	Suppressed	4830517	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2011"	"2011"	"Male"	"M"	Suppressed	5051580	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2012"	"2012"	"Female"	"F"	Suppressed	4841195	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2012"	"2012"	"Male"	"M"	Suppressed	5068222	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2013"	"2013"	"Female"	"F"	Suppressed	4863264	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2013"	"2013"	"Male"	"M"	Suppressed	5092301	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2014"	"2014"	"Female"	"F"	Suppressed	4874713	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2014"	"2014"	"Male"	"M"	Suppressed	5091624	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2015"	"2015"	"Female"	"F"	Suppressed	4880291	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2015"	"2015"	"Male"	"M"	Suppressed	5090857	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2016"	"2016"	"Female"	"F"	Suppressed	4883039	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2016"	"2016"	"Male"	"M"	Suppressed	5095846	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2017"	"2017"	"Female"	"F"	Suppressed	4892426	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2017"	"2017"	"Male"	"M"	Suppressed	5110331	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2018"	"2018"	"Female"	"F"	Suppressed	4897794	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2018"	"2018"	"Male"	"M"	Suppressed	5121732	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2019"	"2019"	"Female"	"F"	11	4885236	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2019"	"2019"	"Male"	"M"	Suppressed	5111495	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2020 "	"2020"	"Female"	"F"	Suppressed	4872630	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"5-14 years"	"5-14"	"2020 "	"2020"	"Male"	"M"	Suppressed	5104745	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2011"	"2011"	"Female"	"F"	11	5078543	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2011"	"2011"	"Male"	"M"	Suppressed	5440190	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2012"	"2012"	"Female"	"F"	Suppressed	5105127	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2012"	"2012"	"Male"	"M"	Suppressed	5457973	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2013"	"2013"	"Female"	"F"	Suppressed	5102053	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2013"	"2013"	"Male"	"M"	Suppressed	5453714	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2014"	"2014"	"Female"	"F"	Suppressed	5101666	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2014"	"2014"	"Male"	"M"	Suppressed	5444283	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2015"	"2015"	"Female"	"F"	Suppressed	5074077	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2015"	"2015"	"Male"	"M"	Suppressed	5424912	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2016"	"2016"	"Female"	"F"	Suppressed	5028275	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2016"	"2016"	"Male"	"M"	Suppressed	5372340	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2017"	"2017"	"Female"	"F"	Suppressed	4993639	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2017"	"2017"	"Male"	"M"	Suppressed	5317171	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2018"	"2018"	"Female"	"F"	11	4984247	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2018"	"2018"	"Male"	"M"	14	5292956	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2019"	"2019"	"Female"	"F"	Suppressed	4959965	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2019"	"2019"	"Male"	"M"	Suppressed	5253933	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2020 "	"2020"	"Female"	"F"	Suppressed	4945198	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"15-24 years"	"15-24"	"2020 "	"2020"	"Male"	"M"	10	5232035	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2011"	"2011"	"Female"	"F"	13	5043325	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2011"	"2011"	"Male"	"M"	16	5302175	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2012"	"2012"	"Female"	"F"	Suppressed	5095545	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2012"	"2012"	"Male"	"M"	Suppressed	5378299	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2013"	"2013"	"Female"	"F"	Suppressed	5165755	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2013"	"2013"	"Male"	"M"	Suppressed	5476953	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2014"	"2014"	"Female"	"F"	25	5284272	0.5
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2014"	"2014"	"Male"	"M"	22	5585130	0.4
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2015"	"2015"	"Female"	"F"	Suppressed	5389144	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2015"	"2015"	"Male"	"M"	Suppressed	5701118	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2016"	"2016"	"Female"	"F"	Suppressed	5479753	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2016"	"2016"	"Male"	"M"	10	5791194	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2017"	"2017"	"Female"	"F"	Suppressed	5572515	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2017"	"2017"	"Male"	"M"	Suppressed	5928976	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2018"	"2018"	"Female"	"F"	17	5628725	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2018"	"2018"	"Male"	"M"	14	6007792	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2019"	"2019"	"Female"	"F"	13	5666003	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2019"	"2019"	"Male"	"M"	19	6061656	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2020 "	"2020"	"Female"	"F"	26	5678866	0.5
+	"Census Region 4: West"	"CENS-R4"	"25-34 years"	"25-34"	"2020 "	"2020"	"Male"	"M"	22	6088485	0.4
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2011"	"2011"	"Female"	"F"	12	4798892	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2011"	"2011"	"Male"	"M"	11	4900650	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2012"	"2012"	"Female"	"F"	Suppressed	4817265	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2012"	"2012"	"Male"	"M"	Suppressed	4917804	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2013"	"2013"	"Female"	"F"	12	4830441	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2013"	"2013"	"Male"	"M"	14	4930895	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2014"	"2014"	"Female"	"F"	44	4872302	0.9
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2014"	"2014"	"Male"	"M"	49	4960667	1.0
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2015"	"2015"	"Female"	"F"	Suppressed	4902130	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2015"	"2015"	"Male"	"M"	Suppressed	4998780	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2016"	"2016"	"Female"	"F"	24	4914669	0.5
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2016"	"2016"	"Male"	"M"	26	5013481	0.5
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2017"	"2017"	"Female"	"F"	10	4995465	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2017"	"2017"	"Male"	"M"	12	5111490	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2018"	"2018"	"Female"	"F"	34	5064161	0.7
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2018"	"2018"	"Male"	"M"	30	5197505	0.6
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2019"	"2019"	"Female"	"F"	32	5119672	0.6
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2019"	"2019"	"Male"	"M"	33	5271003	0.6
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2020 "	"2020"	"Female"	"F"	31	5178518	0.6
+	"Census Region 4: West"	"CENS-R4"	"35-44 years"	"35-44"	"2020 "	"2020"	"Male"	"M"	36	5347772	0.7
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2011"	"2011"	"Female"	"F"	18	5038567	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2011"	"2011"	"Male"	"M"	30	4994510	0.6
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2012"	"2012"	"Female"	"F"	Suppressed	4996821	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2012"	"2012"	"Male"	"M"	13	4960946	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2013"	"2013"	"Female"	"F"	24	4951646	0.5
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2013"	"2013"	"Male"	"M"	35	4925317	0.7
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2014"	"2014"	"Female"	"F"	68	4955997	1.4
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2014"	"2014"	"Male"	"M"	85	4933368	1.7
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2015"	"2015"	"Female"	"F"	15	4953896	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2015"	"2015"	"Male"	"M"	18	4937436	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2016"	"2016"	"Female"	"F"	54	4928315	1.1
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2016"	"2016"	"Male"	"M"	50	4919514	1.0
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2017"	"2017"	"Female"	"F"	25	4903164	0.5
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2017"	"2017"	"Male"	"M"	30	4897131	0.6
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2018"	"2018"	"Female"	"F"	53	4841707	1.1
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2018"	"2018"	"Male"	"M"	63	4839634	1.3
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2019"	"2019"	"Female"	"F"	44	4780407	0.9
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2019"	"2019"	"Male"	"M"	83	4786092	1.7
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2020 "	"2020"	"Female"	"F"	53	4750292	1.1
+	"Census Region 4: West"	"CENS-R4"	"45-54 years"	"45-54"	"2020 "	"2020"	"Male"	"M"	69	4759824	1.4
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2011"	"2011"	"Female"	"F"	24	4389057	0.5
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2011"	"2011"	"Male"	"M"	31	4145179	0.7
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2012"	"2012"	"Female"	"F"	Suppressed	4467272	Suppressed
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2012"	"2012"	"Male"	"M"	14	4212704	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2013"	"2013"	"Female"	"F"	41	4552884	0.9
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2013"	"2013"	"Male"	"M"	47	4290171	1.1
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2014"	"2014"	"Female"	"F"	93	4651358	2.0
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2014"	"2014"	"Male"	"M"	132	4380054	3.0
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2015"	"2015"	"Female"	"F"	32	4747785	0.7
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2015"	"2015"	"Male"	"M"	29	4474829	0.6
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2016"	"2016"	"Female"	"F"	71	4818023	1.5
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2016"	"2016"	"Male"	"M"	83	4543517	1.8
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2017"	"2017"	"Female"	"F"	87	4878411	1.8
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2017"	"2017"	"Male"	"M"	82	4606599	1.8
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2018"	"2018"	"Female"	"F"	134	4900562	2.7
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2018"	"2018"	"Male"	"M"	139	4635180	3.0
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2019"	"2019"	"Female"	"F"	124	4905925	2.5
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2019"	"2019"	"Male"	"M"	155	4652204	3.3
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2020 "	"2020"	"Female"	"F"	102	4884451	2.1
+	"Census Region 4: West"	"CENS-R4"	"55-64 years"	"55-64"	"2020 "	"2020"	"Male"	"M"	134	4645896	2.9
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2011"	"2011"	"Female"	"F"	17	2589415	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2011"	"2011"	"Male"	"M"	18	2321548	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2012"	"2012"	"Female"	"F"	14	2773256	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2012"	"2012"	"Male"	"M"	16	2493214	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2013"	"2013"	"Female"	"F"	29	2942649	1.0
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2013"	"2013"	"Male"	"M"	42	2647553	1.6
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2014"	"2014"	"Female"	"F"	67	3108806	2.2
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2014"	"2014"	"Male"	"M"	84	2792632	3.0
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2015"	"2015"	"Female"	"F"	53	3270977	1.6
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2015"	"2015"	"Male"	"M"	62	2936417	2.1
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2016"	"2016"	"Female"	"F"	59	3418078	1.7
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2016"	"2016"	"Male"	"M"	93	3062280	3.0
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2017"	"2017"	"Female"	"F"	106	3547504	3.0
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2017"	"2017"	"Male"	"M"	119	3173232	3.8
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2018"	"2018"	"Female"	"F"	179	3669297	4.9
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2018"	"2018"	"Male"	"M"	203	3274564	6.2
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2019"	"2019"	"Female"	"F"	131	3798538	3.4
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2019"	"2019"	"Male"	"M"	152	3383875	4.5
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2020 "	"2020"	"Female"	"F"	110	3925123	2.8
+	"Census Region 4: West"	"CENS-R4"	"65-74 years"	"65-74"	"2020 "	"2020"	"Male"	"M"	143	3487851	4.1
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2011"	"2011"	"Female"	"F"	19	1549312	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2011"	"2011"	"Male"	"M"	19	1207519	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2012"	"2012"	"Female"	"F"	17	1568211	Unreliable
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2012"	"2012"	"Male"	"M"	23	1235120	1.9
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2013"	"2013"	"Female"	"F"	88	1597226	5.5
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2013"	"2013"	"Male"	"M"	78	1270541	6.1
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2014"	"2014"	"Female"	"F"	55	1637031	3.4
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2014"	"2014"	"Male"	"M"	53	1311778	4.0
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2015"	"2015"	"Female"	"F"	128	1677217	7.6
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2015"	"2015"	"Male"	"M"	88	1352110	6.5
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2016"	"2016"	"Female"	"F"	79	1723329	4.6
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2016"	"2016"	"Male"	"M"	85	1393769	6.1
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2017"	"2017"	"Female"	"F"	222	1773420	12.5
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2017"	"2017"	"Male"	"M"	180	1441423	12.5
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2018"	"2018"	"Female"	"F"	275	1861970	14.8
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2018"	"2018"	"Male"	"M"	278	1521348	18.3
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2019"	"2019"	"Female"	"F"	129	1946080	6.6
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2019"	"2019"	"Male"	"M"	142	1590354	8.9
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2020 "	"2020"	"Female"	"F"	123	2019622	6.1
+	"Census Region 4: West"	"CENS-R4"	"75-84 years"	"75-84"	"2020 "	"2020"	"Male"	"M"	125	1653912	7.6
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2011"	"2011"	"Female"	"F"	61	784304	7.8
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2011"	"2011"	"Male"	"M"	31	430098	7.2
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2012"	"2012"	"Female"	"F"	34	806627	4.2
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2012"	"2012"	"Male"	"M"	33	445306	7.4
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2013"	"2013"	"Female"	"F"	159	822014	19.3
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2013"	"2013"	"Male"	"M"	107	459921	23.3
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2014"	"2014"	"Female"	"F"	65	840272	7.7
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2014"	"2014"	"Male"	"M"	55	479103	11.5
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2015"	"2015"	"Female"	"F"	289	859479	33.6
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2015"	"2015"	"Male"	"M"	142	497500	28.5
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2016"	"2016"	"Female"	"F"	131	874392	15.0
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2016"	"2016"	"Male"	"M"	107	512917	20.9
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2017"	"2017"	"Female"	"F"	490	874920	56.0
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2017"	"2017"	"Male"	"M"	306	522909	58.5
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2018"	"2018"	"Female"	"F"	580	888532	65.3
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2018"	"2018"	"Male"	"M"	397	536101	74.1
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2019"	"2019"	"Female"	"F"	222	893240	24.9
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2019"	"2019"	"Male"	"M"	127	548648	23.1
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2020 "	"2020"	"Female"	"F"	139	902040	15.4
+	"Census Region 4: West"	"CENS-R4"	"85+ years"	"85+"	"2020 "	"2020"	"Male"	"M"	119	560319	21.2
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2011"	"2011"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2011"	"2011"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2012"	"2012"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2012"	"2012"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2013"	"2013"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2013"	"2013"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2014"	"2014"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2014"	"2014"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2015"	"2015"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2015"	"2015"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2016"	"2016"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2016"	"2016"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2017"	"2017"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2017"	"2017"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2018"	"2018"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2018"	"2018"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2019"	"2019"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2019"	"2019"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2020 "	"2020"	"Female"	"F"	Suppressed	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"Not Stated"	"NS"	"2020 "	"2020"	"Male"	"M"	Suppressed	Not Applicable	Not Applicable
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"ICD-10 113 Cause List: Influenza (J09-J11)"
+"Year/Month: 2011; 2012; 2013; 2014; 2015; 2016; 2017; 2018; 2019; 2020"
+"Group By: Census Region; Ten-Year Age Groups; Year; Gender"
+"Show Totals: Disabled"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Dec 7, 2022 6:48:31 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files,"
+"1999-2020, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/ucd-icd10.html on Dec 7, 2022 6:48:31 PM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"4. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Not Stated."
+"5. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"6. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."
