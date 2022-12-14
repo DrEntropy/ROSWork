@@ -1,0 +1,72 @@
+## Chapter 3 
+
+```{r}
+library(tidyverse)
+```
+
+### Exercise 1
+
+ 
+```{r}
+survey <- tibble(age_groups = c('18-29','30-40','45-64','65+') ,response = c(50,60,40,30), surv_pop = c(200,250,300,250))
+ 
+
+survey |> mutate(weighted_response = response*surv_pop/sum(surv_pop)) |> summarize(sum(weighted_response))
+
+#> 44.5
+```
+
+### Exercise 2
+
+I did this by trial and error, I am sure there is a better way
+
+```{r}
+weights = c(.12,.15,.31,.42)
+print(sum(weights))
+survey |> mutate(pop_weighted = weights*response) |> summarize(sum(pop_weighted))
+
+```
+### Exercise 6
+
+y = 1.5 x + b
+
+This scales the standard deviation to 1.5.  Now we just move the mean by  add 65
+y = 1.5 x + 65
+
+Range of values for new scale is 65 to 140
+
+```{r}
+x <- 0:50
+plot(x, 1.5*x +65, type = 'l')
+
+```
+
+## Exercise 7
+
+The other is y = -1.5 x + 65.  This is not useful here because in the new scale higher test scores have lower transformed scores!
+
+## Exercise 8
+
+```{r}
+rho <- .3
+h_mean <- 69.1
+h_std <- 2.9
+w_mean <- 63.7
+w_std <- 2.7
+
+mean_avg = (h_mean + w_mean)/2
+#> 66.4
+
+std_avg = sqrt(h_std^2 + w_std^2 + 2*rho*w_std*h_std)/2
+#> 2.26
+
+# Verify
+  
+sig <- matrix(c(h_std^2, rho*h_std*w_std, rho*h_std*w_std, w_std^2), nrow=2)
+samples <- MASS::mvrnorm(10000, c(h_mean,w_mean), Sigma = sig )
+samples <-as_tibble(samples)
+colnames(samples) <- c('h','w')
+
+samples |> mutate(avg = (w+h)/2) |> summarize(mean = mean(avg), std = sd(avg))
+```
+
