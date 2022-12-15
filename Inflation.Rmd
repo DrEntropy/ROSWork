@@ -29,3 +29,120 @@ Another challenge here is that this is time series data and we dont expect insta
 Looking at data, I see that Jan 1 1959 is a common starting point we can use at first.
 
 (3.10)  Most likely model would be linear. Graphs TBD
+
+## Import data
+
+Note that this data was read from Fred (using saved set "inflationResearch") and then converted from excel to csv. This process I need to automate. Data is monthly.
+
+```{r}
+library(tidyverse)
+monetary_data <- read_csv('inflationResearch.csv')
+```
+
+I want to really look at differences, and at first i will restrict to 1980 and following so that I will hopefully have not so many changes in defitions to deal with.
+
+```{r}
+ 
+annual_growth <- \(monthlies)
+{
+  monthly_rate <- (monthlies - lag(monthlies))/lag(monthlies)
+  100*(exp(log(1+monthly_rate)*12) - 1)
+}
+
+growth_data <- monetary_data |> 
+        mutate(inflation = annual_growth(CPIAUCSL),
+               base_growth = annual_growth(BOGMBASE),
+               M2_growth = annual_growth(M2SL),
+               M1_growth = annual_growth(M1SL)) |>
+        select(-c(BOGMBASE, M1SL, M2SL,CPIAUCSL)) |> 
+        filter(DATE >= '1980-01-01')
+tail(growth_data)
+```
+
+We are aware of one bit outlier in M1 Growth when the definition was changed.
+
+```{r}
+growth_data |> filter(DATE > '2020-01-01' & DATE < '2020-12-01')
+```
+## Initial exploration
+
+```{r}
+growth_data <- growth_data |> mutate(M1_growth = if_else(M1_growth > 100, NaN, M1_growth))
+```
+
+```{r}
+ggplot(data = growth_data, aes(x=DATE)) +
+  geom_point(mapping = aes(  y = FEDFUNDS)) +
+  geom_point(mapping = aes( y = M2_growth), col = 'blue') +
+  geom_point(mapping = aes( y = inflation), col = 'green')
+  
+```
+```{r}
+ggplot(data = growth_data, aes(x=DATE)) +
+  geom_line(mapping = aes( y = inflation), col = 'green')
+```  
+
+
+
+## Monetary measures compared
+
+For this first glance i will remove large outliers
+
+```{r}
+ggplot(data = growth_data |> filter(M1_growth < 50)) +
+  geom_point(mapping = aes( x = M1_growth, y= M2_growth), col = 'blue') 
+  
+```
+Looks like a linear model can work here for M2 vs M1 growth. 
+
+
+```{r}
+ggplot(data = growth_data |> filter(base_growth < 50)) +
+  geom_point(mapping = aes( x = base_growth, y= M1_growth), col = 'blue') 
+  
+```
+
+Base money seems to be poor predictor of M1  or M2 
+
+## Inflation vs money supply
+
+```{r}
+ggplot(data = filter(growth_data, base_growth < 100), aes(y=inflation)) +
+  geom_point(mapping = aes( x = base_growth), col = 'blue') 
+  
+```
+ 
+```{r}
+ggplot(data = filter(growth_data, M1_growth < 100), aes(y=inflation)) +
+  geom_point(mapping = aes( x = M1_growth), col = 'blue') 
+  
+```
+
+
+```{r}
+ggplot(data = filter(growth_data, M2_growth < 100), aes(y=inflation)) +
+  geom_point(mapping = aes( x = M2_growth), col = 'blue') 
+  
+```
+
+None of the monetary measures seem to be very good at predicting inflation , at least monthly. 
+
+
+```{r}
+ggplot(data = filter(growth_data, M2_growth < 50), aes(y=M2_growth)) +
+  geom_point(mapping = aes( x =FEDFUNDS), col = 'blue') 
+  
+```
+
+## Monetary base outliers
+
+Ok we see there is also some weird values in monetary base to deal with (and also in M1, M2) probably due to redefinition
+EDIT: I checked it is a real change in reserve balances that happened. The one in APril 2020 seems quite a large increase in the monetary base , but it was due to fed paying interset on reserves .
+
+```{r}
+growth_data |> filter(base_growth > 200)
+
+```
+ 
+
+
