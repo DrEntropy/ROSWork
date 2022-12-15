@@ -1,0 +1,31 @@
+## Inflation analyis
+
+(1.10) The goal of this project is to attempt to understand inflation in terms of the changes in the underlying monetary supply as well as effects of federal reserve interest rate targets. I also want to look at relationships between rate sof change of the various money measures, and how this is driven by federal reserve decisions and goverment defecit spending.
+
+The primary data source for this will be the FRED service of the federal reserve.  Initial data to look at:
+
+   - M1 -  note there was a change in May 2020, moving savings deposits into M1 (from M2) .  We intend to look at rates of change of this, we will have a spike to deal with.  Perhaps there is a real effect (this was due to a policy change removing limits on transfers from savings) - M1SL (Note we might be able to correct for spice by regressing rate on M1 vs M2)
+
+  - M2  M2SL
+
+  - Monetary Base  BOGMBASE (Note: NOT seasonally adjusted)
+  
+  - Inflation rate Issue here is change in weights. I intend to  BLS CPI For Urban consumers All Items .  Seems to be the common inflator in use. on fred this is CPIAUCSL
+  
+  - Federal reserve funds rate. FEDFUNDS
+  
+Data for future use only: 
+
+  - Government spending (Future) Quarterly only. W068RCQ027SBEA is total expendatures, W006RC1Q027SBEA is total tax receipts. Need to dig in more to see if these are really what we want. Going to start with this series: 
+  
+  - GDP - FUTURE. only available quarterly
+  
+This data seems to be all available on a monthly bases and is seasonally adjusted.  
+  
+(2.10) The primary issue of validity is the changes in definitions. We will need to be careful to look for outliers in rates of change that will signal a change. Another issue of validity is the changes to how inflation are measured, we will need to pick a good measure.
+
+Another challenge here is that this is time series data and we dont expect instant reactions. We might need to look at yearly data instead.
+
+Looking at data, I see that Jan 1 1959 is a common starting point we can use at first.
+
+(3.10)  Most likely model would be linear. Graphs TBD
