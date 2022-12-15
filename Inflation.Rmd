@@ -68,25 +68,37 @@ growth_data |> filter(DATE > '2020-01-01' & DATE < '2020-12-01')
 
 ```{r}
 growth_data <- growth_data |> mutate(M1_growth = if_else(M1_growth > 100, NaN, M1_growth))
+
+long_growth <- growth_data |>   pivot_longer(!DATE, names_to = "growth_type", values_to = "growth") #for plotting
+ 
 ```
 
 ```{r}
-ggplot(data = growth_data, aes(x=DATE)) +
-  geom_point(mapping = aes(  y = FEDFUNDS)) +
-  geom_point(mapping = aes( y = M2_growth), col = 'blue') +
-  geom_point(mapping = aes( y = inflation), col = 'green')
+ 
+ggplot(long_growth, aes(x=DATE)) +
+  geom_point(mapping = aes( y =  growth , col = growth_type))  
   
 ```
-```{r}
-ggplot(data = growth_data, aes(x=DATE)) +
-  geom_line(mapping = aes( y = inflation), col = 'green')
-```  
+
+Note large outliers we still will need to deal with..
 
 
+```{r} 
+ggplot(long_growth |> filter(growth < 100), aes(DATE, growth)) + 
+  geom_line() + 
+  facet_wrap(~growth_type, scales = "free_y", ncol = 1)
+```
+ 
 
 ## Monetary measures compared
 
-For this first glance i will remove large outliers
+
+
+For this first glance i will remove large outliers as above
+
+```{r}
+GGally::ggpairs(growth_data |> select(-c(DATE,inflation, FEDFUNDS)) |> filter(M1_growth < 50 & base_growth < 50))
+```
 
 ```{r}
 ggplot(data = growth_data |> filter(M1_growth < 50)) +
@@ -95,49 +107,27 @@ ggplot(data = growth_data |> filter(M1_growth < 50)) +
 ```
 Looks like a linear model can work here for M2 vs M1 growth. 
 
-
-```{r}
-ggplot(data = growth_data |> filter(base_growth < 50)) +
-  geom_point(mapping = aes( x = base_growth, y= M1_growth), col = 'blue') 
-  
-```
-
-Base money seems to be poor predictor of M1  or M2 
+ 
+However Base money seems to be poor predictor of M1  or M2 
 
 ## Inflation vs money supply
 
 ```{r}
-ggplot(data = filter(growth_data, base_growth < 100), aes(y=inflation)) +
-  geom_point(mapping = aes( x = base_growth), col = 'blue') 
-  
+inf_growth <- growth_data |> select(-DATE) |>   pivot_longer(!inflation, names_to = "growth_type", values_to = "growth") #for plotting
+
+ggplot(inf_growth |> filter(growth < 50), aes(growth, inflation)) + 
+  geom_point() + 
+  facet_wrap(~growth_type)
 ```
  
-```{r}
-ggplot(data = filter(growth_data, M1_growth < 100), aes(y=inflation)) +
-  geom_point(mapping = aes( x = M1_growth), col = 'blue') 
-  
-```
-
-
-```{r}
-ggplot(data = filter(growth_data, M2_growth < 100), aes(y=inflation)) +
-  geom_point(mapping = aes( x = M2_growth), col = 'blue') 
-  
-```
-
-None of the monetary measures seem to be very good at predicting inflation , at least monthly. 
-
-
-```{r}
-ggplot(data = filter(growth_data, M2_growth < 50), aes(y=M2_growth)) +
-  geom_point(mapping = aes( x =FEDFUNDS), col = 'blue') 
-  
-```
+ 
+None of the monetary measures seem to be very good at predicting inflation , at least monthly. We need to try different things, possibly look at moving averages of monetary growth to capture the lag. This might be a bit out of scope.
+ 
+ 
 
 ## Monetary base outliers
 
-Ok we see there is also some weird values in monetary base to deal with (and also in M1, M2) probably due to redefinition
-EDIT: I checked it is a real change in reserve balances that happened. The one in APril 2020 seems quite a large increase in the monetary base , but it was due to fed paying interset on reserves .
+Althouth I dont plan to use Monetary base, since it seems to have no predictive value, we do see there are some big outliers. Monetary base has not been redefined, but policy changes directly impact this quantity! For example, the one in April 2020 seems quite a large increase in the reserve balances, but it was due to fed paying interest on reserves .
 
 ```{r}
 growth_data |> filter(base_growth > 200)
