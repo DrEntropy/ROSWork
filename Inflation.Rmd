@@ -20,6 +20,8 @@ Data for future use only:
   
   - GDP - FUTURE. only available quarterly
   
+  Money supply and inflation in OTHER countries
+  
 This data seems to be all available on a monthly bases and is seasonally adjusted.  
   
 (2.10) The primary issue of validity is the changes in definitions. We will need to be careful to look for outliers in rates of change that will signal a change. Another issue of validity is the changes to how inflation are measured, we will need to pick a good measure.
@@ -135,4 +137,34 @@ growth_data |> filter(base_growth > 200)
 ```
  
 
+## Focus on M2 and lagged M2
+
+```{r}
+m2_lag_data <- growth_data |> 
+  select(-c('M1_growth','FEDFUNDS','base_growth','DATE')) |>
+  mutate(M2_lag1 = lag(M2_growth), M2_lag2 = lag(M2_lag1), M2_lag3 = lag(M2_lag2),
+         M2_lag4 = lag(M2_lag3),M2_lag5 = lag(M2_lag4), M2_lag6 = lag(M2_lag5)) 
+
+m2_lag_data |> 
+  pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
+  filter(growth < 20) |>
+  ggplot() +
+  geom_line(mapping = aes(growth, inflation))+
+  facet_wrap(~months_lag) 
+
+```
+
+
+```{r}
+library(rstanarm)
+fit = stan_glm(inflation ~ ., data = m2_lag_data )
+fit$stanfit
+```
+
+
+```{r}
+draws = as.data.frame(fit)
+draws |> 
+   ggplot() + geom_density(mapping = aes(x= M2_lag3))
+```
 
