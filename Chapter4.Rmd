@@ -122,6 +122,13 @@ pchisq(ratio,23)
 
 This is large enough that one should not be surprised at seeing a smaller variation then expected.
 
+```{r}
+sds <- seq(.003,.015, .0002)
+ratios <- sds^2*23/expected_sd^2
+dist<- dchisq(ratios,23)
+plot(sds,dist, type='l')
+```
+
 ## Exercise 4.7 - BOOK CLUB
 
 Inference from a proportion with $y = 0$: Out of a random sample of 50 Americans, zero report
