@@ -4,16 +4,66 @@ The ones i plan to demonstrate in book club will be noted.
 
 ## Exercise 4.1
 
+Comparison of proportions: A randomized experiment is performed within a survey. 1000 people are contacted. Half the people contacted are promised a $5 incentive to participate, and half are not promised an incentive. The result is a 50% response rate among the treated group and 40% response rate among the control group. Give an estimate and standard error of the average treatment effect.
+
+
+
 ## Exercise 4.3
+
+Comparison of proportions: You want to gather data to determine which of two students is a better basketball shooter. One of them shoots with 30% accuracy and the other is a 40% shooter. Each student takes 20 shots and you then compare their shooting percentages. 
+What is the probability that the better shooter makes more shots in this small experiment?
+
+
 
 ## Exercise 4.4
 
+Designing an experiment: You want to gather data to determine which of two students is a better basketball shooter. You plan to have each student take # shots and then compare their shooting percentages. Roughly how large does # have to be for you to have a good chance of distinguishing a 30% shooter from a 40% shooter?
+
+
 ## Exercise 4.6 - BOOK CLUB
+Hypothesis testing: The following are the proportions of girl births in Vienna for each month in 1908 and 1909 (out of an average of 3900 births per month):
+
+.4777  .4875  .4859  .4754  .4874  .4864  .4813  .4787  .4895  .4797  .4876  .4859
+.4857  .4907  .5010  .4903  .4860  .4911  .4871  .4725  .4822  .4870  .4823  .4973
+
+The data are in the folder Girls. These proportions were used by von Mises (1957) to support a claim that that the sex ratios were less variable than would be expected under the binomial distribution. We think von Mises was mistaken in that he did not account for the possibility that this discrepancy could arise just by chance.
+
+(a)  Compute the standard deviation of these proportions and compare to the standard deviation that would be expected if the sexes of babies were independently decided with a constant probability over the 24-month period.
+
+(b)  The observed standard deviation of the 24 proportions will not be identical to its theoretical expectation. In this case, is this difference small enough to be explained by random variation? Under the randomness model, the actual variance should have a distribution with expected value equal to the theoretical variance, and proportional to a $\chi^2$ random variable with 23 degrees of freedom; see page 53.
+
 
 ## Exercise 4.7 - BOOK CLUB
 
+Inference from a proportion with $y = 0$: Out of a random sample of 50 Americans, zero report
+having ever held political office. From this information, give a 95% confidence interval for the
+proportion of Americans who have ever held political office.
+
 ## Exercise 4.9 - BOOK CLUB
+
+Inference for a probability: A multiple-choice test item has four options. Assume that a student
+taking this question either knows the answer or does a pure guess. A random sample of 100
+students take the item, and 60% get it correct. Give an estimate and 95% confidence interval for
+the percentage in the population who know the answer.
 
 ## Exericse 4.10  
 
+Survey weighting: Compare two options for a national opinion survey: (a) a simple random
+sample of 1000 Americans, or (b) a survey that oversamples Latinos, with 300 randomly sampled
+Latinos and 700 others randomly sampled from the non-Latino population. One of these options
+will give more accurate comparisons between Latinos and others; the other will give more
+accurate estimates for the total population average.
+
+(a) Which option gives more accurate comparisons and which option gives more accurate
+population estimates?
+
+(b) Explain your answer above by computing standard errors for the Latino/other comparison and
+the national average under each design. Assume that the national population is 15% Latino,
+that the items of interest are yes/no questions with approximately equal proportions
+
+
 ## Exercise 4.11
+
+Working through your own example: Continuing the example from the final exercises of the
+earlier chapters, perform some basic comparisons, confidence intervals, and hypothesis tests and
+discuss the relevance of these to your substantive questions of interest.
