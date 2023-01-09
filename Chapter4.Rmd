@@ -114,13 +114,7 @@ ratio <- sample_sd^2*23/expected_sd^2
 ratio
 ```
 
-What is the probability that it is this small or smaller?
 
-```{r}
-pchisq(ratio,23)
-```
-
-This is large enough that one should not be surprised at seeing a smaller variation then expected.
 
 ```{r}
 sds <- seq(.003,.015, .0002)
@@ -129,11 +123,32 @@ dist<- dchisq(ratios,23)
 plot(sds,dist, type='l')
 ```
 
+
+What is the probability that the standard deviation was as small as we observed or smaller?
+
+```{r}
+pchisq(ratio,23)
+```
+
+This is large enough that one should not be surprised at seeing a smaller variation then expected.
+
 ## Exercise 4.7 - BOOK CLUB
 
 Inference from a proportion with $y = 0$: Out of a random sample of 50 Americans, zero report
 having ever held political office. From this information, give a 95% confidence interval for the
 proportion of Americans who have ever held political office.
+
+---
+
+```{r}
+p_hat <- 2/(50+4)
+se <- sqrt(p_hat*(1-p_hat)/50)
+c(p_hat-2*se,p_hat+2*se)
+
+```
+
+So 'truncating' we say it is from 0 to 9%.  
+
 
 ## Exercise 4.9 - BOOK CLUB
 
@@ -142,21 +157,15 @@ taking this question either knows the answer or does a pure guess. A random samp
 students take the item, and 60% get it correct. Give an estimate and 95% confidence interval for
 the percentage in the population who know the answer.
 
-## Exericse 4.10  
+---
 
-Survey weighting: Compare two options for a national opinion survey: (a) a simple random
-sample of 1000 Americans, or (b) a survey that oversamples Latinos, with 300 randomly sampled
-Latinos and 700 others randomly sampled from the non-Latino population. One of these options
-will give more accurate comparisons between Latinos and others; the other will give more
-accurate estimates for the total population average.
+Suppose $p$ = percentage who know the answer.  Then we would expect to see $100p$ correct answers from those who know the answers and, on average, $100(1-p)/4$ extra correct answers from the lucky guessers, so that $100*(p + (1-p)/4)=60$ correct answers.  With algebra we find $\hat{p} = 0.467 $.
 
-(a) Which option gives more accurate comparisons and which option gives more accurate
-population estimates?
+The standard error of this estimate is $\sqrt{p(1-p)/n}= \sqrt{(1/4)(3/4)/((1-p)*100)} \approx 0.06$ 
 
-(b) Explain your answer above by computing standard errors for the Latino/other comparison and
-the national average under each design. Assume that the national population is 15% Latino,
-that the items of interest are yes/no questions with approximately equal proportions
-
+```{r}
+sqrt(1/4*3/4/((1-.467)*100))
+```
 
 ## Exercise 4.11
 
