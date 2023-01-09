@@ -1,10 +1,19 @@
 # Chapter 4 Selected Exercises
 
-The ones i plan to demonstrate in book club will be noted.
+The ones I plan to demonstrate in book club will be noted.
 
 ## Exercise 4.1
 
 Comparison of proportions: A randomized experiment is performed within a survey. 1000 people are contacted. Half the people contacted are promised a $5 incentive to participate, and half are not promised an incentive. The result is a 50% response rate among the treated group and 40% response rate among the control group. Give an estimate and standard error of the average treatment effect.
+
+---
+
+The estimate is 10% effect, with standard error ~ 3%:
+
+```{r}
+sqrt((.5^2 + .4*.6)/500)
+
+```
 
 
 
@@ -13,12 +22,57 @@ Comparison of proportions: A randomized experiment is performed within a survey.
 Comparison of proportions: You want to gather data to determine which of two students is a better basketball shooter. One of them shoots with 30% accuracy and the other is a 40% shooter. Each student takes 20 shots and you then compare their shooting percentages. 
 What is the probability that the better shooter makes more shots in this small experiment?
 
+---
+I will use normal approximation.  The difference is 10% , so computing the standard error of this percentage:
 
+```{r}
+se <- sqrt((.7*.3 + .4*.6)/20)
+1-pnorm(0, mean = 0.1, sd = se)
+```
+
+The standard error was  15% .   The probability that the bettter shooter makes more shots in this approximation is 75%
+
+Let's sim to be sure the normal approximation is good. 
+
+```{r}
+p1 <- 0.3
+p2 <- 0.4
+
+trials <- 100000
+shooter1 <- rbinom(trials,20,p1)
+shooter2 <- rbinom(trials,20,p2)
+mean(shooter2 > shooter1)
+ 
+```
+
+More like 70%. However I dont know a closed form for the difference of two binomial distributions so the numerical answer is the best I can get. Maybe someone has a better idea.
 
 ## Exercise 4.4
 
 Designing an experiment: You want to gather data to determine which of two students is a better basketball shooter. You plan to have each student take # shots and then compare their shooting percentages. Roughly how large does # have to be for you to have a good chance of distinguishing a 30% shooter from a 40% shooter?
 
+---
+
+Here I will take 'a good chance' to mean 97.5% (1 tailed 2 standard deviations), so we need enough shots to get the 10% to be about 2 standard deviations. So we require that $\sqrt{.3*.7 + .4*.6}/\sqrt{n} \sim .10/2$ Solving we find n ~ 180
+
+```{r}
+n <-4*(0.3*0.7+0.4*0.6)/(.1^2)
+
+```
+
+check with sim again
+
+```{r}
+p1 <- 0.3
+p2 <- 0.4
+n <- 180
+
+trials <- 100000
+shooter1 <- rbinom(trials,n,p1)
+shooter2 <- rbinom(trials,n,p2)
+mean(shooter2 > shooter1)
+ 
+```
 
 ## Exercise 4.6 - BOOK CLUB
 Hypothesis testing: The following are the proportions of girl births in Vienna for each month in 1908 and 1909 (out of an average of 3900 births per month):
@@ -32,6 +86,40 @@ The data are in the folder Girls. These proportions were used by von Mises (1957
 
 (b)  The observed standard deviation of the 24 proportions will not be identical to its theoretical expectation. In this case, is this difference small enough to be explained by random variation? Under the randomness model, the actual variance should have a distribution with expected value equal to the theoretical variance, and proportional to a $\chi^2$ random variable with 23 degrees of freedom; see page 53.
 
+---
+
+```{r}
+girls <- as.numeric(readr::read_lines('girls.dat', skip=1))
+sample_sd<-sd(girls)
+sample_sd
+```
+
+```{r}
+p_est <- mean(girls)
+n_births <- 3900
+expected_sd <- sqrt(p_est*(1-p_est)/n_births)
+expected_sd 
+```
+
+Recall that this quantity:
+$$
+s_y^2*(n-1)/\sigma^2
+$$
+
+Is distributed with a chi^2 distribution with n-1 degrees of freedom.  This quantity has the value:
+
+```{r}
+ratio <- sample_sd^2*23/expected_sd^2
+ratio
+```
+
+What is the probability that it is this small or smaller?
+
+```{r}
+pchisq(ratio,23)
+```
+
+This is large enough that one should not be surprised at seeing a smaller variation then expected.
 
 ## Exercise 4.7 - BOOK CLUB
 

@@ -354,7 +354,7 @@ display: none;
 
 <div id="chapter-4-selected-exercises" class="section level1">
 <h1>Chapter 4 Selected Exercises</h1>
-<p>The ones i plan to demonstrate in book club will be noted.</p>
+<p>The ones I plan to demonstrate in book club will be noted.</p>
 <div id="exercise-4.1" class="section level2">
 <h2>Exercise 4.1</h2>
 <p>Comparison of proportions: A randomized experiment is performed
@@ -363,6 +363,9 @@ are promised a $5 incentive to participate, and half are not promised an
 incentive. The result is a 50% response rate among the treated group and
 40% response rate among the control group. Give an estimate and standard
 error of the average treatment effect.</p>
+<p>The estimate is 10% effect, with standard error ~ 3%:</p>
+<pre class="r"><code>sqrt((.5^2 + .4*.6)/500)</code></pre>
+<pre><code>## [1] 0.03130495</code></pre>
 </div>
 <div id="exercise-4.3" class="section level2">
 <h2>Exercise 4.3</h2>
@@ -371,6 +374,26 @@ of two students is a better basketball shooter. One of them shoots with
 30% accuracy and the other is a 40% shooter. Each student takes 20 shots
 and you then compare their shooting percentages. What is the probability
 that the better shooter makes more shots in this small experiment?</p>
+<hr />
+<p>I will use normal approximation. The difference is 10% , so computing
+the standard error of this percentage:</p>
+<pre class="r"><code>se &lt;- sqrt((.7*.3 + .4*.6)/20)
+1-pnorm(0, mean = 0.1, sd = se)</code></pre>
+<pre><code>## [1] 0.7475075</code></pre>
+<p>The standard error was 15% . The probability that the bettter shooter
+makes more shots in this approximation is 75%</p>
+<p>Let’s sim to be sure the normal approximation is good.</p>
+<pre class="r"><code>p1 &lt;- 0.3
+p2 &lt;- 0.4
+
+trials &lt;- 100000
+shooter1 &lt;- rbinom(trials,20,p1)
+shooter2 &lt;- rbinom(trials,20,p2)
+mean(shooter2 &gt; shooter1)</code></pre>
+<pre><code>## [1] 0.69244</code></pre>
+<p>More like 70%. However I dont know a closed form for the difference
+of two binomial distributions so the numerical answer is the best I can
+get.</p>
 </div>
 <div id="exercise-4.4" class="section level2">
 <h2>Exercise 4.4</h2>
