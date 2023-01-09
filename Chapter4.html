@@ -363,6 +363,7 @@ are promised a $5 incentive to participate, and half are not promised an
 incentive. The result is a 50% response rate among the treated group and
 40% response rate among the control group. Give an estimate and standard
 error of the average treatment effect.</p>
+<hr />
 <p>The estimate is 10% effect, with standard error ~ 3%:</p>
 <pre class="r"><code>sqrt((.5^2 + .4*.6)/500)</code></pre>
 <pre><code>## [1] 0.03130495</code></pre>
@@ -390,10 +391,10 @@ trials &lt;- 100000
 shooter1 &lt;- rbinom(trials,20,p1)
 shooter2 &lt;- rbinom(trials,20,p2)
 mean(shooter2 &gt; shooter1)</code></pre>
-<pre><code>## [1] 0.69244</code></pre>
+<pre><code>## [1] 0.6915</code></pre>
 <p>More like 70%. However I dont know a closed form for the difference
 of two binomial distributions so the numerical answer is the best I can
-get.</p>
+get. Maybe someone has a better idea.</p>
 </div>
 <div id="exercise-4.4" class="section level2">
 <h2>Exercise 4.4</h2>
@@ -402,6 +403,22 @@ of two students is a better basketball shooter. You plan to have each
 student take # shots and then compare their shooting percentages.
 Roughly how large does # have to be for you to have a good chance of
 distinguishing a 30% shooter from a 40% shooter?</p>
+<hr />
+<p>Here I will take ‘a good chance’ to mean 97.5% (1 tailed 2 standard
+deviations), so we need enough shots to get the 10% to be about 2
+standard deviations. So we require that <span class="math inline">\(\sqrt{.3*.7 + .4*.6}/\sqrt{n} \sim .10/2\)</span>
+Solving we find n ~ 180</p>
+<pre class="r"><code>n &lt;-4*(0.3*0.7+0.4*0.6)/(.1^2)</code></pre>
+<p>check with sim again</p>
+<pre class="r"><code>p1 &lt;- 0.3
+p2 &lt;- 0.4
+n &lt;- 180
+
+trials &lt;- 100000
+shooter1 &lt;- rbinom(trials,n,p1)
+shooter2 &lt;- rbinom(trials,n,p2)
+mean(shooter2 &gt; shooter1)</code></pre>
+<pre><code>## [1] 0.97337</code></pre>
 </div>
 <div id="exercise-4.6---book-club" class="section level2">
 <h2>Exercise 4.6 - BOOK CLUB</h2>
@@ -429,6 +446,30 @@ expected value equal to the theoretical variance, and proportional to a
 <span class="math inline">\(\chi^2\)</span> random variable with 23
 degrees of freedom; see page 53.</p></li>
 </ol>
+<hr />
+<pre class="r"><code>girls &lt;- as.numeric(readr::read_lines(&#39;girls.dat&#39;, skip=1))
+sample_sd&lt;-sd(girls)
+sample_sd</code></pre>
+<pre><code>## [1] 0.006409724</code></pre>
+<pre class="r"><code>p_est &lt;- mean(girls)
+n_births &lt;- 3900
+expected_sd &lt;- sqrt(p_est*(1-p_est)/n_births)
+expected_sd </code></pre>
+<pre><code>## [1] 0.008003121</code></pre>
+<p>Recall that this quantity: <span class="math display">\[
+s_y^2*(n-1)/\sigma^2
+\]</span></p>
+<p>Is distributed with a <span class="math inline">\(\chi^2\)</span>
+distribution with n-1 degrees of freedom. This quantity has the
+value:</p>
+<pre class="r"><code>ratio &lt;- sample_sd^2*23/expected_sd^2
+ratio</code></pre>
+<pre><code>## [1] 14.75325</code></pre>
+<p>What is the probability that it is this small or smaller?</p>
+<pre class="r"><code>pchisq(ratio,23)</code></pre>
+<pre><code>## [1] 0.09674148</code></pre>
+<p>This is large enough that one should not be surprised at seeing a
+smaller variation then expected.</p>
 </div>
 <div id="exercise-4.7---book-club" class="section level2">
 <h2>Exercise 4.7 - BOOK CLUB</h2>

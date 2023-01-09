@@ -23,6 +23,7 @@ Comparison of proportions: You want to gather data to determine which of two stu
 What is the probability that the better shooter makes more shots in this small experiment?
 
 ---
+
 I will use normal approximation.  The difference is 10% , so computing the standard error of this percentage:
 
 ```{r}
