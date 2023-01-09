@@ -106,7 +106,7 @@ $$
 s_y^2*(n-1)/\sigma^2
 $$
 
-Is distributed with a chi^2 distribution with n-1 degrees of freedom.  This quantity has the value:
+Is distributed with a $\chi^2$ distribution with n-1 degrees of freedom.  This quantity has the value:
 
 ```{r}
 ratio <- sample_sd^2*23/expected_sd^2
