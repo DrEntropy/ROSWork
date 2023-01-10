@@ -1,6 +1,6 @@
 # Chapter 4 Selected Exercises
 
-The ones I plan to demonstrate in book club will be noted.
+The ones I plan to demonstrate in book club will be noted with *BC*
 
 ```{r}
 library(tidyverse)
@@ -22,7 +22,7 @@ sqrt((.5^2 + .4*.6)/500)
 
 
 
-## Exercise 4.3
+## Exercise 4.3 - BC
 
 Comparison of proportions: You want to gather data to determine which of two students is a better basketball shooter. One of them shoots with 30% accuracy and the other is a 40% shooter. Each student takes 20 shots and you then compare their shooting percentages. 
 What is the probability that the better shooter makes more shots in this small experiment?
@@ -80,7 +80,7 @@ mean(shooter2 > shooter1)
  
 ```
 
-## Exercise 4.6 - BOOK CLUB
+## Exercise 4.6 - BC
 Hypothesis testing: The following are the proportions of girl births in Vienna for each month in 1908 and 1909 (out of an average of 3900 births per month):
 
 .4777  .4875  .4859  .4754  .4874  .4864  .4813  .4787  .4895  .4797  .4876  .4859
@@ -137,7 +137,7 @@ pchisq(ratio,23)
 
 This is large enough that one should not be surprised at seeing a smaller variation then expected.
 
-## Exercise 4.7 - BOOK CLUB
+## Exercise 4.7 - BC
 
 Inference from a proportion with $y = 0$: Out of a random sample of 50 Americans, zero report
 having ever held political office. From this information, give a 95% confidence interval for the
@@ -145,9 +145,17 @@ proportion of Americans who have ever held political office.
 
 ---
 
+We use the estimator for small counts :
+
+$$
+\hat{p} = \frac{y+2}{n+4}
+$$
+
+Why this and not Laplace's rule of succession? (Maybe Gelman prefers Beta(2,2) prior?)
+
 ```{r}
 p_hat <- 2/(50+4)
-se <- sqrt(p_hat*(1-p_hat)/50)
+se <- sqrt(p_hat*(1-p_hat)/54)
 c(p_hat-2*se,p_hat+2*se)
 
 ```
@@ -155,7 +163,7 @@ c(p_hat-2*se,p_hat+2*se)
 So 'truncating' we say it is from 0 to 9%.  
 
 
-## Exercise 4.9 - BOOK CLUB
+## Exercise 4.9 - BC
 
 Inference for a probability: A multiple-choice test item has four options. Assume that a student
 taking this question either knows the answer or does a pure guess. A random sample of 100
@@ -229,6 +237,4 @@ This 95% interval is close to what the binomial sampling distribution gave.
 
 ## Exercise 4.11
 
-Working through your own example: Continuing the example from the final exercises of the
-earlier chapters, perform some basic comparisons, confidence intervals, and hypothesis tests and
-discuss the relevance of these to your substantive questions of interest.
+See separate Inflation.Rmd

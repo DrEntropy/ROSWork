@@ -354,7 +354,8 @@ display: none;
 
 <div id="chapter-4-selected-exercises" class="section level1">
 <h1>Chapter 4 Selected Exercises</h1>
-<p>The ones I plan to demonstrate in book club will be noted.</p>
+<p>The ones I plan to demonstrate in book club will be noted with
+<em>BC</em></p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
 ## ✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
@@ -377,8 +378,8 @@ error of the average treatment effect.</p>
 <pre class="r"><code>sqrt((.5^2 + .4*.6)/500)</code></pre>
 <pre><code>## [1] 0.03130495</code></pre>
 </div>
-<div id="exercise-4.3" class="section level2">
-<h2>Exercise 4.3</h2>
+<div id="exercise-4.3---bc" class="section level2">
+<h2>Exercise 4.3 - BC</h2>
 <p>Comparison of proportions: You want to gather data to determine which
 of two students is a better basketball shooter. One of them shoots with
 30% accuracy and the other is a 40% shooter. Each student takes 20 shots
@@ -400,7 +401,7 @@ trials &lt;- 100000
 shooter1 &lt;- rbinom(trials,20,p1)
 shooter2 &lt;- rbinom(trials,20,p2)
 mean(shooter2 &gt; shooter1)</code></pre>
-<pre><code>## [1] 0.69372</code></pre>
+<pre><code>## [1] 0.6914</code></pre>
 <p>More like 70%. However I dont know a closed form for the difference
 of two binomial distributions so the numerical answer is the best I can
 get. Maybe someone has a better idea.</p>
@@ -427,10 +428,10 @@ trials &lt;- 100000
 shooter1 &lt;- rbinom(trials,n,p1)
 shooter2 &lt;- rbinom(trials,n,p2)
 mean(shooter2 &gt; shooter1)</code></pre>
-<pre><code>## [1] 0.97418</code></pre>
+<pre><code>## [1] 0.9745</code></pre>
 </div>
-<div id="exercise-4.6---book-club" class="section level2">
-<h2>Exercise 4.6 - BOOK CLUB</h2>
+<div id="exercise-4.6---bc" class="section level2">
+<h2>Exercise 4.6 - BC</h2>
 <p>Hypothesis testing: The following are the proportions of girl births
 in Vienna for each month in 1908 and 1909 (out of an average of 3900
 births per month):</p>
@@ -486,22 +487,28 @@ we observed or smaller?</p>
 <p>This is large enough that one should not be surprised at seeing a
 smaller variation then expected.</p>
 </div>
-<div id="exercise-4.7---book-club" class="section level2">
-<h2>Exercise 4.7 - BOOK CLUB</h2>
+<div id="exercise-4.7---bc" class="section level2">
+<h2>Exercise 4.7 - BC</h2>
 <p>Inference from a proportion with <span class="math inline">\(y =
 0\)</span>: Out of a random sample of 50 Americans, zero report having
 ever held political office. From this information, give a 95% confidence
 interval for the proportion of Americans who have ever held political
 office.</p>
 <hr />
+<p>We use the estimator for small counts :</p>
+<p><span class="math display">\[
+\hat{p} = \frac{y+2}{n+4}
+\]</span></p>
+<p>Why this and not Laplace’s rule of succession? (Maybe Gelman prefers
+Beta(2,2) prior?)</p>
 <pre class="r"><code>p_hat &lt;- 2/(50+4)
-se &lt;- sqrt(p_hat*(1-p_hat)/50)
+se &lt;- sqrt(p_hat*(1-p_hat)/54)
 c(p_hat-2*se,p_hat+2*se)</code></pre>
-<pre><code>## [1] -0.01637854  0.09045261</code></pre>
+<pre><code>## [1] -0.01436212  0.08843620</code></pre>
 <p>So ‘truncating’ we say it is from 0 to 9%.</p>
 </div>
-<div id="exercise-4.9---book-club" class="section level2">
-<h2>Exercise 4.9 - BOOK CLUB</h2>
+<div id="exercise-4.9---bc" class="section level2">
+<h2>Exercise 4.9 - BC</h2>
 <p>Inference for a probability: A multiple-choice test item has four
 options. Assume that a student taking this question either knows the
 answer or does a pure guess. A random sample of 100 students take the
@@ -562,10 +569,7 @@ gave.</p>
 </div>
 <div id="exercise-4.11" class="section level2">
 <h2>Exercise 4.11</h2>
-<p>Working through your own example: Continuing the example from the
-final exercises of the earlier chapters, perform some basic comparisons,
-confidence intervals, and hypothesis tests and discuss the relevance of
-these to your substantive questions of interest.</p>
+<p>See separate Inflation.Rmd</p>
 </div>
 </div>
 
