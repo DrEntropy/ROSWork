@@ -200,7 +200,7 @@ $$
 P[f | n_{pass}] \propto P[n_{pass}\mid f]P[f] = Binom(y=n_{pass}-(1-f)*100, n=(1-f)*100,1/4)P[f]
 $$
 
-If we assume a uniform prior, the distribution looks like this, enumerating the possible number of students who knew the answer:
+If we assume a uniform prior, the posterior distribution looks like this, enumerating the possible number of students who knew the answer:
 
 ```{r}
 
@@ -209,40 +209,20 @@ possibles <- tibble(f = 0:60/100,
                       p = dbinom(x= 60-f*100,size=(1-f)*100,p=1/4)) |>
                  mutate(p = p/sum(p))
 
-ggplot(possibles, aes(x=f,y=p)) + geom_line()
+ggplot(possibles |> filter(f>.2), aes(x=f,y=p)) + geom_line()
  
+```
+
+```{r}
+possibles |> summarize(weighted.mean(f,p))
 ```
 
 ```{r}
 possibles <- possibles |> mutate( cdf = cumsum(p))
-possibles |> filter((abs(cdf - .025) < .01) | (abs(cdf - .975) < .01))
+approx(possibles$cdf, possibles$f, c(0.025,0.5,.975))$y
 ```
 
-So 95% of the density for f is contained in the interval from 36 to 53 students.
-
-Could also make this a continuous distribution using gamma functions:
-
-```{r}
-
-dbinom2 <- \(x,size,p) {
-  gamma(size+1)/(gamma(x+1)*gamma(size-x+1))*p^x*(1-p)^(size-x)
-}
-
-grid_approx <- tibble(f = 300:600/1000,
-                      p = dbinom2(x= 60-f*100,size=(1-f)*100,p=1/4)) |>
-                 mutate(p = p/sum(p))
-
-ggplot(grid_approx, aes(x=f,y=p)) + geom_line()
- 
-```
-
-
-```{r}
-grid_approx <- grid_approx |> mutate( cdf = cumsum(p))
-grid_approx |> filter((abs(cdf - .025) < .001) | (abs(cdf - .975) < .001))
-```
-
-So the 95% range of f is from 0.38 to 0.54 , compares well to directly using binomial sampling distribution.
+This 95% interval is close to what the binomial sampling distribution gave. 
 
 
 
