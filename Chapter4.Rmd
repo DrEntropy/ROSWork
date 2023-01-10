@@ -200,7 +200,27 @@ $$
 P[f | n_{pass}] \propto P[n_{pass}\mid f]P[f] = Binom(y=n_{pass}-(1-f)*100, n=(1-f)*100,1/4)P[f]
 $$
 
-If we assume a uniform prior, the distribution looks like this (grid approx)
+If we assume a uniform prior, the distribution looks like this, enumerating the possible number of students who knew the answer:
+
+```{r}
+
+
+possibles <- tibble(f = 0:60/100,
+                      p = dbinom(x= 60-f*100,size=(1-f)*100,p=1/4)) |>
+                 mutate(p = p/sum(p))
+
+ggplot(possibles, aes(x=f,y=p)) + geom_line()
+ 
+```
+
+```{r}
+possibles <- possibles |> mutate( cdf = cumsum(p))
+possibles |> filter((abs(cdf - .025) < .01) | (abs(cdf - .975) < .01))
+```
+
+So 95% of the density for f is contained in the interval from 36 to 53 students.
+
+Could also make this a continuous distribution using gamma functions:
 
 ```{r}
 
