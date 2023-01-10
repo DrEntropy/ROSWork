@@ -2,6 +2,11 @@
 
 The ones I plan to demonstrate in book club will be noted.
 
+```{r}
+library(tidyverse)
+```
+
+
 ## Exercise 4.1
 
 Comparison of proportions: A randomized experiment is performed within a survey. 1000 people are contacted. Half the people contacted are promised a $5 incentive to participate, and half are not promised an incentive. The result is a 50% response rate among the treated group and 40% response rate among the control group. Give an estimate and standard error of the average treatment effect.
@@ -159,13 +164,53 @@ the percentage in the population who know the answer.
 
 ---
 
-Suppose $p$ = percentage who know the answer.  Then we would expect to see $100p$ correct answers from those who know the answers and, on average, $100(1-p)/4$ extra correct answers from the lucky guessers, so that $100*(p + (1-p)/4)=60$ correct answers.  With algebra we find $\hat{p} = 0.467 $.
+Suppose $f$ = percentage who know the answer.  Then we would expect to see $100f$ correct answers from those who know the answers and, on average, $100(1-f)/4$ extra correct answers from the lucky guessers, so that $100*(f + (1-f)/4)=60$ correct answers.  With algebra we find $\hat{f} = 0.467 $.
 
-The standard error of this estimate is $\sqrt{p(1-p)/n}= \sqrt{(1/4)(3/4)/((1-p)*100)} \approx 0.06$ 
+The standard error of this estimate is $\sqrt{f(1-f)/n}= \sqrt{(1/4)(3/4)/((1-f)*100)} \approx 0.06$ 
 
 ```{r}
-sqrt(1/4*3/4/((1-.467)*100))
+se = sqrt(1/4*3/4/((1-.467)*100))
+qnorm(c(.025,.975),.467,sd = se)
 ```
+
+Or using binomial
+```{r}
+60-qbinom(c(.025,.975),100*(1-.467),.25) 
+```
+
+### Bayesian
+
+We measure is $n_{pass}$, the number of students that pass. Here we measured 60
+
+$$
+n_{pass}= f*100 +   Y\\
+Y \sim Binom(n=(1-f)*100,1/4)
+$$
+ 
+
+$$
+P[f | n_{pass}] \propto P[n_{pass}\mid f]P[f] = Binom(y=n_{pass}-(1-f)*100, n=(1-f)*100,1/4)P[f]
+$$
+
+If we assume a uniform prior, the distribution looks like this (grid approx)
+
+```{r}
+
+grid_approx <- tibble(f = 35:75/100, p = dbinom(x= 60-(1-f)*100,size=(1-f)*100,p=1/4)) |>
+  mutate(p = p/sum(p))
+
+ggplot(grid_approx, aes(x=f,y=p)) + geom_line()
+ 
+```
+
+Using grid approximation (i dont think this is a case where I can use beta distribution?)
+
+```{r}
+grid_approx <- grid_approx |> mutate( cdf = cumsum(p))
+grid_approx |> filter((abs(cdf - .025) < .02) | (abs(cdf - .975) < .02))
+```
+
+So the 95% range of f is from 46 to 56 
 
 ## Exercise 4.11
 
