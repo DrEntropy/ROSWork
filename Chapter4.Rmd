@@ -164,7 +164,7 @@ the percentage in the population who know the answer.
 
 ---
 
-Suppose $f$ = percentage who know the answer.  Then we would expect to see $100f$ correct answers from those who know the answers and, on average, $100(1-f)/4$ extra correct answers from the lucky guessers, so that $100*(f + (1-f)/4)=60$ correct answers.  With algebra we find $\hat{f} = 0.467 $.
+Suppose $f$ = percentage who know the answer.  Then we would expect to see $100f$ correct answers from those who know the answers and, on average, $100(1-f)/4$ extra correct answers from the lucky guessers, so that we expect $100*(f + (1-f)/4)=60$ correct answers.  With algebra we find $\hat{f} = 0.467 $.
 
 The standard error of this estimate is $\sqrt{f(1-f)/n}= \sqrt{(1/4)(3/4)/((1-f)*100)} \approx 0.06$ 
 
@@ -175,7 +175,14 @@ qnorm(c(.025,.975),.467,sd = se)
 
 Or using binomial
 ```{r}
-60-qbinom(c(.025,.975),100*(1-.467),.25) 
+60-qbinom(c(.975,.025),100*(1-.467),.25) 
+```
+
+For larger samples, the normal and binomal are closer.
+
+```{r}
+qbinom(c(0.025,.975),500,.25)
+qnorm(c(0.25,0.975),500*.25,sqrt(.25*.75*500))
 ```
 
 ### Bayesian
@@ -186,6 +193,7 @@ $$
 n_{pass}= f*100 +   Y\\
 Y \sim Binom(n=(1-f)*100,1/4)
 $$
+
  
 
 $$
@@ -196,21 +204,28 @@ If we assume a uniform prior, the distribution looks like this (grid approx)
 
 ```{r}
 
-grid_approx <- tibble(f = 35:75/100, p = dbinom(x= 60-(1-f)*100,size=(1-f)*100,p=1/4)) |>
-  mutate(p = p/sum(p))
+dbinom2 <- \(x,size,p) {
+  gamma(size+1)/(gamma(x+1)*gamma(size-x+1))*p^x*(1-p)^(size-x)
+}
+
+grid_approx <- tibble(f = 300:600/1000,
+                      p = dbinom2(x= 60-f*100,size=(1-f)*100,p=1/4)) |>
+                 mutate(p = p/sum(p))
 
 ggplot(grid_approx, aes(x=f,y=p)) + geom_line()
  
 ```
 
-Using grid approximation (i dont think this is a case where I can use beta distribution?)
 
 ```{r}
 grid_approx <- grid_approx |> mutate( cdf = cumsum(p))
-grid_approx |> filter((abs(cdf - .025) < .02) | (abs(cdf - .975) < .02))
+grid_approx |> filter((abs(cdf - .025) < .001) | (abs(cdf - .975) < .001))
 ```
 
-So the 95% range of f is from 46 to 56 
+So the 95% range of f is from 0.38 to 0.54 , compares well to directly using binomial sampling distribution.
+
+
+
 
 ## Exercise 4.11
 
