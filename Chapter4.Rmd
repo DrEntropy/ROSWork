@@ -221,8 +221,9 @@ ggplot(possibles |> filter(f>.2), aes(x=f,y=p)) + geom_line()
  
 ```
 
+
 ```{r}
-possibles |> summarize(weighted.mean(f,p))
+possibles |> summarize(sum(f*p))
 ```
 
 ```{r}
