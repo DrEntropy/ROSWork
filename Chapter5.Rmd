@@ -1,0 +1,55 @@
+# Chapter 5 selected exercises
+
+## 5.2
+
+```{r}
+log_men <- 5.13
+sd_men <- 0.17
+log_women <- 4.96
+sd_women <- .20
+
+random_group <- function(size=10)
+{
+  men <- rbinom(size,1,0.5)
+  weights <- ifelse(men, rlnorm(size,log_men,sd_men),rlnorm(size,log_women,sd_women))
+  sum(weights)
+}
+
+weight_sim <- replicate(100000, random_group(10))
+mean(weight_sim > 1750)
+```
+
+## 5.3
+
+a) 
+```{r}
+dbinom(3,10,.4)
+```
+
+b)
+```{r}
+simulate_shots <- function(size = 10){
+  rbinom(1,size,.4)
+}
+
+mean(replicate(10000, simulate_shots())==3)
+```
+
+## 5.4 
+
+```{r}
+
+sim_n_uniform <- function(n=20){
+  sum(runif(n,0,1))
+}
+
+simulated_sums <- replicate(1000,sim_n_uniform())
+
+hist(simulated_sums)
+
+```
+
+## 5.6
+
+## 5.7 Did this in chapter 4 presentation
+ 
