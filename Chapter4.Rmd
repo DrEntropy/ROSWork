@@ -264,7 +264,3 @@ approx(possibles$cdf, possibles$f, c(0.025,0.5,.975))$y
 
 This 95% interval is close to what the binomial sampling method gave.
 
-
-## Exercise 4.11
-
-See separate Inflation.Rmd
