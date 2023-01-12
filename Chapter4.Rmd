@@ -155,13 +155,44 @@ Why this and not Laplace's rule of succession? (Maybe Gelman prefers Beta(2,2) p
 
 ```{r}
 p_hat <- 2/(50+4)
+p_hat
 se <- sqrt(p_hat*(1-p_hat)/54)
 c(p_hat-2*se,p_hat+2*se)
-
 ```
 
 So 'truncating' we say it is from 0 to 9%.  
 
+
+If you we used laplace's rules instead:
+```{r}
+p_hat <- 1/(50+2)
+p_hat
+se <- sqrt(p_hat*(1-p_hat)/54)
+c(p_hat-2*se,p_hat+2*se)
+```
+### bayesian approach
+
+Using a uniform (Beta(1,1)), prior, we get a posterior
+
+$$
+\hat{p} \sim Beta(1,51)
+$$
+
+```{r}
+p <- 0:100/100
+print(paste0("mean:",1/52))
+plot(p,dbeta(p,1,51), type='l')
+```
+```{r}
+qbeta(c(.025,.975), 1,51)
+```
+
+With beta(2,2) prior
+```{r}
+qbeta(c(.025,.975), 2,52)
+```
+
+Pretty close to what you get with normal approx for each case.
 
 ## Exercise 4.9 - BC
 
@@ -181,16 +212,16 @@ se = sqrt(1/4*3/4/((1-.467)*100))
 qnorm(c(.025,.975),.467,sd = se)
 ```
 
-Or using binomial
+Or using binomial sampling distribtion ($p=1/4, n= 100*(1-46.7)  $)
 ```{r}
 60-qbinom(c(.975,.025),100*(1-.467),.25) 
 ```
 
-For larger samples, the normal and binomal are closer.
+For larger samples, the normal and binomial are closer.
 
 ```{r}
 qbinom(c(0.025,.975),500,.25)
-qnorm(c(0.25,0.975),500*.25,sqrt(.25*.75*500))
+qnorm(c(0.025,0.975),500*.25,sqrt(.25*.75*500))
 ```
 
 ### Bayesian
@@ -231,9 +262,7 @@ possibles <- possibles |> mutate( cdf = cumsum(p))
 approx(possibles$cdf, possibles$f, c(0.025,0.5,.975))$y
 ```
 
-This 95% interval is close to what the binomial sampling distribution gave. 
-
-
+This 95% interval is close to what the binomial sampling method gave.
 
 
 ## Exercise 4.11

@@ -1,5 +1,8 @@
 ## Inflation analyis
 
+
+### NOTE: Not using this afterall, not a good fit for this book.
+
 ### 1.10
 
 The goal of this project is to attempt to understand inflation in terms of the changes in the underlying monetary supply as well as effects of federal reserve interest rate targets. I also want to look at relationships between rate sof change of the various money measures, and how this is driven by federal reserve decisions and goverment defecit spending.
@@ -226,39 +229,8 @@ Although we are seeing statistically significant predictors, none of them seem t
 
 
 
-## Focus on M1 and lagged M1
-
-```{r}
-m1_lag_data <- growth_data |> 
-  select(-c('M2_growth','FEDFUNDS','base_growth','DATE')) |>
-  mutate(M1_lag1 = lag(M1_growth), M1_lag2 = lag(M1_lag1), M1_lag3 = lag(M1_lag2),
-         M1_lag4 = lag(M1_lag3),M1_lag5 = lag(M1_lag4), M1_lag6 = lag(M1_lag5)) 
-
-m1_lag_data |> 
-  pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
-  filter(growth < 20) |>
-  ggplot() +
-  geom_point(mapping = aes(growth, inflation))+
-  facet_wrap(~months_lag) 
-
-```
-
- ## Focus on base and lagged base
-
-```{r}
-base_lag_data <- growth_data |> 
-  select(-c('M2_growth','M1_growth','FEDFUNDS','DATE')) |>
-  mutate(base_lag1 = lag(base_growth),base_lag2 = lag(base_lag1), base_lag3 = lag(base_lag2),
-        base_lag4 = lag(base_lag3),base_lag5 = lag(base_lag4), base_lag6 = lag(base_lag5)) 
-
-base_lag_data |> 
-  pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
-  filter(growth < 20) |>
-  ggplot() +
-  geom_point(mapping = aes(growth, inflation))+
-  facet_wrap(~months_lag) 
-
-```
+ 
+ 
 
 
 
