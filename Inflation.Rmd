@@ -1,6 +1,8 @@
 ## Inflation analyis
 
-(1.10) The goal of this project is to attempt to understand inflation in terms of the changes in the underlying monetary supply as well as effects of federal reserve interest rate targets. I also want to look at relationships between rate sof change of the various money measures, and how this is driven by federal reserve decisions and goverment defecit spending.
+### 1.10
+
+The goal of this project is to attempt to understand inflation in terms of the changes in the underlying monetary supply as well as effects of federal reserve interest rate targets. I also want to look at relationships between rate sof change of the various money measures, and how this is driven by federal reserve decisions and goverment defecit spending.
 
 The primary data source for this will be the FRED service of the federal reserve.  Initial data to look at:
 
@@ -24,13 +26,19 @@ Data for future use only:
   
 This data seems to be all available on a monthly bases and is seasonally adjusted.  
   
-(2.10) The primary issue of validity is the changes in definitions. We will need to be careful to look for outliers in rates of change that will signal a change. Another issue of validity is the changes to how inflation are measured, we will need to pick a good measure.
+### 2.10
+
+The primary issue of validity is the changes in definitions. We will need to be careful to look for outliers in rates of change that will signal a change. Another issue of validity is the changes to how inflation are measured, we will need to pick a good measure.
 
 Another challenge here is that this is time series data and we dont expect instant reactions. We might need to look at yearly data instead.
 
 Looking at data, I see that Jan 1 1959 is a common starting point we can use at first.
 
-(3.10)  Most likely model would be linear. Graphs TBD
+### 3.10  Most likely model would be linear. See below
+
+### 4.11
+
+Nothing specificly seems to fit for this, but i may revisit in future chapters.
 
 ## Import data
 
@@ -61,7 +69,7 @@ growth_data <- monetary_data |>
 tail(growth_data)
 ```
 
-We are aware of one bit outlier in M1 Growth when the definition was changed.
+We are aware of one big outlier in M1 Growth when the definition was changed.
 
 ```{r}
 growth_data |> filter(DATE > '2020-01-01' & DATE < '2020-12-01')
@@ -129,7 +137,7 @@ None of the monetary measures seem to be very good at predicting inflation , at 
 
 ## Monetary base outliers
 
-Althouth I dont plan to use Monetary base, since it seems to have no predictive value, we do see there are some big outliers. Monetary base has not been redefined, but policy changes directly impact this quantity! For example, the one in April 2020 seems quite a large increase in the reserve balances, but it was due to fed paying interest on reserves .
+Although I dont plan to use Monetary base, since it seems to have no predictive value, we do see there are some big outliers. Monetary base has not been redefined, but policy changes directly impact this quantity! For example, the one in April 2020 seems quite a large increase in the reserve balances, but it was due to fed paying interest on reserves .
 
 ```{r}
 growth_data |> filter(base_growth > 200)
@@ -149,11 +157,63 @@ m2_lag_data |>
   pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
   filter(growth < 20) |>
   ggplot() +
-  geom_line(mapping = aes(growth, inflation))+
+  geom_point(mapping = aes(growth, inflation))+
   facet_wrap(~months_lag) 
 
 ```
+### M2 growth by itself.
 
+
+```{r}
+m2_lag_data |>
+ggplot() +
+  geom_point(mapping = aes(M2_growth, inflation))
+ 
+```
+
+
+```{r}
+library(rstanarm)
+fit_m2 = stan_glm(inflation ~ M2_growth, data = m2_lag_data )
+fit_m2$stanfit
+```
+
+
+```{r}
+as.tibble(fit) |>  ggplot() + geom_density(mapping = aes(x= M2_growth))
+```
+Ok, so why is the correlation negative? That seems suprising. If anything I would expect it to be consistent with zero.   
+
+Looks like the large outliers are the cause ? 
+
+I dont know, lets just see if we remove all outliers, altough I would prefer to model them, this is jsut exploratory.
+
+```{r}
+m2_lag_os <- m2_lag_data |> filter(M2_growth < 20 & inflation > -9)
+m2_lag_os |> ggplot() + geom_point(mapping = aes(x=M2_growth, y = inflation))
+```
+From thsi graph it is clear that there should be no depenance.
+
+```{r}
+fit_m2_os= stan_glm(inflation ~ M2_growth, data = m2_lag_os )
+fit_m2_os$stanfit
+```
+
+Removing the outliers suggest no dependance on M2 growth at all. I suspect that the small effect although statistically significant was not significant at all.
+
+
+Attempt robust (student-t) regression?
+
+```{r}
+library(brms)
+fit_m2 = brm(inflation ~ M2_growth,family = student(), data = m2_lag_data )
+```
+```{r}
+fit_m2
+```
+
+
+### Include more of the lags
 
 ```{r}
 library(rstanarm)
@@ -162,9 +222,43 @@ fit$stanfit
 ```
 
 
+Although we are seeing statistically significant predictors, none of them seem to be actually significant. 
+
+
+
+## Focus on M1 and lagged M1
+
 ```{r}
-draws = as.data.frame(fit)
-draws |> 
-   ggplot() + geom_density(mapping = aes(x= M2_lag3))
+m1_lag_data <- growth_data |> 
+  select(-c('M2_growth','FEDFUNDS','base_growth','DATE')) |>
+  mutate(M1_lag1 = lag(M1_growth), M1_lag2 = lag(M1_lag1), M1_lag3 = lag(M1_lag2),
+         M1_lag4 = lag(M1_lag3),M1_lag5 = lag(M1_lag4), M1_lag6 = lag(M1_lag5)) 
+
+m1_lag_data |> 
+  pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
+  filter(growth < 20) |>
+  ggplot() +
+  geom_point(mapping = aes(growth, inflation))+
+  facet_wrap(~months_lag) 
+
 ```
+
+ ## Focus on base and lagged base
+
+```{r}
+base_lag_data <- growth_data |> 
+  select(-c('M2_growth','M1_growth','FEDFUNDS','DATE')) |>
+  mutate(base_lag1 = lag(base_growth),base_lag2 = lag(base_lag1), base_lag3 = lag(base_lag2),
+        base_lag4 = lag(base_lag3),base_lag5 = lag(base_lag4), base_lag6 = lag(base_lag5)) 
+
+base_lag_data |> 
+  pivot_longer(!inflation, names_to = 'months_lag', values_to = 'growth') |>
+  filter(growth < 20) |>
+  ggplot() +
+  geom_point(mapping = aes(growth, inflation))+
+  facet_wrap(~months_lag) 
+
+```
+
+
 
