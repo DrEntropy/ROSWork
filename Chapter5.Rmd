@@ -37,6 +37,9 @@ mean(replicate(10000, simulate_shots())==3)
 
 ## 5.4 
 
+The mean of a single uniform deviate over range 0-1 is 0.5, with variance 1/12 (see previous chapter).
+For 20 of them, the mean is 20*0.5= 10, and the variance would be 20/12= 5/3
+
 ```{r}
 
 sim_n_uniform <- function(n=20){
@@ -45,11 +48,139 @@ sim_n_uniform <- function(n=20){
 
 simulated_sums <- replicate(1000,sim_n_uniform())
 
-hist(simulated_sums)
+hist(simulated_sums, freq=FALSE)
+x <- 0:150/10
+lines(x,dnorm(x,mean=0.5*20, sd = sqrt(20)/sqrt(12) )  )
 
 ```
+Seems like a good approximation to me
+
 
 ## 5.6
 
+```{r}
+savings_mean <- 5
+savings_err <- 4
+market_mean <- 40000
+market_err <- 10000
+
+simulated_market <- function(){
+  savings <- rnorm(1,savings_mean,savings_err)
+  market <- rnorm(1,market_mean,market_err)
+  savings*market
+}
+
+data <- replicate(10000, simulated_market())
+hist(data/1000)
+mean(data)
+
+```
+
+
 ## 5.7 Did this in chapter 4 presentation
  
+## 5.8 
+
+a)
+```{r}
+true_effect <- 0.10
+sd_err <- 0.17
+
+simulated_exp <- rnorm(1000, true_effect, sd_err)
+```
+
+b)
+
+```{r}
+lower= simulated_exp-2*sd_err
+upper = simulated_exp + 2*sd_err
+
+mean(lower < true_effect & upper > true_effect)
+```
+
+c)
+```{r}
+c(mean(simulated_exp),sd(simulated_exp))
+
+```
+
+Nothing here is suprising, not sure what the point is. 
+
+```{r}
+mean(simulated_exp > .35)
+```
+Note that 7 % of the point estimates are larger then 0.35
+
+
+## 5.9
+
+Ah, here is the point of 5.8!
+
+```{r}
+significant <- simulated_exp[lower>0]
+c(mean(significant), sd(significant))
+```
+
+The mean is much higher , and the sd lower. This demostrates type M error.
+
+## 5.10
+a)
+
+```{r}
+
+cost_increase <- 600
+cost_err <- 400
+
+effect <- 3.0
+effect_err <- 1.0
+
+sim_cost <- rnorm(1000,cost_increase, cost_err)
+sim_effect <- rnorm(1000,effect, effect_err)
+
+plot(sim_cost,sim_effect)
+```
+
+b)
+```{r}
+cost_effect_ratio = sim_cost/sim_effect
+quantile( cost_effect_ratio , probs = c(0.025,0.25,0.75,.975))
+```
+c)
+```{r}
+sim_effect <- rnorm(1000,effect, 2)
+cost_effect_ratio = sim_cost/sim_effect
+quantile( cost_effect_ratio , probs = c(0.025,0.25,0.75,.975))
+```
+
+## 5.12
+
+```{r}
+assign <- function(n,p=0.5, method = "independant"){
+switch(method,
+ independant = rbinom(n,1,p),
+ complete = {
+   ones <- rep(1,n*p)
+   zeros <- rep(0,n-length(ones))
+   sample(c(ones,zeros),n)
+ },
+ matched = {
+   if(p!=0.5 || n%%2 != 0) stop("matched only works with p=0.5 and even n")
+   pairs <- rbinom(n/2,1,0.5)
+   res<- c()
+   for(pair in pairs){
+     if(pair)
+       res <- c(res,c(0,1))
+     else
+       res <- c(res,c(1,0))
+   }
+   res
+ },
+ stop("Method must be one of independant, complete, or matched")
+)
+}
+
+test <- assign(100,method="matched")  
+
+```
+ 
+
