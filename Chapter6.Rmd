@@ -1,0 +1,15 @@
+# Chapter 6 Selected Exercises
+
+```{r}
+library(tidyverse)
+```
+
+## Exercise 6.2
+
+## Exercise 6.3
+
+## Exercise 6.4
+
+## Exercise 6.6
+
+## Exercise 6.8
