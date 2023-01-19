@@ -2,13 +2,93 @@
 
 ```{r}
 library(tidyverse)
+library(rstanarm)
 ```
 
 ## Exercise 6.2
+Simulate n data points from y = a + bx + error,  with x uniformly sampled from (0,100).  error has standard deviation sigma (parameter).
+
+```{r}
+
+simulate_data <- \(a, b , n, sigma) {
+  meas_err <- rnorm(n,0,sigma)
+  tibble(x = runif(n,0,100),
+  y = a + b*x + meas_err)
+  
+}
+
+sim_fit_plot <- \(a, b , n, sigma, quiet = FALSE){
+ data <- simulate_data(a,b,n,sigma) 
+ fit <- stan_glm(y ~  x,data = data, refresh=0)
+ a_hat = coef(fit)[1]
+ b_hat = coef(fit)[2]
+ if(!quiet){
+   print(fit)
+   (ggplot(data, mapping = aes(x = x, y = y)) +
+   geom_point() + 
+   geom_abline(slope= b_hat, intercept = a_hat)) |> print()
+ }
+ list(data= data, fit = fit)
+}
+
+test <- sim_fit_plot(10,.5,100,30)
+
+```
 
 ## Exercise 6.3
 
+Lets pick a = 0, b= 1, and sigma = 30 as the case so there is plenty of noise.
+
+```{r}
+test1 <- sim_fit_plot(0,1,100,30)
+```
+```{r}
+test2 <- sim_fit_plot(0,1,10,30)
+```
+
+
+```{r}
+test2 <- sim_fit_plot(0,1,3,30)
+```
+
+We can see that with less points, the errors on the estimates are larger as are the estimated uncertainties. Note that with n=2 the fit has trouble (since we are estimating two parameters)
+
 ## Exercise 6.4
+
+This approach is not very pretty
+```{r}
+ns <- seq(10,100)
+a <- 0
+b <- 1
+sigma <- 30
+results <- tibble(n =ns, a_hat= rep(0, length(ns)), b_hat = a_hat, a_mad_sd = a_hat, b_mad_sd = b_hat)
+for(i in seq_along(ns)){
+  fit <- sim_fit_plot(a,b,ns[[i]],sigma, quiet=TRUE)$fit
+  results$a_hat[[i]] <- coef(fit)[1]
+  results$b_hat[[i]] <- coef(fit)[2]
+  results$a_mad_sd[[i]] <-fit$ses[1]
+  results$b_mad_sd[[i]] <- fit$ses[2]
+  
+}
+```
+
+Now to plot it
+
+```{r}
+results |> pivot_longer(cols = c('a_hat','b_hat','a_mad_sd','b_mad_sd'), names_to = "param") |>
+ggplot(aes(x=n,y=value)) + facet_wrap(~param, scales="free_y" ) + geom_line()
+
+```
+
+  As n increases , the errors get smaller. I could probably plot this better. Also look at vs sqrt(n)
+  
+```{r}
+
+results |> pivot_longer(cols = c('a_hat','b_hat','a_mad_sd','b_mad_sd'), names_to = "param") |>
+ggplot(aes(x=sqrt(n),y=value)) + facet_wrap(~param, scales="free_y" ) + geom_line()
+
+```
+Not quite sqrt(n) as I would expect? 
 
 ## Exercise 6.6
 
