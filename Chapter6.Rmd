@@ -57,7 +57,7 @@ We can see that with less points, the errors on the estimates are larger as are 
 
 This approach is not very pretty
 ```{r}
-ns <- seq(10,100)
+ns <- (2:20)^2
 a <- 0
 b <- 1
 sigma <- 30
@@ -80,16 +80,57 @@ ggplot(aes(x=n,y=value)) + facet_wrap(~param, scales="free_y" ) + geom_line()
 
 ```
 
-  As n increases , the errors get smaller. I could probably plot this better. Also look at vs sqrt(n)
+  As n increases , the errors get smaller. I could probably plot this better.  
+We expect for large n,  $error \propto 1/\sqrt{n}$ so lets plot vs $1/\sqrt{n}$:
   
 ```{r}
 
-results |> pivot_longer(cols = c('a_hat','b_hat','a_mad_sd','b_mad_sd'), names_to = "param") |>
-ggplot(aes(x=sqrt(n),y=value)) + facet_wrap(~param, scales="free_y" ) + geom_line()
+results |> pivot_longer(cols = c('a_hat','b_hat','a_mad_sd','b_mad_sd'), names_to = "param") |> filter(n>30) |>
+ggplot(aes(x=1/sqrt(n),y=value)) + facet_wrap(~param, scales="free_y" ) + geom_line()
 
 ```
-Not quite sqrt(n) as I would expect? 
+ 
+And indeed for n> 30 it seems the error is quite linear in 1/sqrt(n)
 
-## Exercise 6.6
 
 ## Exercise 6.8
+
+Simulate data from 500 pilots, each of whom performs two maneuvers, with each maneuver scored continuously on a 0–10 scale, that each pilot has a true ability that is unchanged during the two tasks, and that the score for each test is equal to this true ability plus independent errors. Further suppose that when pilots score higher than 7 on the scale during the first maneuver, that they get praised, and that scores lower than 3 on the first maneuver result in negative reinforcement. Also suppose, though, that this feedback has no effect on performance on the second task.
+
+```{r}
+ind_err_sig <- 2
+sim_data <- tibble(pilots = runif(500, 0, 10)) |> 
+           mutate(
+            man1 = rnorm(500, pilots, ind_err_sig),
+            man2 = rnorm(500, pilots, ind_err_sig),
+            man1 = pmax(pmin(man1,10),0 ),
+             man2 = pmax(pmin(man2,10),0 )) |>
+           mutate(reaction = if_else(man1 > 7,'praised',if_else(man1 <3, 'negative','none')))
+
+```
+
+a) Make a scatterplot with one dot for each pilot, showing score on the second maneuver vs. score on the first maneuver. Color the dots blue for the pilots who got praised, red for those who got negative reinforcement, and black for the other cases.
+
+```{r}
+sim_data |> ggplot(aes(x=man1, y=man2, color = reaction)) + geom_point() + scale_color_manual(values = c('#ff0000','#000000','#0000ff'))
+  
+```
+
+
+b) Compute the average change in scores for each group of pilots. If you did your simulation correctly, the pilots who were praised did worse, on average, and the pilots who got negative reinforcement improved, on average, for the second maneuver. Explain how this happened, given that your data were simulated under a model in which the positive and negative messages had no effects.
+
+```{r}
+sim_data |> mutate(change = man2-man1) |> 
+            group_by(reaction) |> summarize(average_change = mean(change))
+
+
+```
+
+So as expected we see the effect of regression to the mean. The average change is negative for pilots that were praised, not as a negative reaction to the praise but simply because many of those who did well were just lucky , and that luck didnt hold. And same in reverse for those who did poorly the first time and then got better after negative reinforcement. They were batting below their average the first time.
+
+ 
+```{r}
+stan_glm(man2 ~ man1, data = sim_data, refresh=0)
+```
+
+For the above fit I tried two different errors for how the pilots performed, sigma =1 yielded a fit  with slope close to 1, but when i increased the errors to 2, the slope on the fit was reduced to 0.6, this is the effect of regression to the mean on the regression fit itself (vs. on the groups). I am not sure i fully understand this though, is this partly due to the clipping. 
