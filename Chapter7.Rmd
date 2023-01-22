@@ -1,0 +1,41 @@
+
+process nutrition data as an example
+
+```{r}
+library(dplyr)
+library(tidyr)
+nutrition <- readr::read_csv('obesity.csv')
+exercise <- nutrition |>
+           filter(QuestionID == 'Q036' | QuestionID == 'Q046')  |>
+           filter(YearStart == 2015 & StratificationCategory1 == 'Total')  |>
+           select(c(LocationAbbr,Question, QuestionID, Data_Value)) |>
+           mutate(Variable = if_else(QuestionID == 'Q036', 'obesity','strengthTraining')) |>
+           pivot_wider(id_cols = LocationAbbr, names_from = Variable, values_from = Data_Value) |> 
+           filter(!(LocationAbbr %in% c('US','GU','PR'))) |>
+           rename(state = LocationAbbr)
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(exercise, aes(x= strengthTraining, y = obesity)) +  geom_text(aes(label= state))
+
+```
+
+```{r}
+
+library(rstanarm)
+fit = stan_glm(obesity ~ strengthTraining, data = exercise, refresh= 0)
+print(fit)
+ggplot(exercise) + geom_point( aes(x= strengthTraining, y = obesity))  +
+                   geom_abline(aes(slope = coef(fit)[2], intercept = coef(fit)[1]))  + 
+                   geom_text( aes(x= strengthTraining, y = obesity, label=state), hjust=1.2, vjust=1, alpha=0.6) +
+                   geom_text( x = 24, y = 25, label = glue::glue('obesity = {round(coef(fit)[1],1)} - {-round(coef(fit)[2],1)} strengthTraining '))
+```
+
+## Export data for use in bookdown
+
+```{r}
+readr::write_csv(exercise, '2016Exercise.csv')
+```
