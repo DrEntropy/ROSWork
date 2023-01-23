@@ -1,9 +1,10 @@
-
+## Process data for presentation. 
 process nutrition data as an example
 
 ```{r}
 library(dplyr)
 library(tidyr)
+library(rstanarm)
 nutrition <- readr::read_csv('obesity.csv')
 exercise <- nutrition |>
            filter(QuestionID == 'Q036' | QuestionID == 'Q046')  |>
@@ -23,19 +24,83 @@ ggplot(exercise, aes(x= strengthTraining, y = obesity)) +  geom_text(aes(label= 
 
 ```
 
-```{r}
 
-library(rstanarm)
+
+### Export data for use in bookdown
+
+```{r}
+readr::write_csv(exercise, '2016Exercise.csv')
+```
+
+
+## Selected Exercises  
+
+### 7.3 Fake Data and wrong model
+
+```{r}
+n <- 100
+a <- 0
+b <- -.02
+c <- .05
+x <- runif(n,0,50)
+y <- a + b*x + c* x^2 + rnorm(n,0,3)
+fake <- tibble(x,y)
+p <- ggplot(fake) + geom_point(aes(x=x,y=y))
+p
+```
+```{r}
+fit = stan_glm(y ~x, data = fake, refresh= 0)
+print(fit, detail=FALSE)
+```
+```{r}
+p + geom_abline(intercept = coef(fit)[1], slope = coef(fit)[2])
+```
+
+Note that the fit is 'best' in that it best approximates the data, the best we can do with a straight line.   even though the data is not a line and the residuals still show a pattern.  
+
+```{r}
+fake |> mutate(residual = coef(fit)[1] + x*coef(fit)[2] - y) |>
+     ggplot() + geom_point(aes(x=x, y = residual))
+```
+
+```{r}
+fit = stan_glm(y ~ x + I(x^2), data = fake, refresh= 0)
+print(fit, detail=FALSE,digits=3)
+```
+
+```{r}
+fake |> mutate(poly_fit = coef(fit)[1] + coef(fit)[2]*x + coef(fit)[3]*x^2) |> ggplot() + 
+geom_point(aes(x=x, y=y)) +
+geom_line(aes(x=x, y= poly_fit))
+```
+
+Using a nonlinear fit captures the underlying  generating process well.
+
+
+### 7.4 (and sort of 7.1)
+
+Using the health data above:
+```{r}
 fit = stan_glm(obesity ~ strengthTraining, data = exercise, refresh= 0)
-print(fit)
+print(fit, detail=FALSE)
 ggplot(exercise) + geom_point( aes(x= strengthTraining, y = obesity))  +
                    geom_abline(aes(slope = coef(fit)[2], intercept = coef(fit)[1]))  + 
                    geom_text( aes(x= strengthTraining, y = obesity, label=state), hjust=1.2, vjust=1, alpha=0.6) +
                    geom_text( x = 24, y = 25, label = glue::glue('obesity = {round(coef(fit)[1],1)} - {-round(coef(fit)[2],1)} strengthTraining '))
 ```
 
-## Export data for use in bookdown
+So for a 'new' state (or same state but perhaps after a program of promoting strength training) with 35% participation we would predict:
 
 ```{r}
-readr::write_csv(exercise, '2016Exercise.csv')
+61.9 - 1.1*35
 ```
+
+23% obesity +- 2.5%.  
+
+What is the probability that the obesity will be more then 25%?
+
+```{r}
+1-pnorm(25,23,2.5)
+```
+
+(Using normal approximation)
