@@ -1,0 +1,107 @@
+# Selected Exercises Chapter 8
+
+## 8.9
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(rstanarm)
+
+hibbs <- as_tibble(read.table("hibbs.dat", header = TRUE))
+```
+
+
+
+Stan GLM direct , sigma is 3.9 +- 0.8
+
+```{r}
+
+mod = stan_glm(vote ~ growth, data = hibbs, refresh=0)
+stan_sig <- sigma(mod)
+print(mod, verbose=FALSE)
+```
+
+
+Formula 8.5 yields:
+
+```{r}
+estimated_sig <-sqrt(sum(mod$residuals^2)/(length(mod$residuals)-2))
+estimated_sig
+```
+
+Cross validated method (LOO)
+
+```{r}
+
+res <- rep(0,nrow(hibbs))
+
+for(i in 1:nrow(hibbs)){
+  hibbs_loo <- hibbs[-i,]
+  mod <- stan_glm(vote ~ growth, data = hibbs_loo, refresh=0)
+  a <- coef(mod)[1]
+  b <- coef(mod)[2]
+  res[[i]] <- hibbs$vote[[i]] - (a + b*hibbs$growth[[i]])
+}
+
+cv_sig = sqrt(sum(res^2)/length(res))
+
+cv_sig
+```
+
+So we see that the cv_sig is very close to the stan_glm sigma.  The estimated sigma (from 8.5) is smaller but really with the errors (using the stan_glm error of 0.7)
+
+
+### Exercise 8.10
+
+Try with just a few points and large errors
+
+```{r}
+set.seed(333)
+x = seq(1,5)
+slope <- 0
+y = slope*x + rnorm(length(x),0)*6
+y[[length(x)]] <- 1000
+df = tibble(x,y)
+ggplot(data = df, aes(x=x,y=y) )+geom_point()
+```
+
+```{r}
+
+mod = stan_glm(y ~ x, data = df, refresh=0)
+stan_sig <- sigma(mod)
+print(mod, verbose=FALSE)
+```
+
+
+Using 8.5:
+
+```{r}
+estimated_sig <-sqrt(sum(mod$residuals^2)/(length(mod$residuals)-2))
+estimated_sig
+```
+
+Cross validation
+
+```{r}
+
+res <- rep(0,nrow(df))
+
+for(i in 1:nrow(df)){
+  df_loo <- df[-i,]
+  mod <- stan_glm(y ~ x, data = df_loo, refresh=0)
+  a <- coef(mod)[1]
+  b <- coef(mod)[2]
+  res[[i]] <- df$y[[i]] - (a + b*df$x[[i]])
+}
+
+cv_sig = sqrt(sum(res^2)/length(res))
+
+cv_sig
+```
+
+Nothing i have tried makes a LARGE difference, at least in terms of the SE on sigma. with only a few points the estimated sigma seems to underestimate the cv sigma, but not not statistically significant using the SE from stan_glm.
+
+However with only a few points and a large outlier, i was able to get a bigger difference.
+
+
