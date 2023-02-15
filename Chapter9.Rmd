@@ -1,0 +1,133 @@
+# Chapter 9 Selected Exercises
+
+```{r}
+library(tidyverse)
+library(rstanarm)
+```
+  
+
+## Exercise 9.9
+Prior distributions: Consider a regression predicting final exam score $y$  from midterm exam
+score $x$. Suppose that both exams are on the scale of 0–100, that typical scores range from
+50–100, that the correlation of midterm and final is somewhere in the range 0.5–0.8, and that the
+average score on the final exam might be up to 20 points higher or lower than the average score
+on the midterm.
+Given the above information, set up reasonable priors for the slope and the intercept after
+centering.
+
+
+For the intercept (after centering), I would consider a beta distribution with mean 0.75 and  and standard deviation about 0.4.   (then scale it by 100) This would ensure valid values. Since the mean of the beta distribution is $\frac{\alpha}{\alpha + \beta}$ , something like $\alpha = 3$ and $\beta=1$ is a good starting point:
+
+```{r}
+alpha = 3
+beta = alpha*(1/.75-1)
+var = (alpha*beta)/((alpha +beta)^2*(alpha+beta + 1))
+sqrt(var)
+
+```
+```{r}
+x <- seq(0,1,.01)
+p <- dbeta(x,3,1)
+ggplot(data = tibble(x,p), aes(x=x,y=p)) + geom_line()
+
+```
+
+For the slope, note the formula for the slope from correlation:
+
+$$ 
+a = \rho \frac{\sig_y}{\sig_x}
+$$
+
+
+In this case we dont expect the two standard deviations to be significantly different, so the slope should range from 0.5 to 0.8.  I would use a gaussian centered at 0.65 with sigma of about .5 (about 2.5 times the expected range).
+
+
+
+## Exercise 9.10
+
+Consider model $y=a + bx + \text{error}$ with $x\sim \text{Uniform}(-1,1})$ and independant priors on the coefficients and the residual error $\sigma$.  For a assume normal prior with mean 0 and standard deviation 1. For b assume normal porior with mean 0 and standard deviation 0.2
+
+a)  Simulate   100 data points from this model, assuming the true parameter values are $a=1, b= 0.2, \sigma = 0.5$
+
+```{r}
+N = 100
+a = 1
+b = 0.1
+sigma = 0.5
+
+set.seed(33)
+x = runif(N,-1,1)
+y = a+ b*x + rnorm(N,0,sigma)
+dat = tibble(x,y)
+ggplot(data =dat, aes(x=x,y=y))+ geom_point()
+
+```
+
+Fit the data using the priors above.
+
+```{r}
+mod <- stan_glm(y ~ x, data = dat,prior = normal(0,.2), prior_intercept = normal(0,1),  refresh=0)
+print(mod, digits =3, verbose=FALSE)
+```
+
+Compare to least squares
+
+```{r}
+lmod <-  lm(y ~ x, data = dat)
+print(lmod, digits =3, verbose=FALSE)
+```
+The fits are pretty close. I am surprised the slope is so far off though, but the data is very noisy.
+
+b) To make this work, i will average over several fits. This is not fast.
+
+```{r}
+sim_fit <- \(N){
+  a <- 1
+  b <- 0.1
+  sigma <- 0.5
+  n_avg = 30
+  
+  lmod_coef  = c(0,0)
+  mod_coef = c(0,0)
+  
+  for(i in 1:n_avg)
+      {  
+          x <- runif(N,-1,1)
+          y <- a+ b*x + rnorm(N,0,sigma)
+          dat <- tibble(x,y)
+          mod <- stan_glm(y ~ x, data = dat,prior = normal(0,.2), prior_intercept = normal(0,1),  refresh=0)
+          lmod <- lm(y ~ x, data = dat)
+          mod_coef = mod_coef + coef(mod)
+          lmod_coef = lmod_coef + coef(lmod)
+     }
+
+  list(stan_inter = mod_coef[1]/n_avg,
+       stan_slope = mod_coef[2]/n_avg,
+       lm_inter = lmod_coef[1]/n_avg, 
+       lm_slope = lmod_coef[2]/n_avg)
+}
+```
+
+```{r}
+Ns <- c(4,5,10,20,30,60,100,200,300)
+sim_res <- map_dfr(Ns, sim_fit)
+coefdf <- cbind(Ns,sim_res)
+```
+
+ 
+```{r}
+ggplot(data = pivot_longer(coefdf |> select(Ns, lm_slope, stan_slope),-Ns), aes(x=Ns, y=value)) + geom_point(aes(color=name)) + scale_x_log10() 
+```
+
+
+```{r}
+ggplot(data = pivot_longer(coefdf |> select(Ns, lm_inter, stan_inter),-Ns), aes(x=Ns, y=value)) + geom_point(aes(color=name)) + scale_x_log10()
+```
+
+For the slope:
+In the limit of $n=0$, we expect the linear model to converge (averaging over data sets) to the true values. We expect the Bayesian fit to converge to the priors. For $n \limit \infty$  we expect both to converge to the 'true' values. 
+
+For the intercept, we might expect the same thing expect the prior is too weak to and even a few points is enough to pull it away from zero.
+
+
+c) for the slope, this value of n is about 20. For the intercept, the prior is too weak.
