@@ -16,21 +16,24 @@ Given the above information, set up reasonable priors for the slope and the inte
 centering.
 
 
-For the intercept (after centering), I would consider a beta distribution with mean 0.75 and  and standard deviation about 0.4.   (then scale it by 100) This would ensure valid values. Since the mean of the beta distribution is $\frac{\alpha}{\alpha + \beta}$ , something like $\alpha = 3$ and $\beta=1$ is a good starting point:
+For the intercept (after centering), I would consider a beta distribution with median of 0.75   (then scale it by 100) This would ensure valid values. I will just use some trial and error with low values of alpha and beta to maintain 'weakly informative'.  :
 
 ```{r}
-alpha = 3
-beta = alpha*(1/.75-1)
-var = (alpha*beta)/((alpha +beta)^2*(alpha+beta + 1))
-sqrt(var)
-
+alpha = 2.4
+beta = 1
+qbeta(0.5,alpha,beta)
 ```
+
+
 ```{r}
 x <- seq(0,1,.01)
-p <- dbeta(x,3,1)
+p <- dbeta(x,alpha,beta)
 ggplot(data = tibble(x,p), aes(x=x,y=p)) + geom_line()
 
 ```
+
+I worry this prior is a bit too informative, and might also consider a simple uniform prior and compare.  
+
 
 For the slope, note the formula for the slope from correlation:
 
@@ -39,13 +42,13 @@ a = \rho \frac{\sig_y}{\sig_x}
 $$
 
 
-In this case we dont expect the two standard deviations to be significantly different, so the slope should range from 0.5 to 0.8.  I would use a gaussian centered at 0.65 with sigma of about .5 (about 2.5 times the expected range).
+In this case we dont expect the two standard deviations to be significantly different, so the slope should range from 0.5 to 0.8.  I would use a Gaussian centered at 0.65 with sigma of about .5 (about 2.5 times the expected range).
 
 
 
 ## Exercise 9.10
 
-Consider model $y=a + bx + \text{error}$ with $x\sim \text{Uniform}(-1,1})$ and independant priors on the coefficients and the residual error $\sigma$.  For a assume normal prior with mean 0 and standard deviation 1. For b assume normal porior with mean 0 and standard deviation 0.2
+Consider model $y=a + bx + \text{error}$ with $x\sim \text{Uniform}(-1,1})$ and independent priors on the coefficients and the residual error $\sigma$.  For a assume normal prior with mean 0 and standard deviation 1. For b assume normal prior with mean 0 and standard deviation 0.2
 
 a)  Simulate   100 data points from this model, assuming the true parameter values are $a=1, b= 0.2, \sigma = 0.5$
 
@@ -55,7 +58,7 @@ a = 1
 b = 0.1
 sigma = 0.5
 
-set.seed(33)
+#set.seed(33)
 x = runif(N,-1,1)
 y = a+ b*x + rnorm(N,0,sigma)
 dat = tibble(x,y)
@@ -116,7 +119,10 @@ coefdf <- cbind(Ns,sim_res)
 
  
 ```{r}
-ggplot(data = pivot_longer(coefdf |> select(Ns, lm_slope, stan_slope),-Ns), aes(x=Ns, y=value)) + geom_point(aes(color=name)) + scale_x_log10() 
+ggplot(data = pivot_longer(coefdf |>
+                           select(Ns, lm_slope, stan_slope),-Ns),
+                           aes(x=Ns, y=value)) + 
+      geom_point(aes(color=name)) + scale_x_log10() 
 ```
 
 
