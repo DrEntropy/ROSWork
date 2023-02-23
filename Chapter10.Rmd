@@ -14,15 +14,62 @@ set.seed(33)
 N = 100
 b = c(1,2,-1,-2)
 errors = rnorm(N,0,3)
-df = tibble(z = rbinom(N,1,0.5),
-            x = rnorm(N, z,1),
-            y = b[1]+b[2]*x + b[3]*z + b[4]*x*z + errors)
+df = tibble(z_n = rbinom(N,1,0.5),
+            z = factor(z_n),  # to make plots nice
+            x = rnorm(N,z_n,1),
+            y = b[1]+b[2]*x + b[3]*z_n + b[4]*x*z_n + errors)
 ```
 ```{r}
-ggplot(data= df, aes(x=x,y=y, color = z)) + geom_point()
+p1 = ggplot(data= df, aes(x=x,y=y, color = z)) + geom_point()
+p1
 
 ```
 
+```{r}
+mod1 <- stan_glm(y ~ x + z, data  = df, refresh =0)
+print(mod1)
+```
+
+```{r}
+xt <- seq(-3,3,.1)
+fit_df <- tibble(x=xt, y0 = coef(mod1)[1]+ coef(mod1)[2]*xt, y1=y0 + coef(mod1)[3]) |>
+          pivot_longer(-x, values_to = "y") |> mutate(z= factor(case_when(name=="y0" ~ 0,TRUE ~1)))
+```
+
+
+```{r}
+p1 + 
+  geom_line(data = fit_df , mapping = aes(x = x,y = y, color=z)) 
+```
+
+```{r}
+mod2 <- stan_glm(y ~ x + z + x:z, data  = df, refresh =0)
+print(mod2)
+```
+
+```{r}
+xt <- seq(-3,3,.1)
+fit_df_2 <- tibble(x=xt, y0 = coef(mod2)[1]+ coef(mod2)[2]*xt,
+                         y1=y0 + coef(mod2)[3] + coef(mod2)[4]*xt) |>
+          pivot_longer(-x, values_to = "y") |> mutate(z= factor(case_when(name=="y0" ~ 0,TRUE ~1)))
+```
+
+
+```{r}
+p1 + 
+  geom_line(data = fit_df_2 , mapping = aes(x = x,y = y, color=z)) 
+```
+
+
+Compare to input:
+```{r}
+b
+```
+```{r}
+coef(mod2)
+```
+
+Consistent.
 
 ## 10.3
 
