@@ -5,9 +5,30 @@ library(rstanarm)
 library(ggplot2)
 ```
 
-## 10.1
+## 10.1 Regression with interactions
+
+Simulate 100 data points for $y = b_0 + b_1 X + b_2 z + b_3 x z$. 
+This block sets up specifications as in the problem statement;
+```{r}
+set.seed(33)
+N = 100
+b = c(1,2,-1,-2)
+errors = rnorm(N,0,3)
+df = tibble(z = rbinom(N,1,0.5),
+            x = rnorm(N, z,1),
+            y = b[1]+b[2]*x + b[3]*z + b[4]*x*z + errors)
+```
+```{r}
+ggplot(data= df, aes(x=x,y=y, color = z)) + geom_point()
+
+```
+
 
 ## 10.3
+
+```{r}
+
+```
 
 ## 10.4
 
@@ -20,7 +41,7 @@ print(mod1)
 ```
 
 
-a) Cretae a collinear variable to growth
+a) Create a collinear variable to growth
 
 ```{r}
 hibbs <- hibbs |> mutate(cl_growth = growth)
