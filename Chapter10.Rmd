@@ -1,0 +1,87 @@
+# Selected Exercises
+```{r}
+library(tidyverse)
+library(rstanarm)
+library(ggplot2)
+```
+
+## 10.1
+
+## 10.3
+
+## 10.4
+
+## 10.9
+
+```{r}
+hibbs <- read.table('hibbs.dat', header= TRUE)
+mod1 <- stan_glm('vote ~ growth', data = hibbs, refresh=0)
+print(mod1)
+```
+
+
+a) Cretae a collinear variable to growth
+
+```{r}
+hibbs <- hibbs |> mutate(cl_growth = growth)
+hibbs |> ggplot(aes(x=cl_growth, y= growth)) + geom_point()
+```
+
+b)
+
+```{r}
+mod2 <- stan_glm('vote ~ growth + cl_growth', data = hibbs, refresh = 0)
+print(mod2)
+```
+
+We can see that each predictor has very large MAD_SD, but this is just because of the correlation between these two parameters:
+
+```{r}
+ggplot(data = as.tibble(mod2), aes(x= growth, y = cl_growth))+ geom_point()
+```
+
+c)
+Now we want a nearly colinear case. If we have two variables x and y, and $y = x + \epsilon$ where $\epsilon$ is normal with standard deviation $\sigma$, the correlation coefficent is:
+
+$$
+Cov(X,Y) = Cov(X, X + \epsilon) = Var(X) + Cov(X,\epsilon) = Var(X)\\
+\rho = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\sigma_X}{\sqrt{\sigma_X^2+\sigma_{\epsilon}^2}} 
+$$
+
+Solving for $\sigma_{\epsilon}$
+
+$$
+\sigma_{\epsilon} = \sigma_Y\sqrt{1/\rho^2 - 1}
+$$
+```{r}
+sig_e = sd(hibbs$growth)*sqrt(1/.9^2 - 1)
+sig_e
+```
+
+Using this gave too small of a sample correlation coefficient, due to spurious correlation between the random noise and the data.
+
+Using sd = 0.7 gave approximately the right correlation coefficient. 
+
+```{r}
+hibbs <- hibbs |> mutate(nl_growth = growth + rnorm(length(growth),mean = 0,sd = 0.7))
+cor(hibbs$growth,hibbs$nl_growth)
+```
+
+```{r}
+hibbs |> ggplot(aes(x=nl_growth, y= growth)) + geom_point()
+```
+
+```{r}
+mod3 <- stan_glm('vote ~ growth + nl_growth', data = hibbs, refresh = 0)
+print(mod3)
+```
+
+The errors are still larger then with one of the colinear predictors, but smaller then previously. Again these coefficients are correlated which we can see:
+
+
+```{r}
+ggplot(data = as.tibble(mod3), aes(x= growth, y = nl_growth))+ geom_point()
+```
+
+If you see this kind of thing, this might tell you to consider linear combinations of the predictors, in this case growth + nl_growth and growth- nl_growth.  (The difference in this case is just noise, but in general it could be something.).  
+
