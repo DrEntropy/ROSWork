@@ -73,11 +73,35 @@ Consistent.
 
 ## 10.3
 
+In this exercise and the next, you will simulate two variables that are statistically independent of each other to see what happens when we run a regression to predict one from the other.
+
 ```{r}
+df <- tibble(var1 = rnorm(1000,0,1),
+             var2 = rnorm(1000,0,1))
+mod <- stan_glm( var2 ~ var1, data = df, refresh =0)
+print(mod, digits =3)
 
 ```
 
+I suppose   one would conclude there is no significant effect!
+
 ## 10.4
+
+```{r}
+z_scores <- rep(NA, 100)
+for (k in 1:100) {
+   var1 <- rnorm(1000, 0, 1)
+   var2 <- rnorm(1000, 0, 1)
+   fake <- data.frame(var1, var2)
+   fit <- stan_glm(var2 ~ var1, data=fake, refresh = 0)
+   if(k%%10 == 0) print(k)
+   z_scores[k] <- coef(fit)[2] / se(fit)[2]
+}
+
+mean(abs(z_scores)>2)
+```
+
+So 5% of the time,  we see a spurious correlation effect.  I suspect this can be analyticaly derived, but i am too lazy to work it out. Would need to work out the  distribution of $\rho$ as a random variable.
 
 ## 10.9
 
