@@ -142,5 +142,136 @@ This suggests that although outliers will pull a fit away , the direction they p
 
 ## Exercise 11.9
 
+Note this requires Ros-Examples to be cloned up one level
+
+```{r }
+beauty <- read_csv("../Ros-Examples/Beauty/data/beauty.csv", col_types = "nnfiffff")
+head(beauty)
+```
+
+
+```{r}
+summary(beauty)
+```
+
+Most of the `course_id` are 0, I am not going to use this predictor. 
+
+Lets start looking at eval vs beuty
+
+```{r}
+ggplot(data = beauty) + geom_point(mapping = aes(x= beauty, y= eval, color = female))
+```
+
+ 
+We will need several models to compare, lets start fitting everything and see what predictors might be important, including an interaction for beauty and sex.
+
+```{r}
+fit_all <- stan_glm(eval ~ beauty*female + age + minority + nonenglish + lower , data = beauty, refresh=0)
+print(fit_all)
+```
+```{r}
+loo_all <- loo(fit_all)
+print(loo_all)
+```
+Ok I will pick 3 more models to compare. 
+
+```{r}
+fit_1 <- stan_glm(eval ~ beauty + female , data = beauty, refresh=0)
+print(fit_1)
+```
+
+```{r}
+loo1 <- loo(fit_1)
+print(loo1)
+```
+
+```{r}
+fit_2 <- stan_glm(eval ~ beauty * female , data = beauty, refresh=0)
+print(fit_2)
+```
+
+```{r}
+loo2 <- loo(fit_2)
+print(loo2)
+```
+
+We note that the interaction did not add anything
+
+```{r}
+fit_3 <- stan_glm(eval ~ beauty + female + nonenglish, data = beauty, refresh=0)
+print(fit_3)
+```
+
+```{r}
+loo3= loo(fit_3)
+print(loo3)
+```
+
+```{r}
+loo_compare(loo_all, loo3, loo2, loo1)
+```
+ 
+The difference between the epld on this two models is not significant, so take the simpler one (fit_3) 
+
+I am only going to look at fit_3 for pointwise predictive errors, looking at residuals
+
+```{r}
+b_with_pred = beauty |> arrange(beauty)
+b_with_pred$eval_point_pred <- predict(fit_3)
+
+ggplot(data = b_with_pred) + geom_point(aes(x=eval_point_pred, y =  eval- eval_point_pred, color = female)) + geom_abline(slope =0, intercept =0, color = "red")
+```
+
+Not sure what i am supposed to get out of that.
+ 
+
 
 ## Exercise 11.10
+
+Here i am only going to look at fit_3 and fit_1 , which differ only in adding 'nonenglish' as a predictor.  The loo difference was barely signficant, so it seems useful to compare these using  manual CV:
+
+(a) Randomly partition the data into five parts using the sample function in R.
+(b) For each part, re-fitting the model excluding that part, then use each fitted model to predict
+the outcomes for the left-out part, and compute the sum of squared errors for the prediction.
+(c) For each model, add up the sum of squared errors for the five steps in (b). Compare the
+different models based on this fit.
+
+```{r}
+folds = 5
+n <- nrow(beauty)
+shuffled_index <- sample(1:n, n, replace = FALSE)
+
+residuals_1 <- rep(0,5)
+
+residuals_3 <- rep(0,5)
+
+start = 1
+for(i in 1:folds)
+{
+  end = start + n/5 - 1
+  data <- beauty[-(round(start):round(end)),]
+  print(paste0("Fold ",i, ", length", nrow(data)))
+  fit_1 <- stan_glm(eval ~ beauty + female , data = data, refresh=0)
+  residuals_1[[i]] <- sum((predict(fit_1) - data$eval)^2)
+  
+  fit_3 <- stan_glm(eval ~ beauty + female + nonenglish , data = data, refresh=0)
+  residuals_3[[i]] <- sum((predict(fit_3) - data$eval)^2)
+  
+  start = end + 1
+}
+```
+
+That code is very non-tidy.  
+
+
+```{r}
+print(mean(residuals_1))
+print(mean(residuals_3))
+
+```
+
+Fit three is still better. 
+
+```{r}
+sqrt(sd(residuals_3)^2/5 + sd(residuals_1)^2/5)
+```
