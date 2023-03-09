@@ -142,7 +142,7 @@ This suggests that although outliers will pull a fit away , the direction they p
 
 ## Exercise 11.9
 
-Note this requires Ros-Examples to be cloned up one level
+Note this requires tidy_ros to be cloned up one level
 
 ```{r }
 beauty <- read_csv("../tidy_ros/Beauty/data/beauty.csv", col_types = "nnfiffff")
@@ -255,11 +255,9 @@ for(i in 1:folds)
   print(paste0("Fold ",i, ", length", nrow(data)))
   
   fit_1 <- stan_glm(eval ~ beauty + female , data = data, refresh=0)
-
   
   fit_3 <- stan_glm(eval ~ beauty + female + nonenglish , data = data, refresh=0)
  
-  
   beauty[beauty$fold == i, 'pred3'] <- predict(fit_3, newdata = test)
   beauty[beauty$fold == i, 'pred1'] <- predict(fit_1, newdata = test)
 }
@@ -282,5 +280,9 @@ sds
 ```{r}
 sqrt(sds$sd1^2 + sds$sd3^2)*sqrt(5)
 ```
-
+```{r}
+ggplot(beauty |> mutate(rn = row_number(), err1= eval- pred1, err3 = eval - pred3) |>
+         pivot_longer(c(err1,err3))) +
+  geom_point(aes(x=rn,y=value, color=name))
+```
 
