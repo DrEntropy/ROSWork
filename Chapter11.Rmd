@@ -268,13 +268,13 @@ for(i in 1:folds)
 
 
 ```{r}
-print(mean(residuals_1))
-print(mean(residuals_3))
+print(sum(residuals_1))
+print(sum(residuals_3))
 
 ```
 
-The two fits are not significantly different.  Maybe i made an error somewhere?
+The two fits are not significantly different.  
 
 ```{r}
-sqrt(sd(residuals_3)^2/5 + sd(residuals_1)^2/5)
+sqrt(5*sd(residuals_3)^2 + 5*sd(residuals_1)^2)
 ```
