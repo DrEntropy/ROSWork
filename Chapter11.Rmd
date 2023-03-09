@@ -145,7 +145,7 @@ This suggests that although outliers will pull a fit away , the direction they p
 Note this requires Ros-Examples to be cloned up one level
 
 ```{r }
-beauty <- read_csv("../Ros-Examples/Beauty/data/beauty.csv", col_types = "nnfiffff")
+beauty <- read_csv("../tidy_ros/Beauty/data/beauty.csv", col_types = "nnfiffff")
 head(beauty)
 ```
 
@@ -246,8 +246,6 @@ n <- nrow(beauty)
 beauty$fold <- sample(rep(0,n) + 1:folds, n, replace = FALSE)
 
 
-residuals_1 <- rep(0,5)
-residuals_3 <- rep(0,5)
 
 #b and #c
 for(i in 1:folds)
@@ -257,24 +255,32 @@ for(i in 1:folds)
   print(paste0("Fold ",i, ", length", nrow(data)))
   
   fit_1 <- stan_glm(eval ~ beauty + female , data = data, refresh=0)
-  residuals_1[[i]] <- sum((predict(fit_1, newdata = test) - test$eval)^2)
+
   
   fit_3 <- stan_glm(eval ~ beauty + female + nonenglish , data = data, refresh=0)
-  residuals_3[[i]] <- sum((predict(fit_3, newdata = test) - test$eval)^2)
+ 
+  
+  beauty[beauty$fold == i, 'pred3'] <- predict(fit_3, newdata = test)
+  beauty[beauty$fold == i, 'pred1'] <- predict(fit_1, newdata = test)
 }
 ```
 
- 
-
 
 ```{r}
-print(sum(residuals_1))
-print(sum(residuals_3))
-
+beauty |> summarize(total1 = sum((pred1- eval)^2),total3 = sum((pred3-eval)^2))
 ```
 
 The two fits are not significantly different.  
 
 ```{r}
-sqrt(5*sd(residuals_3)^2 + 5*sd(residuals_1)^2)
+sds <- beauty |> group_by(fold) |> summarize(total1 = sum((pred1- eval)^2),total3 = sum((pred3-eval)^2)) |>
+   ungroup() |> summarize(sd1 = sd(total1), sd3 = sd(total3))
+sds
+
 ```
+
+```{r}
+sqrt(sds$sd1^2 + sds$sd3^2)*sqrt(5)
+```
+
+
