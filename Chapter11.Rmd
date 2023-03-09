@@ -249,10 +249,9 @@ beauty$fold <- sample(rep(0,n) + 1:folds, n, replace = FALSE)
 residuals_1 <- rep(0,5)
 residuals_3 <- rep(0,5)
 
-start = 1
+#b and #c
 for(i in 1:folds)
 {
-  end = start + n/5 - 1
   data <- beauty |> filter(fold != i)
   test <- beauty |> filter(fold == i)
   print(paste0("Fold ",i, ", length", nrow(data)))
@@ -262,8 +261,6 @@ for(i in 1:folds)
   
   fit_3 <- stan_glm(eval ~ beauty + female + nonenglish , data = data, refresh=0)
   residuals_3[[i]] <- sum((predict(fit_3, newdata = test) - test$eval)^2)
-  
-  start = end + 1
 }
 ```
 
@@ -276,7 +273,7 @@ print(mean(residuals_3))
 
 ```
 
-Fit three is still better but not significantly
+The two fits are not significantly different.  Maybe i made an error somewhere?
 
 ```{r}
 sqrt(sd(residuals_3)^2/5 + sd(residuals_1)^2/5)
