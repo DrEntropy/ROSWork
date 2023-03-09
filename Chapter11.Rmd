@@ -237,31 +237,37 @@ the outcomes for the left-out part, and compute the sum of squared errors for th
 different models based on this fit.
 
 ```{r}
+
+# a)
 folds = 5
 n <- nrow(beauty)
-shuffled_index <- sample(1:n, n, replace = FALSE)
-s_beauty <- beauty[shuffled_index,]
-residuals_1 <- rep(0,5)
 
+# the rep(0,n) is just to force recycling.. what the right way ?
+beauty$fold <- sample(rep(0,n) + 1:folds, n, replace = FALSE)
+
+
+residuals_1 <- rep(0,5)
 residuals_3 <- rep(0,5)
 
 start = 1
 for(i in 1:folds)
 {
   end = start + n/5 - 1
-  data <- s_beauty[-(round(start):round(end)),]
+  data <- beauty |> filter(fold != i)
+  test <- beauty |> filter(fold == i)
   print(paste0("Fold ",i, ", length", nrow(data)))
+  
   fit_1 <- stan_glm(eval ~ beauty + female , data = data, refresh=0)
-  residuals_1[[i]] <- sum((predict(fit_1) - data$eval)^2)
+  residuals_1[[i]] <- sum((predict(fit_1, newdata = test) - test$eval)^2)
   
   fit_3 <- stan_glm(eval ~ beauty + female + nonenglish , data = data, refresh=0)
-  residuals_3[[i]] <- sum((predict(fit_3) - data$eval)^2)
+  residuals_3[[i]] <- sum((predict(fit_3, newdata = test) - test$eval)^2)
   
   start = end + 1
 }
 ```
 
-That code is very non-tidy.  
+ 
 
 
 ```{r}
@@ -270,7 +276,7 @@ print(mean(residuals_3))
 
 ```
 
-Fit three is still better..
+Fit three is still better but not significantly
 
 ```{r}
 sqrt(sd(residuals_3)^2/5 + sd(residuals_1)^2/5)
