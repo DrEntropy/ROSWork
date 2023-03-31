@@ -1,0 +1,37 @@
+
+## This code copied from 
+
+https://www.r-bloggers.com/2020/09/introduction-to-stan-in-r/
+
+```{r}
+library(tidyverse)
+library(rstan)
+library(rstanarm)
+
+mtcars %>%
+  head()
+```
+
+
+```{r}
+predictors <- mtcars %>%
+  select(-mpg)
+
+stan_data <- list(
+    N = 32,
+    K = 10,
+    X = predictors,
+    y = mtcars$mpg
+  )
+```
+
+```{r}
+fit_rstan <- stan(
+  file = "mtcars.stan",
+  data = stan_data
+)
+fit_rstan
+```
+Gives same error as before. Error in sink(type = "output") : invalid connection
+
+

@@ -1,0 +1,95 @@
+# Selected Exercises
+```{r}
+library(tidyverse)
+library(rstanarm)
+library(ggplot2)
+library(rstan)
+library(brms)
+```
+
+## 12.6
+
+a) Create a scatterplot of mortality rate versus level of nitric oxides. Do you think linear regression will fit these data well? Fit the regression and evaluate a residual plot from the regression.
+
+```{r}
+pollution <- read_csv("Pollution/data/pollution.csv",
+                      show_col_types =  FALSE)
+
+ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point()
+```
+I doesn't appear that a linear model will work very well.  Lets see:
+
+```{r}
+fit <- stan_glm(mort ~ nox, data = pollution, refresh =0)
+fit
+```
+
+```{r}
+ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point() +
+  geom_abline(intercept= fit$coefficients[1], slope = fit$coefficients[2])
+```
+
+Plotting the residuals:
+```{r}
+pollution$residual <- pollution$mort - predict(fit)
+ggplot(data = pollution) + geom_point(aes(x=nox, y= residual))
+```
+
+Basically explains none of the variance.
+
+b) I suspect that the log of the nox will look more linear, and to make it easier to interpret lets also do the log of the mort.
+
+```{r}
+ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point()
+
+```
+
+```{r}
+fit2 <- stan_glm(log(mort) ~ log(nox), data = pollution, refresh =0)
+print(fit2, digits =4)
+```
+
+
+
+```{r}
+ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point() +
+  geom_abline(intercept= fit2$coefficients[1], slope = fit2$coefficients[2])
+```
+
+
+Plotting the residuals:
+```{r}
+pollution$residual <- log(pollution$mort) - predict(fit2)
+ggplot(data = pollution) + geom_point(aes(x=log(nox), y= residual))
+```
+
+Not convinced that this is much better.
+
+```{r}
+loo1 = loo(fit)
+loo2 = loo(fit2)
+loo2_with_jacobian <- loo2
+# just copied from the book.... 
+loo2_with_jacobian$pointwise[,1] <- loo2_with_jacobian$pointwise[,1] - log(pollution$mort)
+loo_compare(loo1,loo2_with_jacobian)
+```
+
+Fit two is only barely better. 
+
+That outlier is the pulling the fit, a later chapter will show how to do robust fit using brm, but i could not get this working on windows. 
+
+
+```  
+fit3 <- brm(mort ~ log(nox), data = pollution, family = 'student')
+ 
+```
+
+c) How do we interpret the coefficent on the slope?
+
+The model is: `log(mort) = 0.016*log(nox) + intercept`
+
+or `mort = exp(intercept)*nox^(0.016)`
+
+The slope here give the exponent in the power law.
+
+ 
