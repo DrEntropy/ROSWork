@@ -56,11 +56,19 @@ ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point() +
   geom_abline(intercept= fit2$coefficients[1], slope = fit2$coefficients[2])
 ```
 
+```{r}
+
+fit_line = tibble(nox = 0:300 )
+fit_line$mort = exp(predict(fit2, newdata = fit_line))
+ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point() +
+  geom_line(data = fit_line, mapping = aes(x=nox,y=mort))
+```
+
 
 Plotting the residuals:
 ```{r}
 pollution$residual <- log(pollution$mort) - predict(fit2)
-ggplot(data = pollution) + geom_point(aes(x=log(nox), y= residual))
+ggplot(data = pollution) + geom_point(aes(x=nox, y= residual))
 ```
 
 Not convinced that this is much better.
@@ -79,10 +87,15 @@ Fit two is only barely better.
 That outlier is the pulling the fit, a later chapter will show how to do robust fit using brm, but i could not get this working on windows. 
 
 
-```  
-fit3 <- brm(mort ~ log(nox), data = pollution, family = 'student')
- 
+```{r}
+fit3 <- brm(log(mort) ~ log(nox), data = pollution, family = 'student')
+print(fit3, digits = 4)
 ```
+
+```{r}
+fit3_fit <- fixef(fit3)
+```
+
 
 c) How do we interpret the coefficent on the slope?
 
@@ -91,5 +104,24 @@ The model is: `log(mort) = 0.016*log(nox) + intercept`
 or `mort = exp(intercept)*nox^(0.016)`
 
 The slope here give the exponent in the power law.
+```{r}
 
+fit_line = tibble(nox = 0:300 )
+fit_line$mort = exp(predict(fit3, newdata = fit_line)[,1])
+ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point() +
+  geom_line(data = fit_line, mapping = aes(x=nox,y=mort))
+```
  
+```{r}
+loo3 = loo(fit3)
+loo3_with_jacobian <- loo3
+# just copied from the book.... 
+loo3_with_jacobian$pointwise[,1] <- loo3_with_jacobian$pointwise[,1] - log(pollution$mort)
+loo_compare(loo1,loo2_with_jacobian, loo3_with_jacobian)
+```
+
+c) How to interpret the coefficient? Since this is a log- log transformation, the coefficient is the exponent `c` in:
+
+`mort ~ nox^c'  
+
+for example, each doubling of nox produces about a 1.3 % increase in mortality. 
