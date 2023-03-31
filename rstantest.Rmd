@@ -32,6 +32,8 @@ fit_rstan <- stan(
 )
 fit_rstan
 ```
-Gives same error as before. Error in sink(type = "output") : invalid connection
+ 
+ 
+Finally got it workign by first removing rstan and stanheaders and following instructions at web site.
 
 
