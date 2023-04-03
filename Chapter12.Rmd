@@ -9,7 +9,7 @@ library(brms)
 
 ## 12.6
 
-a) Create a scatterplot of mortality rate versus level of nitric oxides. Do you think linear regression will fit these data well? Fit the regression and evaluate a residual plot from the regression.
+### a) Scatter plot of Mort vs NOX
 
 ```{r}
 pollution <- read_csv("Pollution/data/pollution.csv",
@@ -17,7 +17,7 @@ pollution <- read_csv("Pollution/data/pollution.csv",
 
 ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point()
 ```
-I doesn't appear that a linear model will work very well.  Lets see:
+I doesn't appear that a linear model will work very well. To my eye it looks exponential for small nox and then there are a bunch of outliers.  Lets try a fit:
 
 ```{r}
 fit <- stan_glm(mort ~ nox, data = pollution, refresh =0)
@@ -29,32 +29,44 @@ ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point() +
   geom_abline(intercept= fit$coefficients[1], slope = fit$coefficients[2])
 ```
 
+As expected the outliers drive the fit. The coefficient for nox is consistent with zero.
+
+
 Plotting the residuals:
 ```{r}
 pollution$residual <- pollution$mort - predict(fit)
 ggplot(data = pollution) + geom_point(aes(x=nox, y= residual))
 ```
 
-Basically explains none of the variance.
+Explains none of the variance.
 
-b) I suspect that the log of the nox will look more linear, and to make it easier to interpret lets also do the log of the mort.
+###  b) Try transformations
+
+I suspect that the log of the nox will look more linear, and to make it easier to interpret lets also do the log of the mort. 
 
 ```{r}
 ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point()
 
 ```
 
+
+On this scale there is a clear linear relationship except I do worry about the points at the right.
+
+
 ```{r}
 fit2 <- stan_glm(log(mort) ~ log(nox), data = pollution, refresh =0)
 print(fit2, digits =4)
 ```
 
+Now at least wee see a 'significant' positive effect.
 
 
 ```{r}
 ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point() +
   geom_abline(intercept= fit2$coefficients[1], slope = fit2$coefficients[2])
 ```
+
+Or on the original scale:
 
 ```{r}
 
@@ -71,7 +83,7 @@ pollution$residual <- log(pollution$mort) - predict(fit2)
 ggplot(data = pollution) + geom_point(aes(x=nox, y= residual))
 ```
 
-Not convinced that this is much better.
+Compare the loo's, using the correction to the Jacobian from the text which I do not understand fully ;)
 
 ```{r}
 loo1 = loo(fit)
@@ -82,35 +94,38 @@ loo2_with_jacobian$pointwise[,1] <- loo2_with_jacobian$pointwise[,1] - log(pollu
 loo_compare(loo1,loo2_with_jacobian)
 ```
 
-Fit two is only barely better. 
-
-That outlier is the pulling the fit, a later chapter will show how to do robust fit using brm, but i could not get this working on windows. 
-
+Fit two is better, just barely significantly though.
 
 ```{r}
-fit3 <- brm(log(mort) ~ log(nox), data = pollution, family = 'student')
+c(median(bayes_R2(fit)),median(bayes_R2(fit2)))
+```
+
+Fit2 does explain more of the variance at least!
+
+### Outliers (not part of the excercise)
+
+That outlier is the pulling the fit, a later chapter will show how to do robust fit using brms, so I read ahead to try it out:
+
+```{r}
+fit3 <- brm(log(mort) ~ log(nox), data = pollution, family = 'student', refresh=0)
 print(fit3, digits = 4)
 ```
+
 
 ```{r}
 fit3_fit <- fixef(fit3)
 ```
 
 
-c) How do we interpret the coefficent on the slope?
-
-The model is: `log(mort) = 0.016*log(nox) + intercept`
-
-or `mort = exp(intercept)*nox^(0.016)`
-
-The slope here give the exponent in the power law.
 ```{r}
-
-fit_line = tibble(nox = 0:300 )
-fit_line$mort = exp(predict(fit3, newdata = fit_line)[,1])
-ggplot(data = pollution, aes(x=nox, y = mort)) + geom_point() +
-  geom_line(data = fit_line, mapping = aes(x=nox,y=mort))
+ggplot(data = pollution, aes(x=log(nox), y = log(mort))) + geom_point() +
+  geom_abline(intercept= fit3_fit[1], slope = fit3_fit[2])
 ```
+
+
+This move the slope up a bit and de-emphasized the outliers as desired.
+
+ 
  
 ```{r}
 loo3 = loo(fit3)
@@ -120,7 +135,27 @@ loo3_with_jacobian$pointwise[,1] <- loo3_with_jacobian$pointwise[,1] - log(pollu
 loo_compare(loo1,loo2_with_jacobian, loo3_with_jacobian)
 ```
 
-c) How to interpret the coefficient? Since this is a log- log transformation, the coefficient is the exponent `c` in:
+fit3 is significantly better then the original fit, but not from fit2.
+
+Note we can compare directly loo2 and loo3:
+
+```{r}
+loo_compare(loo2,loo3)
+```
+
+So the 'robust'fit is only marginally better according to loo, which makes sense do the dominance of the noise.
+
+```{r}
+median(bayes_R2(fit2))
+```
+   
+### c) How do we interpret the coefficent on the slope?
+
+The model is: `log(mort) = 0.016*log(nox) + intercept`
+
+or `mort = exp(intercept)*nox^(0.016)`
+
+The slope here give the exponent in the power law., the coefficient is the exponent `c` in:
 
 `mort ~ nox^c'  
 
