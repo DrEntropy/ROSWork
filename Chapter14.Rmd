@@ -1,0 +1,173 @@
+# Chapter 14, selected exercises
+
+```{r}
+library(rstanarm)
+library(tidyverse)
+```
+
+## Exercise 14.3 
+
+Graphing Logistic Regressions
+
+Graphing logistic regressions: The well-switching data described in Section 13.7 are in the
+folder Arsenic.
+(a) Fit a logistic regression for the probability of switching using log (distance to nearest safe
+well) as a predictor.
+
+```{r, message=FALSE}
+wells <- read_csv('wells.csv')
+wells <- wells |> mutate(log_dist = log(dist))
+summary(wells)
+```
+```{r}
+fit_a <- stan_glm(switch ~ log(dist), data = wells,family = binomial(link = "logit"), refresh = 0)
+print(fit_a, digits=3)
+```
+
+*I wonder if I should center log distance?* 
+
+(b) Make a graph similar to Figure 13.8b displaying Pr(switch) as a function of distance to
+nearest safe well, along with the data.
+
+Borrowed from tidyros example 
+
+```{r}
+v <- 
+  tibble(
+    dist = seq(from=min(wells$dist), to = max(wells$dist), length.out=100),
+    .pred = predict(fit_a, type = "response", newdata = tibble(dist))
+  )
+
+wells %>% 
+  ggplot(aes(dist)) +
+  stat_ydensity(
+    aes(y = switch, group = switch),
+    width = 0.25,
+    draw_quantiles = c(0.25, 0.5, 0.75),
+    scale = "count"
+  ) +
+  geom_line(aes(y = .pred), data = v) +
+  coord_cartesian(ylim = c(-0.125, 1.125)) +
+  scale_y_continuous(breaks = seq(0, 1, 0.1), minor_breaks = NULL) +
+  scale_x_continuous(breaks = scales::breaks_width(50)) +
+  labs(
+    title = "Probability of household switching to new well by distance",
+    subtitle =
+      "Voilin plots represent density of those do did and did not switch",
+    x = "Distance to the closest known safe well (meters)",
+    y = "Probability of household switching"
+  )
+```
+
+
+
+
+
+(c) Make a residual plot and binned residual plot as in Figure 14.8.
+I am only going to show binned residual plot
+
+This code borrowed from the tidy-ros examples:
+
+```{r}
+plot_binned_residuals <- function(data) {
+  data %>% 
+    ggplot(aes(x_mean)) +
+    geom_hline(yintercept = 0, color = "white", size = 2) +
+    geom_line(aes(y = 2 * y_se), color = "grey60") +
+    geom_line(aes(y = -2 * y_se), color = "grey60") +
+    geom_point(aes(y = y_mean)) +
+    labs(y = "Average residual")
+}
+
+binned_means <- function(x, y, n_bins = 40) {
+  tibble(x, y) %>% 
+    mutate(bin = cut_number(x, n = n_bins)) %>% 
+    group_by(bin) %>% 
+    summarize(
+      x_mean = mean(x),
+      y_mean = mean(y),
+      y_se = sd(y) / sqrt(n())
+    )
+}
+```
+
+```{r}
+v <- 
+  binned_means(
+    x = wells$dist,
+    y = residuals(fit_a)
+  )
+
+v %>% 
+  plot_binned_residuals() +
+  labs(
+    title = "Binned residuals by distance to nearest safe well",
+    x = "Distance to nearest safe well"
+  )
+```
+
+
+(d) Compute the error rate of the fitted model and compare to the error rate of the null model.
+
+Error rate of the null model:
+
+```{r}
+wells |> summarize(null_switch = mean(switch))
+```
+So the error rate is 1- that, about 42.5%
+
+For the fitted model:
+
+```{r}
+pred <- predict(fit_a, type='response')
+mean((pred > 0.5 & wells$switch==1) | (pred <= 0.5 &  wells$switch==0))
+```
+
+ok, so better then null!
+
+(e) Create indicator variables corresponding to dist < 100; dist between 100 and 200; and
+dist >  200. Fit a logistic regression for Pr(switch) using these indicators. With this new
+model, repeat the computations and graphs for part (a) of this exercise.
+
+```{r}
+wells <- wells |> 
+  mutate(
+    dist_cut = cut(dist,c(0,100,200,1000))
+ 
+  )
+
+fit_e <- stan_glm(switch ~ dist_cut - 1 ,
+                  data = wells, family= binomial(link="logit"), refresh = 0)
+```
+
+```{r}
+print(fit_e, digits =3)
+```
+
+
+
+Plot it
+
+
+```{r}
+binned <- wells |> 
+          group_by(dist_cut) |> 
+          summarise(p_cut = mean(switch), sd_cut = sd(switch) / sqrt(n()) ) 
+binned <- binned |>
+  mutate(.pred = predict(fit_e, type = "response", newdata = binned))
+
+binned |> 
+  ggplot() +
+  geom_point(aes(x=dist_cut, y= p_cut)) + 
+  geom_errorbar(aes(x= dist_cut, ymin = p_cut - sd_cut,ymax = p_cut + sd_cut)) +
+  geom_point(aes(x = dist_cut, y = .pred), color='red')
+```
+
+
+```{r}
+binned |> 
+  ggplot() +
+  geom_point(aes(x=dist_cut, y= p_cut - .pred)) + 
+  geom_errorbar(aes(x= dist_cut, ymin = p_cut - .pred - sd_cut,ymax = p_cut - .pred + sd_cut)) 
+```
+
