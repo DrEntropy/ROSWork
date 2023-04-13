@@ -144,7 +144,7 @@ fit_e <- stan_glm(switch ~ dist_cut - 1 ,
 print(fit_e, digits =3)
 ```
 
-
+ 
 
 Plot it
 
@@ -163,11 +163,16 @@ binned |>
   geom_point(aes(x = dist_cut, y = .pred), color='red')
 ```
 
+```{r}
+binned
+```
+
+At first I was surprised, but then I recalled that fitting to a constant is the same as estimating the proportion, which is all we are doing for each bin! 
 
 ```{r}
-binned |> 
-  ggplot() +
-  geom_point(aes(x=dist_cut, y= p_cut - .pred)) + 
-  geom_errorbar(aes(x= dist_cut, ymin = p_cut - .pred - sd_cut,ymax = p_cut - .pred + sd_cut)) 
+as_tibble(fit_e) |> pivot_longer( everything(), names_to = 'bin', values_to = 'coef' ) |>
+  group_by(bin) |> summarize(mean = mean(invlogit(coef)), sd = sd(invlogit(coef)))
 ```
+
+
 
