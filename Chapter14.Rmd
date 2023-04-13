@@ -3,6 +3,7 @@
 ```{r}
 library(rstanarm)
 library(tidyverse)
+
 ```
 
 ## Exercise 14.3 
@@ -11,6 +12,9 @@ Graphing Logistic Regressions
 
 Graphing logistic regressions: The well-switching data described in Section 13.7 are in the
 folder Arsenic.
+
+### Fit (a)
+
 (a) Fit a logistic regression for the probability of switching using log (distance to nearest safe
 well) as a predictor.
 
@@ -26,8 +30,9 @@ print(fit_a, digits=3)
 
 *I wonder if I should center log distance?* 
 
-(b) Make a graph similar to Figure 13.8b displaying Pr(switch) as a function of distance to
-nearest safe well, along with the data.
+### (b) Make a graph similar to Figure 13.8b 
+
+Display Pr(switch) as a function of distance to nearest safe well, along with the data.
 
 Borrowed from tidyros example 
 
@@ -59,11 +64,29 @@ wells %>%
   )
 ```
 
+### Look at it on log scale, vs binned data
+
+```{r}
+binned <- wells |>  mutate(bin = cut_interval(log_dist,n = 10)) |>
+        group_by(bin) |> 
+             summarize(
+             dist = median(dist),
+             p_switch = mean(switch),
+             p_se = sd(switch) / sqrt(n()) 
+             )
+             
+ 
+
+binned |> 
+  ggplot() +
+  geom_errorbar(aes(x= log(dist), ymin = p_switch - p_se,ymax = p_switch + p_se)) +
+  geom_line(aes(x = log(dist), y = predict(fit_a, type = "response")),data=wells, color='red') +
+  geom_point(aes(x=log(dist), y= p_switch))
+```
 
 
 
-
-(c) Make a residual plot and binned residual plot as in Figure 14.8.
+### (c) Make a residual plot and binned residual plot as in Figure 14.8.
 I am only going to show binned residual plot
 
 This code borrowed from the tidy-ros examples:
@@ -107,7 +130,7 @@ v %>%
 ```
 
 
-(d) Compute the error rate of the fitted model and compare to the error rate of the null model.
+### (d) Compute the error rate of the fitted model and compare to the error rate of the null model.
 
 Error rate of the null model:
 
@@ -125,7 +148,9 @@ mean((pred > 0.5 & wells$switch==1) | (pred <= 0.5 &  wells$switch==0))
 
 ok, so better then null!
 
-(e) Create indicator variables corresponding to dist < 100; dist between 100 and 200; and
+### (e) Large Binns 
+
+Create indicator variables corresponding to dist < 100; dist between 100 and 200; and
 dist >  200. Fit a logistic regression for Pr(switch) using these indicators. With this new
 model, repeat the computations and graphs for part (a) of this exercise.
 
@@ -174,5 +199,31 @@ as_tibble(fit_e) |> pivot_longer( everything(), names_to = 'bin', values_to = 'c
   group_by(bin) |> summarize(mean = mean(invlogit(coef)), sd = sd(invlogit(coef)))
 ```
 
+### Alternate plot to better illustrate the fit IMHO
 
+```{r}
+binned <- wells |>  mutate(bin = cut_interval(dist, n = 10)) |>
+        group_by(bin) |> 
+             summarize(
+             dist_mean = mean(dist),
+             p_switch = mean(switch),
+             p_se = sd(switch) / sqrt(n()) 
+             )
+             
+ 
 
+binned |> 
+  ggplot() +
+  geom_errorbar(aes(x= dist_mean, ymin = p_switch - p_se,ymax = p_switch + p_se)) +
+  geom_line(aes(x = dist, y = predict(fit_e, type = "response")),data=wells, color='red') +
+  geom_point(aes(x=dist_mean, y= p_switch))
+```
+
+### How bad is the prediction accuracy?
+
+```{r}
+pred <- predict(fit_e, type='response')
+mean((pred > 0.5 & wells$switch==1) | (pred <= 0.5 &  wells$switch==0))
+```
+
+Slightly better?
