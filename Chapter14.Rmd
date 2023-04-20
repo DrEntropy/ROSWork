@@ -118,7 +118,8 @@ binned_means <- function(x, y, n_bins = 40) {
 v <- 
   binned_means(
     x = wells$dist,
-    y = residuals(fit_a)
+    y = residuals(fit_a),
+    n_bins = 40
   )
 
 v %>% 
@@ -137,7 +138,7 @@ Error rate of the null model:
 ```{r}
 wells |> summarize(null_switch = mean(switch))
 ```
-So the error rate is 1- that, about 42.5%
+If we guess that everyone switches, we will be right 57.5% of the time, So the error rate is 1- that, about 42.5%
 
 For the fitted model:
 
@@ -146,9 +147,9 @@ pred <- predict(fit_a, type='response')
 mean((pred > 0.5 & wells$switch==1) | (pred <= 0.5 &  wells$switch==0))
 ```
 
-ok, so better then null!
+ok, so only *slightly* better then null!
 
-### (e) Large Binns 
+### (e) Large Bins 
 
 Create indicator variables corresponding to dist < 100; dist between 100 and 200; and
 dist >  200. Fit a logistic regression for Pr(switch) using these indicators. With this new
@@ -161,7 +162,7 @@ wells <- wells |>
  
   )
 
-fit_e <- stan_glm(switch ~ dist_cut - 1 ,
+fit_e <- stan_glm(switch ~ dist_cut -1,
                   data = wells, family= binomial(link="logit"), refresh = 0)
 ```
 
