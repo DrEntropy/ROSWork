@@ -1,0 +1,120 @@
+# Chapter 15 Selected Excercises
+
+```{r}
+library(rstanarm)
+library(tidyverse)
+
+```
+## 15.5
+Comparing logit and probit: Take one of the data examples from Chapter 13 or 14. Fit these
+data using both logit and probit models. Check that the results are essentially the same after scaling by factor of 1.6 (see Figure 15.4).
+
+### Rodents
+I am going to use the rodents data set from Chapter 13, pickings some columsn that seem relevant. This is not an exhaustive study :).  
+
+Race: 1 - white, 2 - black, 3 - PR, 4 - Other hispanci, 5- Asian/PI, 6 - indigenous, 7 - two or more races
+
+
+```{r}
+rodents <- read_csv('Rodents/Data/rodents.csv', col_select = c("rodent2","personrm", "dilap", "regext","poverty","race"),
+                    show_col_types = FALSE)
+
+rodents <- rodents |> mutate_at(c("rodent2","dilap","regext","poverty","race"), as.integer)
+rodents
+```
+
+Standard logit. I am using flat priors here because there is some bug with probit regression an stan_glm priors.
+
+https://skeptric.com/rstanarm-probit-prior/
+
+
+```{r}
+fit_a <- stan_glm(rodent2 ~ factor(race) + dilap  + personrm + poverty + regext, data = rodents,family = binomial(link = "logit"),prior=NULL, refresh = 0)
+print(fit_a, digits=3)
+```
+
+probit
+
+```{r}
+fit_b <- stan_glm(rodent2 ~ factor(race) + dilap  + personrm + poverty + regext, data = rodents,family = binomial(link = "probit"),prior=NULL, refresh = 0)
+print(fit_b, digits=3)
+```
+```{r}
+compare = tibble(fit_a_coef = fit_a$coefficients, fit_b_equiv = fit_b$coefficients*1.6, se = se(fit_a))
+compare
+```
+
+So with errors, they are equivalent (when scaled by 1.6)
+
+## 15.6
+
+Comparing logit and probit: Construct a dataset where the logit and probit models give clearly different estimates, not just differing by a factor of 1.6.
+
+### Approach
+
+So the approach I will use is to use a latent variable formulation to generate the data, but experiment with the distribution used to generate . The text says "The two models are so close that, except in some unusual situations involving points in the far tails of the distributions, we can go back and forth between logit and probit just by a simple scaling." 
+
+
+
+I tried t-distribution with df = 1 (cauchy) but that didnt do the trick. Also tried just adding some random outliers.
+
+ 
+```{r}
+set.seed(33)
+x <- runif(100,-1,1)
+
+z =  5*x  + rnorm(100)
+y = z>0
+
+fake_data = tibble(x=x,z=z,y=y) |>
+            mutate(flip = rbinom(100,1,.1), y=if_else(flip & abs(x) >= 0.6, (1-y), y))
+
+fake_data |> ggplot() + geom_point(aes(x=x,y=y))
+```
+
+```{r}
+fit_a <- stan_glm(y ~ x ,data = fake_data, family = binomial(link = "logit"),prior=NULL, refresh = 0)
+print(fit_a, digits=3)
+```
+
+
+
+```{r}
+fit_b <- stan_glm(y ~ x,data = fake_data, family = binomial(link = "probit"),prior=NULL, refresh = 0)
+print(fit_b, digits=3)
+```
+
+
+```{r}
+compare = tibble(fit_a_coef = fit_a$coefficients, fit_b_equiv = fit_b$coefficients*1.6, se = se(fit_a))
+compare
+```
+
+
+Honestly nothing I have tried pushes the results "VERY" far apart. best i could do would be about 1 sigma as in the previous run.
+
+### plot 
+```{r}
+fake_data |> ggplot() + geom_point(aes(x=x,y=y)) +
+            geom_line(aes(x = x, y = predict(fit_a, type = "response")), color='red') +
+            geom_line(aes(x = x, y = predict(fit_b, type = "response")), color = 'blue')
+```
+
+
+
+
+### Compare with no outliers
+
+
+```{r}
+set.seed(33)
+x <- runif(100,-1,1)
+
+z =  5*x  + rnorm(100)
+y = z>0
+
+fake_data = tibble(x=x,z=z,y=y) 
+
+fit_c <- stan_glm(y ~ x,data = fake_data, family = binomial(link = "probit"),prior=NULL, refresh = 0)
+print(fit_c, digits=3)
+```
