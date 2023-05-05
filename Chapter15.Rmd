@@ -10,17 +10,24 @@ Comparing logit and probit: Take one of the data examples from Chapter 13 or 14.
 data using both logit and probit models. Check that the results are essentially the same after scaling by factor of 1.6 (see Figure 15.4).
 
 ### Rodents
-I am going to use the rodents data set from Chapter 13, pickings some columsn that seem relevant. This is not an exhaustive study :).  
+I am going to use the rodents data set from Chapter 13, pickings some columns that seem relevant. This is not an exhaustive study and no conclusions should be drawn, the purpose here is to compare probit and logit.  (NB I originally had poverty, povertyx2 but they were not strong predictors)
 
-Race: 1 - white, 2 - black, 3 - PR, 4 - Other hispanci, 5- Asian/PI, 6 - indigenous, 7 - two or more races
+Race: 1 - white, 2 - black, 3 - PR, 4 - Other Hispanic, 5- Asian/PI, 6 - indigenous, 7 - two or more races
 
 
 ```{r}
-rodents <- read_csv('Rodents/Data/rodents.csv', col_select = c("rodent2","personrm", "dilap", "regext","poverty","race"),
+rodents <- read_csv('Rodents/Data/rodents.csv', col_select = c("rodent2","personrm", "housing", "regext","race","borough"),
                     show_col_types = FALSE)
 
-rodents <- rodents |> mutate_at(c("rodent2","dilap","regext","poverty","race"), as.integer)
-rodents
+rodents <- rodents |> mutate_at(c("rodent2","regext","race"), as.integer)
+rodents <- rodents |> mutate(persons_over_1 = personrm - 1)
+```
+
+
+
+```{r}
+rodents |> group_by(race) |> summarize(mean = mean(rodent2, na.rm= TRUE))
+
 ```
 
 Standard logit. I am using flat priors here because there is some bug with probit regression an stan_glm priors.
@@ -29,14 +36,14 @@ https://skeptric.com/rstanarm-probit-prior/
 
 
 ```{r}
-fit_a <- stan_glm(rodent2 ~ factor(race) + dilap  + personrm + poverty + regext, data = rodents,family = binomial(link = "logit"),prior=NULL, refresh = 0)
+fit_a <- stan_glm(rodent2 ~ factor(race) +factor(housing) +  factor(borough)  + persons_over_1  + regext, data = rodents,family = binomial(link = "logit"),prior=NULL, refresh = 0)
 print(fit_a, digits=3)
 ```
 
 probit
 
 ```{r}
-fit_b <- stan_glm(rodent2 ~ factor(race) + dilap  + personrm + poverty + regext, data = rodents,family = binomial(link = "probit"),prior=NULL, refresh = 0)
+fit_b <- stan_glm(rodent2 ~ factor(race) + factor(housing) + factor(borough)  + persons_over_1  + regext, data = rodents,family = binomial(link = "probit"),prior=NULL, refresh = 0)
 print(fit_b, digits=3)
 ```
 ```{r}
