@@ -5,12 +5,15 @@
 library(rstanarm)
 invlogit <- plogis
 library(tidyverse)
+library(ggplot2)
 ```
 ## Exercises 
 
 ### 17.2
 
-Copied from section Poststrat2_tv.RMD:
+Copied from section Poststrat2_tv.RMD.  
+
+I decided that looking at all the census data was too tedius, but I decided to at least work through the tidyverse version of 17.2
 
 #### Creating the artificial world
 
@@ -85,6 +88,9 @@ poststrat <-
   ) %>% 
   ungroup()
 ```
+
+
+#### Sample
 
 We then sample from the assumed population with the assumed response rate.
 
@@ -180,6 +186,126 @@ tibble(
   summarize(across(yes_pop, list(mean = mean, sd = sd)))
 ```
 
-###  Ok now to do the actual exercise, i need to find census data that gives me these 32 categories seperately, but all i can find is age and sex,  and ethnicity seperate.  Also even using that data is tedius so i am going to skip this.
+ 
 
 
+### 17.5
+
+```{r}
+data <- as_tibble(mpg) |> select(cty, displ) |> mutate(mpg = cty) |> select(-cty)
+data |> ggplot(aes(x= log(displ), y=mpg)) + geom_point()
+```
+
+```{r}
+data <- data |> mutate(ldispl = log(displ)) |> select(-displ)
+```
+
+
+#### Full regression
+
+```{r}
+set.seed(42)
+fit = stan_glm(mpg ~  ldispl, data= data, refresh = 0)
+fit
+```
+
+#### a) Gen Missing data 
+
+```{r}
+mid_mpg <- 20
+
+p_miss <- \(mpg) {
+  invlogit(-1-.25*(mpg-mid_mpg))
+}
+
+tibble(mpg = seq(10:35), p= p_miss(mpg)) |>
+  ggplot(aes(x= mpg,y =p)) + geom_point()
+
+```
+
+```{r}
+set.seed(337)
+data_miss <- data |>
+  rowwise() |>
+   mutate(missing = rbinom(1, size = 1, p = p_miss(mpg)) )|>
+   ungroup() |>
+   mutate(ldispl = if_else(as.logical(missing), NA, ldispl)) |>
+   select(-missing)
+```
+
+How many are missing? 
+
+
+```{r}
+sum(is.na(data_miss$ldispl))/nrow(data_miss)
+```
+
+
+
+#### b) Regression of x on y:
+
+```{r}
+set.seed(42)
+impute_full = stan_glm(ldispl ~ mpg, data= data, refresh = 0)
+print(impute_full, digits =4)
+```
+```{r}
+set.seed(42)
+impute = stan_glm(ldispl ~ mpg, data= data_miss, refresh = 0)
+print(impute, digits = 4)
+```
+
+As claimed the two fits are somewhat consistent.  
+
+#### c) compare complete case  to original fit:
+
+ 
+```{r}
+fit_miss = stan_glm(mpg ~ ldispl, data= data_miss, refresh = 0)
+fit_miss
+```
+
+Not really inconsistent?
+
+####  d) use impute fit to randomly impute missing data. 
+
+```{r}
+pred_miss <- posterior_predict(impute, newdata = data_miss |> select(mpg), draws = 1)[1,]
+data_impute <- data_miss |> mutate(imputed = is.na(ldispl), ldispl = if_else(imputed, pred_miss, ldispl))
+data_impute |> ggplot(aes(x= ldispl, y=mpg, color = imputed)) + geom_point()
+```
+
+Looks realistic i guess
+
+```{r}
+fit_impute = stan_glm(mpg ~  ldispl, data= data_impute, refresh = 0)
+fit_impute
+```
+
+Lets do this n times and average
+
+```{r}
+nsims = 100
+slope = rep(NA, nsims)
+mad_sd = rep(NA, nsims)
+for( i in seq(nsims)){
+  pred_miss <- posterior_predict(impute, newdata = data_miss |> select(mpg), draws = 1)[1,]
+  data_impute <- data_miss |> mutate(imputed = is.na(ldispl), ldispl = if_else(imputed, pred_miss, ldispl))
+  fit_impute = stan_glm(mpg ~  ldispl, data= data_impute, refresh = 0)
+  slope[i] = coef(fit_impute)[2]
+  mad_sd[i] = se(fit_impute)[2]
+}
+
+mean(slope)
+
+
+```
+
+USing formula from page 326, neglecting 1/M term:
+
+```{r}
+sqrt(mean(mad_sd^2)+ var(slope))
+```
+
+Final estimate is -9.3  +- 0.6,  which is consistant with the original (-9.4 +- 0.4)
+Interesting? Discuss
