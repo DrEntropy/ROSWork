@@ -307,5 +307,5 @@ USing formula from page 326, neglecting 1/M term:
 sqrt(mean(mad_sd^2)+ var(slope))
 ```
 
-Final estimate is -9.3  +- 0.6,  which is consistant with the original (-9.4 +- 0.4)
+Final estimate is -9.3  +- 0.6,  which is consistent with the original (-9.4 +- 0.4)
 Interesting? Discuss
