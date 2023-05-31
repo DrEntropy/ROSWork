@@ -1,0 +1,117 @@
+# Chapter 19
+
+## Exercise 19.3
+
+In the discussion of gain-score models in Section 19.3, we noted that if we include
+the pre-treatment measure of the outcome in a gain score model, the coefficient on the treatment
+indicator will be the same as if we had just run a standard regression of the outcome on the
+treatment indicator and the pre-treatment measure. Show why this is true.
+
+### My answer
+
+If we run a regression on the outcome the model is:
+
+$$
+y_i = \alpha + \tau z_i + \gamma x_u + \epsilon_i
+$$
+If instead regress on  the 'gain' , but otherwise leave things the same then we have:
+
+$$
+g_i = y_i - x_i = \alpha' + \tau' z_i + \gamma'x_u + \epsilon_i
+$$
+
+re-arrange terms:
+
+$$
+y_i   = \alpha' + \tau' z_i + (\gamma' - 1)x_u + \epsilon_i
+$$
+
+
+
+These are the same models with  $\alpha = \alpha'$, $\tau = \tau'$  and $\gamma = \gamma' - 1$ , so as claimed,
+the coefficient on the treatment is the same.
+
+## 19.8
+
+```{r}
+library(tidyverse)
+library(rstanarm)
+```
+
+### Messy randomization
+
+The folder Cows contains data from an agricultural experiment that was conducted on 50 cows to estimate the effect of a feed additive on 6 outcomes related to the amount of milk fat produced by each cow. Four diets (treatments) were considered, corresponding to different levels of the additive, and three variables were recorded before treatment assignment: lactation number (seasons of lactation), age, and initial weight of the cow. Cows were initially assigned to treatments completely at random, and then the distributions of the three covariates were checked for balance across the treatment groups; several randomizations were tried, and the one that produced the “best”  balance with respect to the three covariates was chosen. The treatment depends only on fully observed covariates and not on unrecorded variables such as the physical appearances of the cows or the times at which the cows entered the study, because the decisions of whether to re-randomize are not explained.
+
+We shall consider different estimates of the effect of additive on the mean daily milk fat
+produced.
+
+```{r}
+cows <- read_csv(here::here('cows.csv'), col_types = 'dfdddddddd')
+cows$mdmf <- cows$milk*cows$fat/100
+```
+
+(a) Consider the simple regression of mean daily milk fat on the level of additive. Compute
+the estimated treatment effect and standard error, and explain why this is not a completely
+appropriate analysis given the randomization used.
+
+```{r}
+fit <- stan_glm(mdmf ~ level, data = cows, refresh=0)
+fit
+```
+
+Additive seems to help milk fat outcome, but this is not appropriate due to the re-randomization which depended in some way on the three covariates. The outcome possibly (even likely) depends on these variables, so that the potential outcomes are *not* independent of the treatment.
+
+(b) Add more predictors to the model. Explain your choice of which variables to include.
+Compare your estimated treatment effect to the result from (a).
+
+All three pre-treatment variables should be added since they effected if a treatment was performed or not.
+
+```{r}
+fit2 <- stan_glm(mdmf ~ level + age + lactation + initial_weight, data = cows, refresh=0)
+print(fit2, digits=3)
+```
+
+The treatment effect turns out to be similar in this case.  I was not sure if it was appropriate to add interactions ?
+I note that age and initial weight had only small effect.
+
+(c) Repeat (b), this time considering additive level as a categorical predictor with four levels.
+Make a plot showing the estimate (and standard error) of the treatment effect at each level and also showing the inference from the model fit in part (b)
+
+
+```{r}
+fit3 <- stan_glm(mdmf ~ factor(level) + age + lactation + initial_weight, data = cows, refresh=0)
+print(fit3, digits=3)
+```
+Not sure this is what was intended... discuss!
+
+
+```{r}
+
+plot_data = tibble(level = unique(cows$level)[-1]) |> 
+            mutate(effect_b = coef(fit2)[2]*level,
+                   se_b = se(fit2)[2]*level,
+                   effect_c = coef(fit3)[2:4],
+                   se_c = se(fit3)[2:4])
+
+
+num_lines <- 100
+fit_2_draws <- as_tibble(fit2)
+plot_b_data <- tibble(level_x = seq(0,.4,.02))
+
+base_plot <- plot_data |> 
+             ggplot() + geom_point(aes(x = level, y= effect_c)) +
+             geom_errorbar(aes(x=level, ymin = effect_c - se_c, ymax= effect_c + se_c)) +
+             geom_point(aes(x = level +.01, y= effect_b), color = "red") +
+             geom_errorbar(aes(x=level+.01, ymin = effect_b - se_b, ymax= effect_b + se_b), color = "red")
+
+
+plot <- base_plot
+for(i in 1:num_lines)
+{
+  plot_b_data <- plot_b_data |> mutate(y = fit_2_draws[[i,2]]*level_x )
+  plot <- plot + geom_line(aes(x=level_x, y = y), color = "red", alpha = .2, data = plot_b_data)
+}
+
+plot
+ 
+```
